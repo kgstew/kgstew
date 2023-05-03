@@ -1,27 +1,27 @@
-import 'nextra-theme-blog/style.css'
+import '@/css/tailwind.css'
+import '@/css/prism.css'
+import 'katex/dist/katex.css'
+// import '@/css/docsearch.css' // Uncomment if using algolia docsearch
+// import '@docsearch/css' // Uncomment if using algolia docsearch
+
+import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
-
-import '../styles/main.css'
-
-export default function Nextra({ Component, pageProps }) {
+import siteMetadata from '@/data/siteMetadata'
+import { Analytics } from 'pliny/analytics'
+import { SearchProvider } from 'pliny/search'
+import LayoutWrapper from '@/components/LayoutWrapper'
+export default function App({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="/feed.xml"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <Component {...pageProps} />
-    </>
+      <Analytics analyticsConfig={siteMetadata.analytics} />
+      <LayoutWrapper>
+        <SearchProvider searchConfig={siteMetadata.search}>
+          <Component {...pageProps} />
+        </SearchProvider>
+      </LayoutWrapper>
+    </ThemeProvider>
   )
 }
