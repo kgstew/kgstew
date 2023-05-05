@@ -1,8 +1,11 @@
 {
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 300
+        "editor.wordWrapColumn": 80
     },
     "editor.wordWrapColumn": 120,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    }
 }
