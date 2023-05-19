@@ -8,7 +8,7 @@ const siteMetadata = {
   description: 'My life and experience creating community and making things',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https//kgstew.com',
+  siteUrl: 'https://kgstew.com',
   siteRepo: 'https://github.com/kgstew/kgstew',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
