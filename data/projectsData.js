@@ -8,7 +8,7 @@ const projectsData = [
   {
     title: 'Colorado Maker Directory',
     description: `The largest directory of spaces, resources, support and information for creatives in Colorado. Find your community.`,
-    imgSrc: '/static/images/projects/colorao-maker-directory.jpg',
+    imgSrc: '/static/images/projects/colorado-maker-directory.jpg',
     href: 'https://iamamaker.co',
   },
   {
