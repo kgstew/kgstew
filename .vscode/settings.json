@@ -8,7 +8,7 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "editor.formatOnType": true,
+  "editor.formatOnType": false,
   "languageToolLinter.smartFormat.onType": true,
   "editor.wordWrap": "on",
   "spellright.language": ["en"],
