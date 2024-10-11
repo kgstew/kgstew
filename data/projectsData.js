@@ -12,8 +12,8 @@ const projectsData = [
     href: 'https://iamamaker.co',
   },
   {
-    title: 'Technical Arists Meetup',
-    description: `A monthly meetup for technical artists to gather, discuss projects, find collaborations and socialize.`,
+    title: 'League of Creative Technologists',
+    description: `A monthly meetup for technical artists to gather, discuss projects, find collaborations and socialize. We also host regular workshops on incorporating technology into art.`,
     imgSrc: '/static/images/projects/techart.jpg',
     href: 'https://www.facebook.com/groups/177597161701995/',
   },
