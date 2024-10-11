@@ -1,11 +1,21 @@
 {
-    "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 80
-    },
-    "editor.wordWrapColumn": 120,
-    "editor.formatOnSave": true,
-    "editor.quickSuggestions": {
-        "strings": true
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
+  "editor.wordWrapColumn": 120,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnType": true,
+  "languageToolLinter.smartFormat.onType": true,
+  "editor.wordWrap": "on",
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "mdx"],
+  "spellright.parserByClass": {
+    "mdx": {
+      "parser": "markdown"
     }
+  }
 }
