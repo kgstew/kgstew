@@ -14,6 +14,7 @@ module.exports = {
     './layouts/**/*.{js,ts,tsx}',
     './lib/**/*.{js,ts,tsx}',
     './data/**/*.mdx',
+    '!./data/examples/**/*',
   ],
   darkMode: 'class',
   theme: {
