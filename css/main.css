@@ -1,3 +1,15 @@
 /* red: #BB001F */
 /* towards-orange: #DD2628 */
 /* orange: #FF3530 */
+
+.codeFigure > figure,
+.codeFigure > pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.codeFigure > figcaption {
+  border-bottom: thin #c0c0c0 solid;
+  background-color: #262626;
+  padding: 0.5em;
+}
