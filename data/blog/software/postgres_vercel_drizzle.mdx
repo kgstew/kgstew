@@ -1,0 +1,286 @@
+---
+title: Setup Postgres and Drizzle on Vercel
+date: '2024-10-17'
+summary: Setting up Postgres for storage and implementing the Drizzle ORM on Vercel
+tags: ['create', 'software']
+---
+
+## Creating a Postgres instance on Vercel
+
+We're going to go through the steps for setting up a Postgres storage instance on Vercel. I want to setup a new database to enable another feature I am building. In a future post we will explore creating a simple integration with Anthrophic Claude and I want to have the ability to store user submissions and results.
+
+Lets get started by installing the Vercel dependencies.
+
+```
+yarn add -g vercel@latest
+yarn add @vercel/postgres
+
+```
+
+[Create a Postgres database](https://vercel.com/docs/storage/vercel-postgres/quickstart#create-a-postgres-database) with Vercel to configure your database.
+
+Pull the environment variables from Vercel
+
+```
+vercel env pull .env.development.local
+```
+
+At this point you have a Postgres instance created and can start creating tables directly in Vercel. `@vercel/postgres` gives you some basic functionality to interact with the database but also recommends using one of their supported ORMs for application development. We're going to move on to setting up Drizzle to handle table schemas, migrations and use the Drizzle ORM for queries.
+
+## What is Drizzle?
+
+"Drizzle ORM is a headless TypeScript ORM with a head. 🐲" If you aren't familiar with ORMs just know that they provide a abstraction layer between your application code and your database allowing you to interact with tables and make queries in code without requiring your write SQL queries directly. You can read more about the [Drizzle ORM](https://orm.drizzle.team/docs/overview).
+
+### Setup and Configure Drizzle
+
+You can follow the [Drizzle with Vercel Guide](https://orm.drizzle.team/docs/tutorials/drizzle-with-vercel) used here. I include the changes made for my own application needs.
+
+First let's install some dependencies.
+
+```
+yarn add drizzle-orm
+yarn add -D drizzle-kit
+yarn add dotenv
+```
+
+Next we're going to create our Drizzle config files, initial schema and some base queries for interacting with our database tables. My `db` directory ended up looking like the following.
+
+```
+<project_root>
+⌙ db
+ ⌙ migrations/
+ ⌙ queries/
+  ⌙ delete.ts
+  ⌙ insert.ts
+  ⌙ select.ts
+  ⌙ update.ts
+ ⌙ schema.ts
+drizzle.config.ts
+...
+```
+
+Create a `db` folder and add an `index.ts` file
+
+<figure class="codeFigure">
+<figcaption>db/index.ts</figcaption>
+```ts filename="index.ts"
+
+import { sql } from '@vercel/postgres'
+import { drizzle } from 'drizzle-orm/vercel-postgres'
+import { config } from 'dotenv'
+
+config({ path: '.env.development.local' })
+
+export const db = drizzle(sql)
+```
+</figure>
+
+Create your first tables by adding a database schema to `db/schema.ts`.
+
+<figure class="codeFigure">
+<figcaption>db/schema.ts</figcaption>
+```ts filename="schema.ts"
+
+import { integer, numeric, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core'
+
+export const usersTable = pgTable('users_table', {
+  id: serial('id').primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').notNull().unique(),
+})
+
+export const learningPlansTable = pgTable('learning_plan_table', {
+  id: serial('id').primaryKey(),
+  goal: text('goal').notNull(),
+  availableTime: numeric('available_time').notNull(),
+  learningStyle: text('learning_style').notNull(),
+  topics: text('topics').notNull(),
+  userId: integer('user_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'cascade' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at')
+    .notNull()
+    .$onUpdate(() => new Date()),
+})
+
+export type InsertUser = typeof usersTable.$inferInsert
+export type SelectUser = typeof usersTable.$inferSelect
+
+export type InsertLearningPlan = typeof learningPlansTable.$inferInsert
+export type SelectLearningPlan = typeof learningPlansTable.$inferSelect
+```
+</figure>
+
+Now let's create a `drizzle.config.ts` file in the root of your project directory.
+
+<figure class="codeFigure">
+<figcaption>drizzle.config.ts</figcaption>
+```ts filename="drizzle.config.ts"
+
+import { config } from 'dotenv'
+import { defineConfig } from 'drizzle-kit'
+
+config({ path: '.env.development.local' })
+
+export default defineConfig({
+  schema: './db/schema.ts',
+  out: './db/migrations',
+  dialect: 'postgresql',
+  dbCredentials: {
+    url: process.env.POSTGRES_URL!,
+  },
+})
+```
+</figure>
+
+At this point we can generate our initial migration and push the schema to Vercel. I'm using the default configuration for Vercel that creates a development cloud instance of the database. You can also configure a local install of the database if you prefer and use a container service like docker to run a local instance.
+
+### Apply Changes to the Database
+
+First let's generate a new migration from our schema changes.
+
+```
+npx drizzle-kit generate
+```
+
+You can see the migration content in your `db/migrations` folder to see what Drizzle is doing under the hood.
+
+Now let's run our migration
+
+```
+npx drizzle-kit migrate
+```
+
+### Making Queries
+
+Our last step here before we can start writing components to interact with our database is to create some queries to INSERT, SELECT, UPDATE and DELETE our data.
+
+We're going to add four files to a `db/queries` folder; `insert.ts`, `select.ts`, `update.ts` and `delete.ts`.
+
+<figure class="codeFigure">
+<figcaption>db/queries/insert.ts</figcaption>
+```ts filename="insert.ts"
+
+import { db } from '../index'
+import { InsertLearningPlan, InsertUser, learningPlansTable, usersTable } from '../schema'
+
+export async function createUser(data: InsertUser) {
+  await db.insert(usersTable).values(data)
+}
+
+export async function createLearningPlan(data: InsertLearningPlan) {
+  await db.insert(learningPlansTable).values(data)
+}
+```
+</figure>
+
+<figure class="codeFigure">
+<figcaption>db/queries/select.ts</figcaption>
+```ts filename="select.ts"
+
+import { asc, between, count, eq, getTableColumns, sql } from 'drizzle-orm'
+import { db } from '../index'
+import { SelectUser, learningPlansTable, usersTable } from '../schema'
+
+export async function getUserById(id: SelectUser['id']): Promise<
+  Array<{
+    id: number
+    name: string
+    email: string
+  }>
+> {
+  return db.select().from(usersTable).where(eq(usersTable.id, id))
+}
+
+export async function getUsersWithLearningPlanCount(
+  page = 1,
+  pageSize = 5
+): Promise<
+  Array<{
+    planCount: number
+    id: number
+    name: string
+    email: string
+  }>
+> {
+  return db
+    .select({
+      ...getTableColumns(usersTable),
+      planCount: count(learningPlansTable.id),
+    })
+    .from(usersTable)
+    .leftJoin(learningPlansTable, eq(usersTable.id, learningPlansTable.userId))
+    .groupBy(usersTable.id)
+    .orderBy(asc(usersTable.id))
+    .limit(pageSize)
+    .offset((page - 1) * pageSize)
+}
+
+export async function getLearningPlansForLast24Hours(
+  page = 1,
+  pageSize = 5
+): Promise<
+  Array<{
+    id: number
+    goal: string
+  }>
+> {
+  return db
+    .select({
+      id: learningPlansTable.id,
+      goal: learningPlansTable.goal,
+    })
+    .from(learningPlansTable)
+    .where(between(learningPlansTable.createdAt, sql`now() - interval '1 day'`, sql`now()`))
+    .orderBy(asc(learningPlansTable.goal), asc(learningPlansTable.id))
+    .limit(pageSize)
+    .offset((page - 1) * pageSize)
+}
+```
+</figure>
+
+<figure class="codeFigure">
+<figcaption>db/queries/update.ts</figcaption>
+```ts filename="update.ts"
+
+import { eq } from 'drizzle-orm'
+import { db } from '../index'
+import { SelectLearningPlan, SelectUser, learningPlansTable, usersTable } from '../schema'
+
+export async function updateLearningPlan(
+  id: SelectLearningPlan['id'],
+  data: Partial<Omit<SelectLearningPlan, 'id'>>
+) {
+  await db.update(learningPlansTable).set(data).where(eq(learningPlansTable.id, id))
+}
+
+export async function updateUser(id: SelectUser['id'], data: Partial<Omit<SelectUser, 'id'>>) {
+  await db.update(usersTable).set(data).where(eq(usersTable.id, id))
+}
+```
+</figure>
+
+<figure class="codeFigure">
+<figcaption>db/queries/delete.ts</figcaption>
+```ts filename="delete.ts"
+
+import { eq } from 'drizzle-orm'
+import { db } from '../index'
+import { learningPlansTable, SelectUser, usersTable } from '../schema'
+
+export async function deleteUser(id: SelectUser['id']) {
+  await db.delete(usersTable).where(eq(usersTable.id, id))
+}
+
+export async function deleteLearningPlans(id: SelectUser['id']) {
+  await db.delete(learningPlansTable).where(eq(learningPlansTable.id, id))
+}
+```
+</figure>
+
+### Whats Next?
+
+Now that you have the basic queries needed to interact with your database you can start creating components that will take your user inputs, submit the information and store it in your database! Remember that any time you make changes to your schema you will need to generate a new migration and migrate the database to keep the changes in sync.
+
+I'll cover more about creating and using components with queries in another post along with how to setup Anthropic Claude to assist in building structured lesson plans for independent learning.
