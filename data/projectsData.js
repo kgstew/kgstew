@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: 'WMD',
+    description: `WMD is a manufacturer of music hardware including modular synthesizers and guitar pedals We make tools that inspire creativity through powerful feature sets and well crafted user interfaces.`,
+    imgSrc: '/static/images/blog/wmd.jpg',
+    href: 'https://wmdevices.com',
+  },
+  {
     title: 'Fable Bound',
     description: `Fable Bound is a narrative journey into the life a young female viking. It's a wooden ship built with a computer controlled system for movement, lights and sound that invites you to climb aboard and experience your own heroes journey.`,
     imgSrc: '/static/images/projects/fable_bound.jpg',

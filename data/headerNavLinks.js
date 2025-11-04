@@ -1,7 +1,11 @@
 const headerNavLinks = [
   {
     href: '/projects',
-    title: 'Projects',
+    title: 'Current',
+  },
+  {
+    href: '/blog',
+    title: 'Posts',
   },
 ]
 export default headerNavLinks
