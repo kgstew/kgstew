@@ -2,6 +2,7 @@
   "name": "kgstew.com",
   "version": "0.0.1",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
