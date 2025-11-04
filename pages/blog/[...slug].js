@@ -2,7 +2,7 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import PageTitle from '@/components/PageTitle'
 import { MDXComponents } from '@/components/MDXComponents'
 import { sortedBlogPost, coreContent } from 'pliny/utils/contentlayer'
-import { allBlogs, allAuthors } from 'contentlayer/generated'
+import { allBlogs, allAuthors } from '.contentlayer/generated'
 const DEFAULT_LAYOUT = 'PostLayout'
 export async function getStaticPaths() {
   return {

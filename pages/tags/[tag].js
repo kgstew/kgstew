@@ -3,7 +3,7 @@ import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { kebabCase } from 'pliny/utils/kebabCase'
 import { getAllTags, allCoreContent } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from '.contentlayer/generated'
 export async function getStaticPaths() {
   const tags = await getAllTags(allBlogs)
   return {

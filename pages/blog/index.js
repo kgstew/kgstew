@@ -2,7 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from '.contentlayer/generated'
 export const POSTS_PER_PAGE = 20
 export const getStaticProps = async () => {
   const posts = sortedBlogPost(allBlogs)

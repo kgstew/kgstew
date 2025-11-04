@@ -4,7 +4,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { kebabCase } from 'pliny/utils/kebabCase'
 import { getAllTags } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from '.contentlayer/generated'
 export const getStaticProps = async () => {
   const tags = await getAllTags(allBlogs)
   return {

@@ -1,6 +1,6 @@
 // import { MDXLayoutRenderer } from '@/components/MDXComponents'
 
-import { allAuthors } from 'contentlayer/generated'
+import { allAuthors } from '.contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { MDXComponents } from '@/components/MDXComponents'
 const DEFAULT_LAYOUT = 'AuthorLayout'

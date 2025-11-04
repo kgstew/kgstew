@@ -1,6 +1,6 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import { allAuthors } from 'contentlayer/generated'
+import { allAuthors } from '.contentlayer/generated'
 import About from './about'
 export const getStaticProps = async () => {
   const author = allAuthors.find((p) => p.slug === 'default')
