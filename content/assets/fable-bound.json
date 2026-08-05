@@ -1,921 +1,8 @@
 {
   "project": "fable-bound",
-  "generatedAt": "2026-08-05T22:15:47.288Z",
-  "count": 27,
+  "generatedAt": "2026-08-05T22:22:51.728Z",
+  "count": 26,
   "assets": {
-    "5286eba791": {
-      "id": "5286eba791",
-      "project": "fable-bound",
-      "source": "IMG_4900.MOV",
-      "type": "video",
-      "duration": 32.203333,
-      "needsStreamHost": true,
-      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5286eba791/loop.mp4",
-      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5286eba791/poster.jpg",
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "8ab3abec63": {
-      "id": "8ab3abec63",
-      "project": "fable-bound",
-      "source": "IMG_5020.MOV",
-      "type": "video",
-      "duration": 39.536667,
-      "needsStreamHost": true,
-      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8ab3abec63/loop.mp4",
-      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8ab3abec63/poster.jpg",
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "d6fffbf948": {
-      "id": "d6fffbf948",
-      "project": "fable-bound",
-      "source": "IMG_5349.MP4",
-      "type": "video",
-      "duration": 2.1,
-      "needsStreamHost": false,
-      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/d6fffbf948/loop.mp4",
-      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/d6fffbf948/poster.jpg",
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "2dadd5c8bc": {
-      "id": "2dadd5c8bc",
-      "project": "fable-bound",
-      "source": "IMG_3697.HEIC",
-      "type": "image",
-      "width": 4032,
-      "height": 3024,
-      "aspect": 1.3333,
-      "capturedAt": "2021-03-30T15:52:28",
-      "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoUAA8APt1cp0yopSOiMAgBEBuJZwAASqbQG68y3PPvjOQA/rnhLEdGEki4isqgIDorQf7r/YIQZs8HTEB7a9ZAAAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "4ea3979084": {
-      "id": "4ea3979084",
-      "project": "fable-bound",
-      "source": "IMG_3213.JPG",
-      "type": "image",
-      "width": 1536,
-      "height": 878,
-      "aspect": 1.7494,
-      "capturedAt": "2024-01-10T22:29:44",
-      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUAAsAPt1cqE0opSQiMAgBEBuJYgCdMoAC/Kl3WC0OdixvAADiPQZEGtmgPi0vnEtThq06Dr+fomV6U8WH6JZIZ0iJ/jWgRoCXxV/HweU7qXSUQAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1200.avif"
-          },
-          {
-            "w": 1536,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1536.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1200.webp"
-          },
-          {
-            "w": 1536,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1536.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1536,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1536.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "e87851e0d7": {
-      "id": "e87851e0d7",
-      "project": "fable-bound",
-      "source": "IMG_3247.HEIC",
-      "type": "image",
-      "width": 3007,
-      "height": 2963,
-      "aspect": 1.0148,
-      "capturedAt": "2024-03-21T13:47:23",
-      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwBACdASoUABQAPtFYpkyoJSQiMAwBABoJYgC7JIAAdXHcsYmazJZI+m1L2vw0ZoAA/vKqk8wx2MbmNeR7yXdEHrRosnq4J1UyHLSbkxFX2FDVTsojM9CqBK0WXINNoPy6WxWyq/irgCUSZ2YAAA==",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "22d2cefed6": {
-      "id": "22d2cefed6",
-      "project": "fable-bound",
-      "source": "IMG_3558.HEIC",
-      "type": "image",
-      "width": 4032,
-      "height": 3024,
-      "aspect": 1.3333,
-      "capturedAt": "2024-04-21T16:26:47",
-      "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwBACdASoUAA8APt1cqE0opSQiMAgBEBuJYwCdACDlEM8HR2bCUn9bouAA/lc7EuVlRad5OT5SXCkSxcRPcSpxE7BU7MbhMcApqSQqyM3AAA==",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "7c41386491": {
-      "id": "7c41386491",
-      "project": "fable-bound",
-      "source": "IMG_3302.jpeg",
-      "type": "image",
-      "width": 3024,
-      "height": 4032,
-      "aspect": 0.75,
-      "capturedAt": "2024-06-02T17:49:31",
-      "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwBACdASoUABsAPt1krU8opaSiKAqpEBuJZQC2yAxU7Mcw5bJvtHIi/+0o1cgAAPY7/kmSCR6FsAZKOVPMQvE9CAxNJqN3kRgCeB/bX5FLAU+HprDL81kyAr+Ym5ZSU8VmgeM5ivIpdRsvUPoMNeonknl2XTQ5/AA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "49bbe7681e": {
-      "id": "49bbe7681e",
-      "project": "fable-bound",
-      "source": "IMG_4569.HEIC",
-      "type": "image",
-      "width": 4032,
-      "height": 3024,
-      "aspect": 1.3333,
-      "capturedAt": "2024-07-05T17:46:15",
-      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA8APt1gqU2opaQiMAgBEBuJYgCdMoABT3HcmNyEA04AAOD8sxhdggt6DU8qQriKNg1geCJrI3AYUOuId/yZ8OUxjLRCtSo0CIB+Eu1IrK4AAAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "5cf3161e04": {
-      "id": "5cf3161e04",
-      "project": "fable-bound",
-      "source": "IMG_4327.HEIC",
-      "type": "image",
-      "width": 1857,
-      "height": 2221,
-      "aspect": 0.8361,
-      "capturedAt": "2024-07-08T17:27:05",
-      "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBQCdASoUABgAPt1ur1GopqQiqAgBEBuJZAC7AEsj9MtOvsT/Rt5GTVaqHu0ANCaAAP7uoKQKzoMK9uXzcVPEcPVe/nzWoURqLVUA4+7nKdCUI+v0H+hgU+TkszpBNS9d/iKLvrsO5ZiRRwAoUxiAAAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1200.avif"
-          },
-          {
-            "w": 1857,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1857.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1200.webp"
-          },
-          {
-            "w": 1857,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1857.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "85ba624466": {
-      "id": "85ba624466",
-      "project": "fable-bound",
-      "source": "IMG_4606.HEIC",
-      "type": "image",
-      "width": 4032,
-      "height": 3024,
-      "aspect": 1.3333,
-      "capturedAt": "2024-07-25T17:09:57",
-      "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoUAA8APt1cpkyopSOiMAgBEBuJYwC2yBEYdIW289LQAPen+7anKj4/Pp5ICjLEsFLuL5SY9fb7BdkTae9bl0rEtRY3QO6+12W4/j2oMgAAAA==",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "33b5928241": {
-      "id": "33b5928241",
-      "project": "fable-bound",
-      "source": "IMG_4785.HEIC",
-      "type": "image",
-      "width": 4032,
-      "height": 3024,
-      "aspect": 1.3333,
-      "capturedAt": "2024-08-11T22:57:07",
-      "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoUAA8APt1cpkyopSOiMAgBEBuJYwC2yCHgAkut0ZcGVKwA4mtnhf8ZzTHbOiBTZYFMkfAZWD1IICcja/Lqc2zvd1wvQRHlwhmpN0PtnLFEAAAA",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "3e393a2071": {
-      "id": "3e393a2071",
-      "project": "fable-bound",
-      "source": "IMG_4978.HEIC",
-      "type": "image",
-      "width": 4032,
-      "height": 3024,
-      "aspect": 1.3333,
-      "capturedAt": "2024-08-24T15:09:35",
-      "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoUAA8APt1gqU2opaQiMAgBEBuJQBOgBDjvbvzRmEIgkbYa8AD+3+0nzvX4bDJ/GkDBFiJZHtPXJ4ZTxmvT3Qx+xYjUSzuCGegAAA==",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "38110a78b2": {
-      "id": "38110a78b2",
-      "project": "fable-bound",
-      "source": "IMG_4981.HEIC",
-      "type": "image",
-      "width": 3024,
-      "height": 4032,
-      "aspect": 0.75,
-      "capturedAt": "2024-08-24T16:00:29",
-      "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASoUABsAPt1mrFCopSQiqAgBEBuJZACsAAvnWewG567LmyudxCZpiKUkdrYqQADZytQhG9lBeODz8ujhcfpk0h30BGfy3xdbADNN4dbggP8Svlti9QVG0FDbfjqEHAnI1GmFZ5S4pMFlz2U1X/m5GPnTYuL9HU70FCWLcfIleGdjc8kn8EcAuWUVHpZbMAAA",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "e8503724aa": {
-      "id": "e8503724aa",
-      "project": "fable-bound",
-      "source": "IMG_4989.HEIC",
-      "type": "image",
-      "width": 3024,
-      "height": 4032,
-      "aspect": 0.75,
-      "capturedAt": "2024-08-25T12:30:37",
-      "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBQCdASoUABsAPtlWpEyoJKOiN/VYAQAbCWIAsR7QwZx7qmbWtqWMTV1Qe3Z+2FDigAAA/nZ+DUrUxTKHm8vdPBnXnfFBCdGszgv9RCLsvwj9eM2KJKXT5cxUiXhLn9Pm4YhciV2yZ8EEMAan/MaPmGXhxMWca4qBh7PDxL0MN+dgAAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "8b8e3dd5ba": {
-      "id": "8b8e3dd5ba",
-      "project": "fable-bound",
-      "source": "IMG_4990.HEIC",
-      "type": "image",
-      "width": 3024,
-      "height": 4032,
-      "aspect": 0.75,
-      "capturedAt": "2024-08-25T12:30:47",
-      "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBQCdASoUABsAPs1QoUynpKMiN/qoAPAZiWYAnTMcdNAkeel7XIV+OvEVsjljtf1zYAAA/lQ92jR+GWspzHJIRUTCuMsCaZ/1aleOK+fU0zmp7zatFw4jaj2X+YxdCh/+t980tF079wLGgkusiFr9gMVrNW45snpECKmStxeJb/yVeT9C8x4AAAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
     "ef98d42090": {
       "id": "ef98d42090",
       "project": "fable-bound",
@@ -978,215 +65,11 @@
           }
         ]
       },
-      "alt": "",
-      "caption": "",
+      "alt": "The finished viking ship at dusk on the playa, shields glowing warm from within and blue light washing the painted wave skirts at its base",
+      "caption": "Black Rock City, August 2024. The shields lit from inside; the sea lit from below.",
       "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "4be4107712": {
-      "id": "4be4107712",
-      "project": "fable-bound",
-      "source": "PXL_20240826_031214322.jpg",
-      "type": "image",
-      "width": 2268,
-      "height": 4032,
-      "aspect": 0.5625,
-      "capturedAt": "2024-08-25T20:12:14",
-      "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBgCdASoUACQAPt1gpU6opS+iKqoB8BuJZgCdMvB8EcAAfqKdH/TQacDEslXOk/Io73DrLpUHIAedbSFmUAD+4w2vIOw69PtYTp+QXGMVzU8w+a+TPHGavSSQsnOViYigzh5wkEDu87GpDJMad96nRqRoh5CrfnrMWYCG1I6iWqvpFZBi1PQr90DCZCvdrwzy5wCAKPgAAA==",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2000.avif"
-          },
-          {
-            "w": 2268,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2268.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2000.webp"
-          },
-          {
-            "w": 2268,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2268.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "4fbd4c5edd": {
-      "id": "4fbd4c5edd",
-      "project": "fable-bound",
-      "source": "IMG_0285.jpeg",
-      "type": "image",
-      "width": 3024,
-      "height": 4032,
-      "aspect": 0.75,
-      "capturedAt": "2024-08-25T21:00:38",
-      "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQBACdASoUABsAPsVOnkynpCKiN+gA8BiJaACpI3+CsYXCvOIdnvziYO+7NoEDAAD+932H4wu2Y7lOz58nJBIZvOm9LQJUM6lHGaSAtPbYR7nv7lOZl97pRg174q/OAPrxJbge5MUuu7k5a9gNP1SQuPLIhGnrwAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
-    },
-    "0c3c7548b3": {
-      "id": "0c3c7548b3",
-      "project": "fable-bound",
-      "source": "DSC_7766.JPG",
-      "type": "image",
-      "width": 6000,
-      "height": 4000,
-      "aspect": 1.5,
-      "capturedAt": "2024-08-26T20:27:23",
-      "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoUAA0APt1gp00opaOiMAgBEBuJYwCdACKZLYx0MzsvOAD1p3qFrDreLrDz1y6FKyUsfoo8pPnGuZEAAAA=",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1600.jpg"
-          }
-        ]
-      },
-      "alt": "",
-      "caption": "",
-      "credit": "",
-      "role": "detail",
-      "order": null
+      "role": "hero",
+      "order": 1
     },
     "b17b97dc8e": {
       "id": "b17b97dc8e",
@@ -1250,79 +133,698 @@
           }
         ]
       },
-      "alt": "",
-      "caption": "",
+      "alt": "A crowd sitting and standing around the lit ship at night, people in costume lounging on the painted waves while others lean over the gunwale",
+      "caption": "The part that mattered. People stayed.",
       "credit": "",
-      "role": "detail",
-      "order": null
+      "role": "hero",
+      "order": 2
     },
-    "eb802f15da": {
-      "id": "eb802f15da",
+    "3e393a2071": {
+      "id": "3e393a2071",
       "project": "fable-bound",
-      "source": "IMG_5349.HEIC",
+      "source": "IMG_4978.HEIC",
       "type": "image",
       "width": 4032,
       "height": 3024,
       "aspect": 1.3333,
-      "capturedAt": "2024-10-05T18:56:23",
-      "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoUAA8APt1cp0yopSOiMAgBEBuJYwCw7Btfib2GKrgA9jyQ71Mr+v66gjFuKNxGVJ1M+QJTRXw6tlOjA3/1AV2VsOIKAAAA",
+      "capturedAt": "2024-08-24T15:09:35",
+      "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoUAA8APt1gqU2opaQiMAgBEBuJQBOgBDjvbvzRmEIgkbYa8AD+3+0nzvX4bDJ/GkDBFiJZHtPXJ4ZTxmvT3Qx+xYjUSzuCGegAAA==",
       "variants": {
         "avif": [
           {
             "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/400.avif"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/400.avif"
           },
           {
             "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/800.avif"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/800.avif"
           },
           {
             "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/1200.avif"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/1200.avif"
           },
           {
             "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2000.avif"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2000.avif"
           },
           {
             "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2400.avif"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2400.avif"
           }
         ],
         "webp": [
           {
             "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/400.webp"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/400.webp"
           },
           {
             "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/800.webp"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/800.webp"
           },
           {
             "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/1200.webp"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/1200.webp"
           },
           {
             "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2000.webp"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2000.webp"
           },
           {
             "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2400.webp"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/2400.webp"
           }
         ],
         "jpeg": [
           {
             "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/1600.jpg"
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/3e393a2071/1600.jpg"
           }
         ]
       },
-      "alt": "",
+      "alt": "Sixteen crew members in matching black hoodies posed in front of the ship on the open playa under heavy grey cloud",
+      "caption": "The crew, on playa. Most of them had never built anything like this before they showed up.",
+      "credit": "",
+      "role": "hero",
+      "order": 3
+    },
+    "4fbd4c5edd": {
+      "id": "4fbd4c5edd",
+      "project": "fable-bound",
+      "source": "IMG_0285.jpeg",
+      "type": "image",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "capturedAt": "2024-08-25T21:00:38",
+      "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQBACdASoUABsAPsVOnkynpCKiN+gA8BiJaACpI3+CsYXCvOIdnvziYO+7NoEDAAD+932H4wu2Y7lOz58nJBIZvOm9LQJUM6lHGaSAtPbYR7nv7lOZl97pRg174q/OAPrxJbge5MUuu7k5a9gNP1SQuPLIhGnrwAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4fbd4c5edd/1600.jpg"
+          }
+        ]
+      },
+      "alt": "The ship's prow at night, a ring of illuminated blue runes above a glowing lantern, with laser beams from the city fanning out behind",
       "caption": "",
       "credit": "",
-      "role": "detail",
-      "order": null
+      "role": "hero",
+      "order": 4
+    },
+    "0c3c7548b3": {
+      "id": "0c3c7548b3",
+      "project": "fable-bound",
+      "source": "DSC_7766.JPG",
+      "type": "image",
+      "width": 6000,
+      "height": 4000,
+      "aspect": 1.5,
+      "capturedAt": "2024-08-26T20:27:23",
+      "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoUAA0APt1gp00opaOiMAgBEBuJYwCdACKZLYx0MzsvOAD1p3qFrDreLrDz1y6FKyUsfoo8pPnGuZEAAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1600.jpg"
+          }
+        ]
+      },
+      "alt": "The ship seen at distance across the open playa in daylight, dwarfed by the desert, with the Man and the mountains behind it",
+      "caption": "For scale. Twenty feet of ship, and still a speck.",
+      "credit": "",
+      "role": "hero",
+      "order": 5
+    },
+    "d6fffbf948": {
+      "id": "d6fffbf948",
+      "project": "fable-bound",
+      "source": "IMG_5349.MP4",
+      "type": "video",
+      "duration": 2.1,
+      "needsStreamHost": false,
+      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/d6fffbf948/loop.mp4",
+      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/d6fffbf948/poster.jpg",
+      "alt": "The ship rocking on its pneumatics, bow rising and settling",
+      "caption": "",
+      "credit": "",
+      "role": "hero",
+      "order": 6
+    },
+    "4ea3979084": {
+      "id": "4ea3979084",
+      "project": "fable-bound",
+      "source": "IMG_3213.JPG",
+      "type": "image",
+      "width": 1536,
+      "height": 878,
+      "aspect": 1.7494,
+      "capturedAt": "2024-01-10T22:29:44",
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUAAsAPt1cqE0opSQiMAgBEBuJYgCdMoAC/Kl3WC0OdixvAADiPQZEGtmgPi0vnEtThq06Dr+fomV6U8WH6JZIZ0iJ/jWgRoCXxV/HweU7qXSUQAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1200.avif"
+          },
+          {
+            "w": 1536,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1536.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1200.webp"
+          },
+          {
+            "w": 1536,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1536.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1536,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4ea3979084/1536.jpg"
+          }
+        ]
+      },
+      "alt": "An AI-generated concept rendering of a viking longship resting in a circular depression in desert dunes",
+      "caption": "The first image of it that existed, generated in January 2024 to explain the idea to other people. Nobody on the team could draw.",
+      "credit": "AI-generated concept image",
+      "role": "process",
+      "order": 10
+    },
+    "e87851e0d7": {
+      "id": "e87851e0d7",
+      "project": "fable-bound",
+      "source": "IMG_3247.HEIC",
+      "type": "image",
+      "width": 3007,
+      "height": 2963,
+      "aspect": 1.0148,
+      "capturedAt": "2024-03-21T13:47:23",
+      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwBACdASoUABQAPtFYpkyoJSQiMAwBABoJYgC7JIAAdXHcsYmazJZI+m1L2vw0ZoAA/vKqk8wx2MbmNeR7yXdEHrRosnq4J1UyHLSbkxFX2FDVTsojM9CqBK0WXINNoPy6WxWyq/irgCUSZ2YAAA==",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e87851e0d7/1600.jpg"
+          }
+        ]
+      },
+      "alt": "A hand holding a translucent panel up against a deep blue sky, sunlight blazing through the material",
+      "caption": "",
+      "credit": "",
+      "role": "process",
+      "order": 11
+    },
+    "22d2cefed6": {
+      "id": "22d2cefed6",
+      "project": "fable-bound",
+      "source": "IMG_3558.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2024-04-21T16:26:47",
+      "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwBACdASoUAA8APt1cqE0opSQiMAgBEBuJYwCdACDlEM8HR2bCUn9bouAA/lc7EuVlRad5OT5SXCkSxcRPcSpxE7BU7MbhMcApqSQqyM3AAA==",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/22d2cefed6/1600.jpg"
+          }
+        ]
+      },
+      "alt": "Build day inside a timber-framed shop, half a dozen people working along a run of steel box section while a grinder throws a sheet of sparks",
+      "caption": "April 2024. Build days ran most weekends for eleven months.",
+      "credit": "",
+      "role": "process",
+      "order": 12
+    },
+    "7c41386491": {
+      "id": "7c41386491",
+      "project": "fable-bound",
+      "source": "IMG_3302.jpeg",
+      "type": "image",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "capturedAt": "2024-06-02T17:49:31",
+      "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwBACdASoUABsAPt1krU8opaSiKAqpEBuJZQC2yAxU7Mcw5bJvtHIi/+0o1cgAAPY7/kmSCR6FsAZKOVPMQvE9CAxNJqN3kRgCeB/bX5FLAU+HprDL81kyAr+Ym5ZSU8VmgeM5ivIpdRsvUPoMNeonknl2XTQ5/AA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/7c41386491/1600.jpg"
+          }
+        ]
+      },
+      "alt": "The welded steel keel frame clamped up outdoors under a canopy, dozens of C-clamps holding the cross members while the epoxy sets",
+      "caption": "The steel spine, before any of it looked like a ship.",
+      "credit": "",
+      "role": "process",
+      "order": 13
+    },
+    "49bbe7681e": {
+      "id": "49bbe7681e",
+      "project": "fable-bound",
+      "source": "IMG_4569.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2024-07-05T17:46:15",
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA8APt1gqU2opaQiMAgBEBuJYgCdMoABT3HcmNyEA04AAOD8sxhdggt6DU8qQriKNg1geCJrI3AYUOuId/yZ8OUxjLRCtSo0CIB+Eu1IrK4AAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/49bbe7681e/1600.jpg"
+          }
+        ]
+      },
+      "alt": "Two deer skulls with full antler racks packed in a cardboard box outdoors",
+      "caption": "Materials.",
+      "credit": "",
+      "role": "process",
+      "order": 14
+    },
+    "85ba624466": {
+      "id": "85ba624466",
+      "project": "fable-bound",
+      "source": "IMG_4606.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2024-07-25T17:09:57",
+      "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoUAA8APt1cpkyopSOiMAgBEBuJYwC2yBEYdIW289LQAPen+7anKj4/Pp5ICjLEsFLuL5SY9fb7BdkTae9bl0rEtRY3QO6+12W4/j2oMgAAAA==",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/85ba624466/1600.jpg"
+          }
+        ]
+      },
+      "alt": "Seven painted round shields propped against the ship's hull in a suburban back yard, each with a different burned and stencilled design",
+      "caption": "July 2024, a month out. Every shield was made by a different person.",
+      "credit": "",
+      "role": "process",
+      "order": 15
+    },
+    "33b5928241": {
+      "id": "33b5928241",
+      "project": "fable-bound",
+      "source": "IMG_4785.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2024-08-11T22:57:07",
+      "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoUAA8APt1cpkyopSOiMAgBEBuJYwC2yCHgAkut0ZcGVKwA4mtnhf8ZzTHbOiBTZYFMkfAZWD1IICcja/Lqc2zvd1wvQRHlwhmpN0PtnLFEAAAA",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/33b5928241/1600.jpg"
+          }
+        ]
+      },
+      "alt": "The control electronics laid out on a bench — a green custom circuit board marked FABLE BOUND carrying four ESP32 modules and relay boards, wired to 12-volt supplies through a labelled harness reading PS RAIL, SB UP, SB AFT and SB FORE",
+      "caption": "The board that ran the ship. Labelled harness, because you cannot debug a pneumatic system in the dark at 2am otherwise.",
+      "credit": "",
+      "role": "process",
+      "order": 16
     },
     "a44c44525a": {
       "id": "a44c44525a",
@@ -1386,11 +888,411 @@
           }
         ]
       },
-      "alt": "",
+      "alt": "The complete ship parked on a path in a Denver park in spring, painted blue wave skirts spread around its base and wooden steps at the centre",
+      "caption": "April 2025, set up in Denver. It travelled after the burn.",
+      "credit": "",
+      "role": "process",
+      "order": 17
+    },
+    "5cf3161e04": {
+      "id": "5cf3161e04",
+      "project": "fable-bound",
+      "source": "IMG_4327.HEIC",
+      "type": "image",
+      "width": 1857,
+      "height": 2221,
+      "aspect": 0.8361,
+      "capturedAt": "2024-07-08T17:27:05",
+      "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBQCdASoUABgAPt1ur1GopqQiqAgBEBuJZAC7AEsj9MtOvsT/Rt5GTVaqHu0ANCaAAP7uoKQKzoMK9uXzcVPEcPVe/nzWoURqLVUA4+7nKdCUI+v0H+hgU+TkszpBNS9d/iKLvrsO5ZiRRwAoUxiAAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1200.avif"
+          },
+          {
+            "w": 1857,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1857.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1200.webp"
+          },
+          {
+            "w": 1857,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1857.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1600.jpg"
+          }
+        ]
+      },
+      "alt": "Four painted shields overlapping — a raven in flight on scorched pine, pale roots spreading across dark boards, a gold vegvísir stave, and a hooded figure in silhouette",
       "caption": "",
       "credit": "",
       "role": "detail",
-      "order": null
+      "order": 30
+    },
+    "38110a78b2": {
+      "id": "38110a78b2",
+      "project": "fable-bound",
+      "source": "IMG_4981.HEIC",
+      "type": "image",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "capturedAt": "2024-08-24T16:00:29",
+      "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBQCdASoUABsAPt1mrFCopSQiqAgBEBuJZACsAAvnWewG567LmyudxCZpiKUkdrYqQADZytQhG9lBeODz8ujhcfpk0h30BGfy3xdbADNN4dbggP8Svlti9QVG0FDbfjqEHAnI1GmFZ5S4pMFlz2U1X/m5GPnTYuL9HU70FCWLcfIleGdjc8kn8EcAuWUVHpZbMAAA",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/38110a78b2/1600.jpg"
+          }
+        ]
+      },
+      "alt": "A life-size raven sculpture of black feathers and leather perched on a nest lashed to the mast, wings spread, against a blue desert sky",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": 31
+    },
+    "e8503724aa": {
+      "id": "e8503724aa",
+      "project": "fable-bound",
+      "source": "IMG_4989.HEIC",
+      "type": "image",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "capturedAt": "2024-08-25T12:30:37",
+      "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBQCdASoUABsAPtlWpEyoJKOiN/VYAQAbCWIAsR7QwZx7qmbWtqWMTV1Qe3Z+2FDigAAA/nZ+DUrUxTKHm8vdPBnXnfFBCdGszgv9RCLsvwj9eM2KJKXT5cxUiXhLn9Pm4YhciV2yZ8EEMAan/MaPmGXhxMWca4qBh7PDxL0MN+dgAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/e8503724aa/1600.jpg"
+          }
+        ]
+      },
+      "alt": "A raven built from cut black leather gripping the ship's rail with wire talons, the empty playa stretching out behind",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": 32
+    },
+    "8b8e3dd5ba": {
+      "id": "8b8e3dd5ba",
+      "project": "fable-bound",
+      "source": "IMG_4990.HEIC",
+      "type": "image",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "capturedAt": "2024-08-25T12:30:47",
+      "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBQCdASoUABsAPs1QoUynpKMiN/qoAPAZiWYAnTMcdNAkeel7XIV+OvEVsjljtf1zYAAA/lQ92jR+GWspzHJIRUTCuMsCaZ/1aleOK+fU0zmp7zatFw4jaj2X+YxdCh/+t980tF079wLGgkusiFr9gMVrNW45snpECKmStxeJb/yVeT9C8x4AAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8b8e3dd5ba/1600.jpg"
+          }
+        ]
+      },
+      "alt": "A tooled leather panel hung on the mast, burned with a raven above a rune compass and a ring of staves",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": 33
+    },
+    "4be4107712": {
+      "id": "4be4107712",
+      "project": "fable-bound",
+      "source": "PXL_20240826_031214322.jpg",
+      "type": "image",
+      "width": 2268,
+      "height": 4032,
+      "aspect": 0.5625,
+      "capturedAt": "2024-08-25T20:12:14",
+      "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBgCdASoUACQAPt1gpU6opS+iKqoB8BuJZgCdMvB8EcAAfqKdH/TQacDEslXOk/Io73DrLpUHIAedbSFmUAD+4w2vIOw69PtYTp+QXGMVzU8w+a+TPHGavSSQsnOViYigzh5wkEDu87GpDJMad96nRqRoh5CrfnrMWYCG1I6iWqvpFZBi1PQr90DCZCvdrwzy5wCAKPgAAA==",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2000.avif"
+          },
+          {
+            "w": 2268,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2268.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2000.webp"
+          },
+          {
+            "w": 2268,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/2268.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/4be4107712/1600.jpg"
+          }
+        ]
+      },
+      "alt": "An antlered skull mounted high on the mast at blue hour, uplit from a collar of warm light at its base",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": 34
+    },
+    "eb802f15da": {
+      "id": "eb802f15da",
+      "project": "fable-bound",
+      "source": "IMG_5349.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2024-10-05T18:56:23",
+      "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoUAA8APt1cp0yopSOiMAgBEBuJYwCw7Btfib2GKrgA9jyQ71Mr+v66gjFuKNxGVJ1M+QJTRXw6tlOjA3/1AV2VsOIKAAAA",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/eb802f15da/1600.jpg"
+          }
+        ]
+      },
+      "alt": "The ship lit at dusk outside an event centre, shields glowing cyan and the wave skirts washed blue, people standing on deck",
+      "caption": "October 2024. First outing after the playa, at a decompression event.",
+      "credit": "",
+      "role": "detail",
+      "order": 35
     },
     "483d7f863b": {
       "id": "483d7f863b",
@@ -1454,11 +1356,11 @@
           }
         ]
       },
-      "alt": "",
-      "caption": "",
+      "alt": "The ship on a grass field beneath tall cumulus, shields mounted along the hull and painted waves banked against its sides",
+      "caption": "June 2025, a Colorado regional burn.",
       "credit": "",
       "role": "detail",
-      "order": null
+      "order": 36
     },
     "ac26e56f1c": {
       "id": "ac26e56f1c",
@@ -1522,11 +1424,11 @@
           }
         ]
       },
-      "alt": "",
+      "alt": "A low three-quarter view of the ship shot into the sun, the prow spiral silhouetted against a burst of light above the painted waves",
       "caption": "",
       "credit": "",
       "role": "detail",
-      "order": null
+      "order": 37
     },
     "9b2adc23fa": {
       "id": "9b2adc23fa",
@@ -1590,11 +1492,11 @@
           }
         ]
       },
-      "alt": "",
+      "alt": "The ship broadside on a grass field under a bright blue sky, its Fable Bound sign staked in the foreground",
       "caption": "",
       "credit": "",
       "role": "detail",
-      "order": null
+      "order": 38
     },
     "aaca0817b9": {
       "id": "aaca0817b9",
@@ -1658,11 +1560,41 @@
           }
         ]
       },
-      "alt": "",
+      "alt": "The ship from the bow quarter with both prow spirals visible, wave boards running the length of the hull",
       "caption": "",
       "credit": "",
       "role": "detail",
-      "order": null
+      "order": 39
+    },
+    "5286eba791": {
+      "id": "5286eba791",
+      "project": "fable-bound",
+      "source": "IMG_4900.MOV",
+      "type": "video",
+      "duration": 32.203333,
+      "needsStreamHost": true,
+      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5286eba791/loop.mp4",
+      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5286eba791/poster.jpg",
+      "alt": "The ship in motion",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": 40
+    },
+    "8ab3abec63": {
+      "id": "8ab3abec63",
+      "project": "fable-bound",
+      "source": "IMG_5020.MOV",
+      "type": "video",
+      "duration": 39.536667,
+      "needsStreamHost": true,
+      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8ab3abec63/loop.mp4",
+      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8ab3abec63/poster.jpg",
+      "alt": "The ship in motion",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": 41
     }
   }
 }

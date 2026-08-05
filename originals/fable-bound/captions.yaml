@@ -12,192 +12,204 @@
 #   skip     true to keep an original out of the site entirely.
 
 assets:
+  # CHECK: a DSLR frame, so possibly not yours
   DSC_7766.JPG:
-    alt: ""
-    caption: ""
+    alt: The ship seen at distance across the open playa in daylight, dwarfed by the desert, with the Man and the mountains behind it
+    caption: For scale. Twenty feet of ship, and still a speck.
     credit: ""
-    role: detail
-    order: null
+    role: hero
+    order: 5
     skip: false
   IMG_0285.jpeg:
-    alt: ""
+    alt: The ship's prow at night, a ring of illuminated blue runes above a glowing lantern, with laser beams from the city fanning out behind
     caption: ""
     credit: ""
-    role: detail
-    order: null
+    role: hero
+    order: 4
     skip: false
   IMG_3213.JPG:
-    alt: ""
-    caption: ""
-    credit: ""
-    role: detail
-    order: null
+    alt: An AI-generated concept rendering of a viking longship resting in a circular depression in desert dunes
+    caption: The first image of it that existed, generated in January 2024 to explain the idea to other people. Nobody on the team could draw.
+    credit: AI-generated concept image
+    role: process
+    order: 10
     skip: false
+  # CHECK: mica? a diffuser sample? I could not tell what this is
   IMG_3247.HEIC:
-    alt: ""
+    alt: A hand holding a translucent panel up against a deep blue sky, sunlight blazing through the material
     caption: ""
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 11
     skip: false
   IMG_3302.jpeg:
-    alt: ""
-    caption: ""
+    alt: The welded steel keel frame clamped up outdoors under a canopy, dozens of C-clamps holding the cross members while the epoxy sets
+    caption: The steel spine, before any of it looked like a ship.
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 13
     skip: false
   IMG_3558.HEIC:
-    alt: ""
-    caption: ""
+    alt: Build day inside a timber-framed shop, half a dozen people working along a run of steel box section while a grinder throws a sheet of sparks
+    caption: April 2024. Build days ran most weekends for eleven months.
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 12
     skip: false
+  # Dated 2021-03-30, three years before Fable Bound. This is furniture, not the
+  # ship — it belongs in hobby-crafts. Skipped; move the original and re-ingest.
+  # CHECK: dated 2021 — this is furniture, not the ship. Move it to hobby-crafts.
   IMG_3697.HEIC:
-    alt: ""
+    alt: A welded steel coffee table base with a radiating sunburst of bar stock between its lower rails
     caption: ""
     credit: ""
     role: detail
-    order: null
-    skip: false
+    order: 99
+    skip: true
   IMG_4327.HEIC:
-    alt: ""
+    alt: Four painted shields overlapping — a raven in flight on scorched pine, pale roots spreading across dark boards, a gold vegvísir stave, and a hooded figure in silhouette
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 30
     skip: false
   IMG_4569.HEIC:
-    alt: ""
-    caption: ""
+    alt: Two deer skulls with full antler racks packed in a cardboard box outdoors
+    caption: Materials.
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 14
     skip: false
+  # CHECK: is it right that every shield was a different person?
   IMG_4606.HEIC:
-    alt: ""
-    caption: ""
+    alt: Seven painted round shields propped against the ship's hull in a suburban back yard, each with a different burned and stencilled design
+    caption: July 2024, a month out. Every shield was made by a different person.
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 15
     skip: false
+  # CHECK: the PCB was a team member's work — name them?
   IMG_4785.HEIC:
-    alt: ""
-    caption: ""
+    alt: The control electronics laid out on a bench — a green custom circuit board marked FABLE BOUND carrying four ESP32 modules and relay boards, wired to 12-volt supplies through a labelled harness reading PS RAIL, SB UP, SB AFT and SB FORE
+    caption: The board that ran the ship. Labelled harness, because you cannot debug a pneumatic system in the dark at 2am otherwise.
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 16
     skip: false
+  # CHECK: 32s — needs a stream host or a chosen 6s excerpt
   IMG_4900.MOV:
-    alt: ""
+    alt: The ship in motion
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 40
     skip: false
+  # CHECK: worth naming the crew here, with their permission
   IMG_4978.HEIC:
-    alt: ""
-    caption: ""
+    alt: Sixteen crew members in matching black hoodies posed in front of the ship on the open playa under heavy grey cloud
+    caption: The crew, on playa. Most of them had never built anything like this before they showed up.
     credit: ""
-    role: detail
-    order: null
+    role: hero
+    order: 3
     skip: false
   IMG_4981.HEIC:
-    alt: ""
+    alt: A life-size raven sculpture of black feathers and leather perched on a nest lashed to the mast, wings spread, against a blue desert sky
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 31
     skip: false
   IMG_4989.HEIC:
-    alt: ""
+    alt: A raven built from cut black leather gripping the ship's rail with wire talons, the empty playa stretching out behind
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 32
     skip: false
   IMG_4990.HEIC:
-    alt: ""
+    alt: A tooled leather panel hung on the mast, burned with a raven above a rune compass and a ring of staves
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 33
     skip: false
+  # CHECK: 39s — needs a stream host or a chosen 6s excerpt
   IMG_5020.MOV:
-    alt: ""
+    alt: The ship in motion
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 41
     skip: false
   IMG_5349.HEIC:
-    alt: ""
-    caption: ""
+    alt: The ship lit at dusk outside an event centre, shields glowing cyan and the wave skirts washed blue, people standing on deck
+    caption: October 2024. First outing after the playa, at a decompression event.
     credit: ""
     role: detail
-    order: null
+    order: 35
     skip: false
+  # CHECK: 2.1s — short enough to loop on the project hero
   IMG_5349.MP4:
-    alt: ""
+    alt: The ship rocking on its pneumatics, bow rising and settling
     caption: ""
     credit: ""
-    role: detail
-    order: null
+    role: hero
+    order: 6
     skip: false
   IMG_5565.HEIC:
-    alt: ""
-    caption: ""
+    alt: The complete ship parked on a path in a Denver park in spring, painted blue wave skirts spread around its base and wooden steps at the centre
+    caption: April 2025, set up in Denver. It travelled after the burn.
     credit: ""
-    role: detail
-    order: null
+    role: process
+    order: 17
     skip: false
+  # CHECK: which regional event was this?
   IMG_6584.HEIC:
-    alt: ""
-    caption: ""
+    alt: The ship on a grass field beneath tall cumulus, shields mounted along the hull and painted waves banked against its sides
+    caption: June 2025, a Colorado regional burn.
     credit: ""
     role: detail
-    order: null
+    order: 36
     skip: false
   IMG_6602.HEIC:
-    alt: ""
+    alt: A low three-quarter view of the ship shot into the sun, the prow spiral silhouetted against a burst of light above the painted waves
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 37
     skip: false
   IMG_6613.HEIC:
-    alt: ""
+    alt: The ship broadside on a grass field under a bright blue sky, its Fable Bound sign staked in the foreground
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 38
     skip: false
   IMG_6616.HEIC:
-    alt: ""
+    alt: The ship from the bow quarter with both prow spirals visible, wave boards running the length of the hull
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 39
     skip: false
   PXL_20240826_030847640.jpg:
-    alt: ""
-    caption: ""
+    alt: The finished viking ship at dusk on the playa, shields glowing warm from within and blue light washing the painted wave skirts at its base
+    caption: Black Rock City, August 2024. The shields lit from inside; the sea lit from below.
     credit: ""
-    role: detail
-    order: null
+    role: hero
+    order: 1
     skip: false
   PXL_20240826_031214322.jpg:
-    alt: ""
+    alt: An antlered skull mounted high on the mast at blue hour, uplit from a collar of warm light at its base
     caption: ""
     credit: ""
     role: detail
-    order: null
+    order: 34
     skip: false
   PXL_20240901_034626451.jpg:
-    alt: ""
-    caption: ""
+    alt: A crowd sitting and standing around the lit ship at night, people in costume lounging on the painted waves while others lean over the gunwale
+    caption: The part that mattered. People stayed.
     credit: ""
-    role: detail
-    order: null
+    role: hero
+    order: 2
     skip: false

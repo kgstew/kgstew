@@ -62,24 +62,43 @@ function stubFor(file) {
 
 /**
  * Adds stubs for any originals that aren't in the sidecar yet, preserving
- * everything already written. Returns the count of new entries.
+ * everything already written.
+ *
+ * Edits the parsed document in place rather than re-serialising a plain object,
+ * because a round-trip through JSON silently discards every comment in the file.
+ * People annotate these — "# CHECK this name", "# ask Leanne who shot this" —
+ * and losing those on the next ingest is the kind of quiet damage that stops
+ * anyone trusting the tool. Only writes when something actually changed.
  */
 export async function syncSidecar(projectDir, filenames) {
   const p = sidecarPath(projectDir)
-  const current = await readSidecar(projectDir)
-  let added = 0
 
-  for (const f of filenames) {
-    if (!(f in current)) {
-      current[f] = stubFor(f)
-      added++
-    }
+  if (!(await exists(p))) {
+    const stubs = Object.fromEntries([...filenames].sort().map((f) => [f, stubFor(f)]))
+    const body = YAML.stringify({ assets: stubs }, { lineWidth: 0 }).replace(/^assets:\n/, '')
+    await fs.writeFile(p, TEMPLATE_HEADER + body, 'utf8')
+    return { added: filenames.length, total: filenames.length, path: p }
   }
 
-  const ordered = Object.fromEntries(Object.keys(current).sort().map((k) => [k, current[k]]))
-  const body = YAML.stringify({ assets: ordered }, { lineWidth: 0 }).replace(/^assets:\n/, '')
-  await fs.writeFile(p, TEMPLATE_HEADER + body, 'utf8')
-  return { added, total: Object.keys(current).length, path: p }
+  const raw = await fs.readFile(p, 'utf8')
+  const doc = YAML.parseDocument(raw)
+  if (doc.errors?.length) {
+    throw new Error(`${p} is not valid YAML — fix or delete it before ingesting.\n  ${doc.errors[0].message}`)
+  }
+
+  let assets = doc.get('assets')
+  if (assets == null) {
+    throw new Error(
+      `${p} has no top-level "assets:" key.\n` +
+        '  Refusing to continue: regenerating it would discard existing captions.'
+    )
+  }
+
+  const missing = filenames.filter((f) => !assets.has(f)).sort()
+  for (const f of missing) assets.set(f, doc.createNode(stubFor(f)))
+
+  if (missing.length) await fs.writeFile(p, doc.toString({ lineWidth: 0 }), 'utf8')
+  return { added: missing.length, total: assets.items.length, path: p }
 }
 
 /** Assets missing alt text — reported so nothing ships unlabelled. */
