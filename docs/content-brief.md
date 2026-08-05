@@ -25,7 +25,7 @@ Started 2026-08-04. Last updated after interview batch 2.
 | **Design direction** | **Approved:** Signal (identity) + Index (work page) + Shop Drawing (project pages). Revised pitch → https://claude.ai/code/artifact/2fcdd20f-ccae-46c1-9d87-0d416a32a2f0 |
 | **Typefaces** | Confirmed as pitched. |
 | **Card copy** | Human stake, never specs. Specs live on project pages only. |
-| **Poetic Kinetics** | Describe the installation; **never the client, never the destination.** |
+| **Disclosure** | Per project, not site-wide. See the disclosure model below. |
 
 ---
 
@@ -170,6 +170,33 @@ Bound people.
 
 ---
 
+## Disclosure model
+
+Corrected 2026-08-05 — this is **per project**, not a blanket rule, and it belongs in the
+content model rather than in anyone's memory. Most of Kyle's work isn't client work at all;
+some of it is.
+
+Fields on every project:
+
+| Field | Meaning |
+| --- | --- |
+| `disclosure` | `open` · `work-only` · `embargoed` |
+| `client` | omitted entirely when not disclosable |
+| `destination` | where it's installed / who it's for |
+| `embargoUntil` | optional date after which `open` applies |
+
+- **`open`** — default. Client and destination can be named. Applies to everything released.
+- **`work-only`** — describe the installation, never the client or destination. Some pieces
+  sit here only until release, then flip to `open`.
+- **`embargoed`** — not mentioned at all yet.
+
+**The butterflies are the sole permanent `work-only` project.** The installation can be
+described in full; the client and destination never. Everything else becomes `open` on release.
+
+Making this a data field rather than a convention means a page rebuild can't leak by accident.
+
+---
+
 ## Open problems
 
 1. **Headline not chosen.** Four options in `positioning.md`. Blocks homepage copy.
@@ -193,7 +220,17 @@ Ephemerisle island + art boat, Reallocate/hacktivation. Off-repo to mine: Linked
 buildtostrike.org, WMD product docs, Instagram, the Fable Bound grant proposal (Google Drive),
 freespace/Red Vic press coverage.
 
-### Asset pipeline — agreed design, not yet built
+### Asset pipeline — **built**, `tools/ingest/`
+
+Decided: **Vercel Blob** (hundreds of images now, growing significantly; thousands of Fable
+Bound frames to curate down from). Verified end to end in `--dry-run` against real originals;
+the upload path is untested pending a `BLOB_READ_WRITE_TOKEN`. See `tools/ingest/README.md`.
+
+**Finding:** five of the six test photos carried a GPS IFD. `mdls` had reported only one, so
+the exposure is wider than the first spot-check suggested. Every derivative is now probed
+after encoding and the run fails if any metadata survived.
+
+Original design, all implemented:
 
 1. **Originals never enter git.** One folder per project outside the repo, backed up separately.
    Derivatives are always re-derivable, so we can change format or sizes later for free.
@@ -207,8 +244,12 @@ freespace/Red Vic press coverage.
    he builds things that *move*, and a still is the least interesting version. Anything over
    ~10s goes to a streaming host, never the repo. `ffmpeg` is available locally.
 
-**Open:** derivatives committed vs Vercel Blob; Cloudflare Stream vs YouTube vs loops-only;
-expected library size (hundreds vs thousands of files).
+**Still open:** Cloudflare Stream vs YouTube for anything longer than a 6s loop. Not blocking —
+the loop encoder covers the kinetic work either way.
+
+**Kyle needs to do one thing:** create a Blob store at https://vercel.com/dashboard/stores and
+drop the token into `tools/ingest/.env.local`. Then originals go in
+`~/kgstew-assets/originals/<project>/` and the pipeline takes over.
 
 ---
 
@@ -257,8 +298,10 @@ gathering.
 
 Rebuild target: Next.js App Router, React 19, Tailwind 4, MDX via native support or
 `next-mdx-remote`. Content model needs a real `Project` type — discipline tags, context,
-scale, role, dates, collaborators, outcome, status — not the current blog-post-with-tags.
-Plus a separate lightweight `Post` type for the ongoing feed.
+scale, role, dates, collaborators, outcome, status, **plus the disclosure fields above and an
+`accent` colour** — not the current blog-post-with-tags. Plus a separate lightweight `Post`
+type for the ongoing feed. Projects reference assets by manifest id from
+`content/assets/<project>.json`.
 
 Dropping from the old stack: `contentlayer2` (community fork of an abandoned project, weakest
 link in the build), `daisyui`, `@emotion/*`, `pliny`, and the entire `db/` directory (Drizzle
