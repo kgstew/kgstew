@@ -137,6 +137,29 @@ Professional: **WMD, Zenput.**
   of really interesting capabilities and experience that very few people on this planet have."*
 - Needs batch 3 detail — the two things are separate projects.
 
+### Lighting & control systems for other people's art — **NEW, a category of its own**
+
+Surfaced 2026-08-05 when Kyle dropped assets in. On all three he was **the lighting design and
+control systems person, not the project lead** — he said so explicitly. That shapes the
+presentation: these are *systems by Kyle inside someone else's piece*, and the artist keeps the
+credit line.
+
+This is arguably a fourth leg of the portfolio alongside WMD, the big builds, and community.
+It's recent, it's growing, and it's the cleanest proof of the thesis available — other artists
+bring him in specifically to be the connective tissue in their work. Connects directly to the
+reusable Pi/ESP32 toolkit (batch 2 Q9) and to the butterflies.
+
+| Project | What | Handling |
+| --- | --- | --- |
+| **The Seventh Gate** | Darrell Onsted's Burning Man piece, this year. Kyle designed all the lighting systems. His words: "definitely worth talking about." | Credit Darrell. **Check release timing** — Burning Man 2026 may not have happened yet. |
+| **Wadsworth** | A friend's art piece; Kyle volunteered, building movement systems. | Credit the artist — need their name. |
+| **Star Trace** | Kyle came in late to rescue the build after another fabricator; got the system running. Partially installed in Hong Kong, still an active source of stress. | **Sensitive — see below.** |
+
+**Star Trace handling.** The technical work is fine to cover. The rescue-and-management story
+is not: Kyle called it "too taboo or too touchy… for the friend that I bailed out on the piece."
+He said we can come back to it another time. Until *he* raises it, cover the systems work only
+or leave the project out. Don't prompt on it.
+
 ### Standard
 
 - **Zenput** — 10 years, junior engineer → eng manager of two product teams. React, Django,
@@ -297,8 +320,20 @@ reversal, and Kyle's own top-five ranking. He rejected draft-1 positioning as to
 asked for one clear line.
 
 ### Batch 3 — per-project detail — **not yet written**
-Needed for: Ephemerisle (two projects), Zenput specifics, freespace/Red Vic, and asset
-gathering.
+Needed for: the three new lighting/control projects (The Seventh Gate, Wadsworth, Star Trace —
+respecting the Star Trace boundary), Ephemerisle split into two projects, Zenput specifics with
+the 2013 origin woven in, freespace/Red Vic. Plus artist names and credit lines for the
+contributed work.
+
+### Fable Bound assets — **ingested 2026-08-05**
+27 assets, 213 objects, 45.5 MB of derivatives from 169 MB of originals. 17 originals carried
+GPS; all stripped. Nine HEICs required the transcode fallback. Two videos (39.5s, 32.2s) are
+flagged `needsStreamHost` — they have 6s loops for page use, but the full versions force the
+Stream-vs-YouTube decision.
+
+**No captions yet.** Every asset defaults to `role: detail`, so nothing is marked as a hero.
+Drafting alt text and roles from the photographs is a Claude task in the established
+interview-and-draft pattern — Kyle corrects rather than writes.
 
 ---
 
