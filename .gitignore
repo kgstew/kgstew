@@ -2,6 +2,26 @@
 
 # dependencies
 /node_modules
+node_modules/
+
+/temp
+
+# This repository is public. Working notes — positioning drafts, interview
+# transcripts, the content brief — stay local: they contain client details under
+# NDA, candid notes about collaborators, and unpublished biographical material.
+/docs
+
+# Asset originals live here for convenience but are never committed or uploaded —
+# only their derivatives go to Blob. The captions sidecars ARE tracked: they are
+# hand-written content, they are tiny, and losing them means re-describing every
+# photo by hand.
+/originals/**
+!/originals/**/
+!/originals/**/captions.yaml
+!/originals/README.md
+
+# Dry-run manifests are scratch output for inspecting shape before an upload.
+content/assets/*.dry.json
 /.pnp
 .pnp.js
 /.yarn/*
@@ -45,3 +65,4 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+.env*.local
