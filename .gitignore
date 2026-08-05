@@ -6,6 +6,9 @@ node_modules/
 
 # Asset originals never enter the repo — only derivatives and manifests do.
 /temp
+
+# Dry-run manifests are scratch output for inspecting shape before an upload.
+content/assets/*.dry.json
 /.pnp
 .pnp.js
 /.yarn/*
