@@ -17,7 +17,11 @@ export async function readManifest(project) {
   return JSON.parse(await fs.readFile(p, 'utf8'))
 }
 
-export async function writeManifest(project, assets, { generatedAt, dry = false }) {
+export async function writeManifest(
+  project,
+  assets,
+  { generatedAt, dry = false, pendingDeletion = [] }
+) {
   await fs.mkdir(MANIFEST_DIR, { recursive: true })
 
   const roleWeight = { hero: 0, process: 1, detail: 2 }
@@ -33,6 +37,10 @@ export async function writeManifest(project, assets, { generatedAt, dry = false 
     project,
     generatedAt,
     count: sorted.length,
+    // Derivatives of removed originals that are still live on Blob. Persisted
+    // so the record survives the run that noticed them — otherwise writing the
+    // manifest is what destroys the only list of what needs deleting.
+    ...(pendingDeletion.length ? { pendingDeletion } : {}),
     assets: Object.fromEntries(sorted.map((a) => [a.id, a])),
   }
   const p = manifestPath(project, { dry })

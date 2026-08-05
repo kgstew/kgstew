@@ -8,7 +8,7 @@ import { hashBytes, mapLimit, exists, bytes, log } from './lib/util.mjs'
 import { deriveImage } from './lib/image.mjs'
 import { readDecodable } from './lib/decode.mjs'
 import { deriveVideo } from './lib/video.mjs'
-import { uploadOnce, assertToken } from './lib/blob.mjs'
+import { uploadOnce, assertToken, deleteBlobs, urlsOf } from './lib/blob.mjs'
 import { readSidecar, syncSidecar, missingAlt } from './lib/sidecar.mjs'
 import { readManifest, writeManifest, manifestPath } from './lib/manifest.mjs'
 
@@ -19,10 +19,14 @@ const { values: flags } = parseArgs({
     init: { type: 'boolean', default: false },
     'dry-run': { type: 'boolean', default: false },
     force: { type: 'boolean', default: false },
+    prune: { type: 'boolean', default: false },
     only: { type: 'string' }, // images | video
     help: { type: 'boolean', default: false },
   },
 })
+
+/** One timestamp for the whole run, so entries written together agree. */
+const STAMP = new Date().toISOString()
 
 const USAGE = `
 kgstew asset ingest
@@ -33,6 +37,7 @@ kgstew asset ingest
   --only images|video
   --dry-run          derive and report, upload nothing
   --force            re-upload even if the blob already exists
+  --prune            delete blobs for originals that are no longer present
   --help
 
 Originals:  ${ASSETS_ROOT}
@@ -199,6 +204,30 @@ async function ingestProject(project) {
     }
   })
 
+  // Anything in the previous manifest but not this run: the original was
+  // deleted, renamed, or marked skip. Its derivatives are still public.
+  // Carry forward anything a previous run flagged but never pruned, so the
+  // record cannot be lost by the act of writing the manifest.
+  const fresh = Object.values(previous.assets ?? {})
+    .filter((a) => !assets[a.id])
+    .map((a) => ({ id: a.id, source: a.source, urls: urlsOf(a), detectedAt: STAMP }))
+  const carried = previous.pendingDeletion ?? []
+
+  // The invariant that actually matters: never delete a URL a live asset still
+  // points at. Identity is the URL itself, not the id or filename — a restored
+  // original produces the same content hash and therefore the same URLs, and
+  // deleting "its orphan record" would take the live asset down with it.
+  const liveUrls = new Set(Object.values(assets).flatMap(urlsOf))
+  const orphans = []
+  const seenUrl = new Set()
+  for (const o of [...carried, ...fresh]) {
+    const urls = (o.urls ?? []).filter((u) => !liveUrls.has(u) && !seenUrl.has(u))
+    if (!urls.length) continue
+    urls.forEach((u) => seenUrl.add(u))
+    orphans.push({ ...o, urls })
+  }
+  const orphanUrls = orphans.flatMap((o) => o.urls)
+
   const entries = Object.values(assets)
   const noAlt = missingAlt(entries)
 
@@ -207,6 +236,25 @@ async function ingestProject(project) {
   log.info(`  ${bytes(totalBytes)} of derivatives${flags['dry-run'] ? ' (dry run, nothing sent)' : ''}`)
   if (gpsStripped) log.info(`  ${gpsStripped} original(s) carried GPS — removed`)
   if (noAlt.length) log.warn(`${noAlt.length} asset(s) still need alt text in captions.yaml`)
+
+  let stillPending = orphans
+  if (orphans.length) {
+    log.info('')
+    for (const o of orphans) log.dim(`  orphan: ${o.source} (${o.urls.length} objects)`)
+    if (flags.prune) {
+      const n = await deleteBlobs(orphanUrls, { dryRun: flags['dry-run'] })
+      log.ok(
+        `${n} orphaned object(s) deleted from Blob` +
+          (flags['dry-run'] ? ' (dry run, nothing deleted)' : '')
+      )
+      if (!flags['dry-run']) stillPending = []
+    } else {
+      log.warn(
+        `${orphans.length} removed original(s) still have ${orphanUrls.length} objects live ` +
+          `at public URLs.\n  Re-run with --prune to delete them.`
+      )
+    }
+  }
 
   // A partial run must never replace a good manifest with a worse one. If any
   // asset failed, report and leave the existing file alone — a half-written
@@ -219,8 +267,9 @@ async function ingestProject(project) {
   // Dry runs still write a manifest, to a .dry.json sibling — the shape is worth
   // inspecting before committing to an upload run.
   const written = await writeManifest(project, assets, {
-    generatedAt: new Date().toISOString(),
+    generatedAt: STAMP,
     dry: flags['dry-run'],
+    pendingDeletion: stillPending,
   })
   log.dim(`  manifest: ${written}`)
 

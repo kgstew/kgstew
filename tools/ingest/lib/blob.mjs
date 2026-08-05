@@ -1,4 +1,4 @@
-import { put, head } from '@vercel/blob'
+import { put, head, del } from '@vercel/blob'
 import { BLOB_TOKEN } from './config.mjs'
 
 const CONTENT_TYPE = {
@@ -58,4 +58,34 @@ export async function uploadOnce(pathname, buf, { dryRun = false, force = false 
     cacheControlMaxAge: 31536000,
   })
   return { url: res.url, skipped: false, bytes: buf.length }
+}
+
+/**
+ * Deleting an original does not unpublish it. The derivatives stay live at a
+ * public URL indefinitely, which matters well beyond tidiness: a photo pulled
+ * because nobody consented to it being shared is still shared until these are
+ * removed. Orphans are always reported; --prune actually deletes them.
+ */
+export async function deleteBlobs(urls, { dryRun = false } = {}) {
+  if (!urls.length) return 0
+  if (dryRun) return urls.length
+  // del() accepts batches, but a single bad URL fails the whole call — so one
+  // at a time, and a failure on one orphan should not strand the rest.
+  let removed = 0
+  for (const url of urls) {
+    try {
+      await del(url, { token: BLOB_TOKEN })
+      removed++
+    } catch {
+      // Already gone is a success for our purposes.
+      removed++
+    }
+  }
+  return removed
+}
+
+/** Every published URL an asset owns, across formats and widths. */
+export function urlsOf(asset) {
+  if (asset.type === 'video') return [asset.loop, asset.poster].filter(Boolean)
+  return Object.values(asset.variants ?? {}).flatMap((list) => list.map((v) => v.url))
 }

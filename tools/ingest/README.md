@@ -69,6 +69,27 @@ npm run ingest -- --project fable-bound --only video
 `--force` re-uploads and re-derives even when nothing changed. Only needed after
 changing encoder settings in `lib/config.mjs`.
 
+## Removing something already published
+
+**Deleting an original does not unpublish it.** The derivatives stay live at public
+URLs until they are explicitly deleted — which matters when a photo is pulled
+because nobody consented to it being shared.
+
+Delete the original, then:
+
+```sh
+npm run ingest -- --project fable-bound --prune
+```
+
+Every run reports orphans whether or not you pass `--prune`, and records them in
+the manifest under `pendingDeletion` so the list survives until it is dealt with.
+Nothing is ever deleted if a live asset still references the same URL, so
+restoring a file you removed is safe.
+
+Note that objects are uploaded with a one-year cache header, so an edge cache may
+serve a deleted file briefly after the origin returns 404. For anything urgent,
+verify with `curl -I` rather than a browser, which will have its own cache.
+
 ## What comes out
 
 Per image: AVIF and WebP at 400/800/1200/2000 plus native width capped at 2400,

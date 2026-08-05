@@ -1,7 +1,7 @@
 {
   "project": "fable-bound",
-  "generatedAt": "2026-08-05T22:22:51.728Z",
-  "count": 26,
+  "generatedAt": "2026-08-05T22:36:17.802Z",
+  "count": 24,
   "assets": {
     "ef98d42090": {
       "id": "ef98d42090",
@@ -70,74 +70,6 @@
       "credit": "",
       "role": "hero",
       "order": 1
-    },
-    "b17b97dc8e": {
-      "id": "b17b97dc8e",
-      "project": "fable-bound",
-      "source": "PXL_20240901_034626451.jpg",
-      "type": "image",
-      "width": 4080,
-      "height": 3072,
-      "aspect": 1.3281,
-      "capturedAt": "2024-08-31T20:46:26",
-      "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoUAA8APt1cp0yopSOiMAgBEBuJQAALfK9KI52wQWAA/tq+T17/5BlwU92F4Ya2SWt39axfEPX7UTX8ro1h6mDvZU/gAA==",
-      "variants": {
-        "avif": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/400.avif"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/800.avif"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/1200.avif"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2000.avif"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2400.avif"
-          }
-        ],
-        "webp": [
-          {
-            "w": 400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/400.webp"
-          },
-          {
-            "w": 800,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/800.webp"
-          },
-          {
-            "w": 1200,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/1200.webp"
-          },
-          {
-            "w": 2000,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2000.webp"
-          },
-          {
-            "w": 2400,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2400.webp"
-          }
-        ],
-        "jpeg": [
-          {
-            "w": 1600,
-            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/1600.jpg"
-          }
-        ]
-      },
-      "alt": "A crowd sitting and standing around the lit ship at night, people in costume lounging on the painted waves while others lean over the gunwale",
-      "caption": "The part that mattered. People stayed.",
-      "credit": "",
-      "role": "hero",
-      "order": 2
     },
     "3e393a2071": {
       "id": "3e393a2071",
@@ -339,24 +271,9 @@
       },
       "alt": "The ship seen at distance across the open playa in daylight, dwarfed by the desert, with the Man and the mountains behind it",
       "caption": "For scale. Twenty feet of ship, and still a speck.",
-      "credit": "",
+      "credit": "Bravo",
       "role": "hero",
       "order": 5
-    },
-    "d6fffbf948": {
-      "id": "d6fffbf948",
-      "project": "fable-bound",
-      "source": "IMG_5349.MP4",
-      "type": "video",
-      "duration": 2.1,
-      "needsStreamHost": false,
-      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/d6fffbf948/loop.mp4",
-      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/d6fffbf948/poster.jpg",
-      "alt": "The ship rocking on its pneumatics, bow rising and settling",
-      "caption": "",
-      "credit": "",
-      "role": "hero",
-      "order": 6
     },
     "4ea3979084": {
       "id": "4ea3979084",
@@ -753,7 +670,7 @@
         ]
       },
       "alt": "Seven painted round shields propped against the ship's hull in a suburban back yard, each with a different burned and stencilled design",
-      "caption": "July 2024, a month out. Every shield was made by a different person.",
+      "caption": "July 2024, a month out. Shields made by Martin Stenflo and Leanne Lopez.",
       "credit": "",
       "role": "process",
       "order": 15
@@ -822,7 +739,7 @@
       },
       "alt": "The control electronics laid out on a bench — a green custom circuit board marked FABLE BOUND carrying four ESP32 modules and relay boards, wired to 12-volt supplies through a labelled harness reading PS RAIL, SB UP, SB AFT and SB FORE",
       "caption": "The board that ran the ship. Labelled harness, because you cannot debug a pneumatic system in the dark at 2am otherwise.",
-      "credit": "",
+      "credit": "Nathan Koral",
       "role": "process",
       "order": 16
     },
@@ -1357,7 +1274,7 @@
         ]
       },
       "alt": "The ship on a grass field beneath tall cumulus, shields mounted along the hull and painted waves banked against its sides",
-      "caption": "June 2025, a Colorado regional burn.",
+      "caption": "June 2025, Apogaea, Colorado regional burn.",
       "credit": "",
       "role": "detail",
       "order": 36
