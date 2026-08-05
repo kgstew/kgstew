@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+/* Placeholder tokens. The real system — Signal / Index / Shop Drawing — lands
+   with the design work; this is only enough to keep the foundation legible. */
+@theme {
+  --color-ground: #0e0f11;
+  --color-screen: #edeae3;
+  --color-signal: #d93b2b;
+}
+
+html {
+  color-scheme: light dark;
+}
