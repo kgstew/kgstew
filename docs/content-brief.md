@@ -232,8 +232,10 @@ after encoding and the run fails if any metadata survived.
 
 Original design, all implemented:
 
-1. **Originals never enter git.** One folder per project outside the repo, backed up separately.
-   Derivatives are always re-derivable, so we can change format or sizes later for free.
+1. **Originals live in `originals/<project>/` and are gitignored** — in the repo for
+   convenience, never committed, never uploaded. Their `captions.yaml` sidecars *are*
+   tracked, since hand-written alt text is content worth versioning. Nothing in there is
+   backed up by git, so the real copies must live somewhere else too.
 2. **A `sharp`-based script** reads originals → emits AVIF + WebP + JPEG at 400/800/1200/2000px,
    plus dimensions and an inline LQIP placeholder, into `assets/manifest.json`.
 3. **Captions in a sidecar, not in code.** One `captions.yaml` per project with alt text,
@@ -247,9 +249,15 @@ Original design, all implemented:
 **Still open:** Cloudflare Stream vs YouTube for anything longer than a 6s loop. Not blocking —
 the loop encoder covers the kinetic work either way.
 
-**Kyle needs to do one thing:** create a Blob store at https://vercel.com/dashboard/stores and
-drop the token into `tools/ingest/.env.local`. Then originals go in
-`~/kgstew-assets/originals/<project>/` and the pipeline takes over.
+**Status: live.** Blob store `kgstew-blob` created (public access), token in `.env.local` at
+the repo root. First real ingest done — 55 objects, all URLs verified 200 with correct content
+types, published files confirmed free of EXIF/XMP/IPTC.
+
+Workflow: drop originals in `originals/<project>/`, then
+`cd tools/ingest && npm run ingest -- --project <slug>`.
+
+**Caution:** Blob is a public store, so anything ingested is live at a public URL immediately,
+linked or not. Never ingest a `work-only` or `embargoed` project before it clears.
 
 ---
 

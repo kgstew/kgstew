@@ -1,16 +1,18 @@
-import os from 'node:os'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+/** Repo root, resolved from this file so the tool works from any cwd. */
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 
 /**
- * Originals live OUTSIDE the repo. They are never committed and never uploaded —
- * only derivatives are. Override with ASSETS_ROOT.
+ * Originals live in the repo for convenience but are gitignored — only the
+ * captions sidecars are tracked. They are never uploaded; only derivatives are.
+ * Override with ASSETS_ROOT.
  */
-export const ASSETS_ROOT =
-  process.env.ASSETS_ROOT || path.join(os.homedir(), 'kgstew-assets', 'originals')
+export const ASSETS_ROOT = process.env.ASSETS_ROOT || path.join(REPO_ROOT, 'originals')
 
 /** Manifests are small JSON and DO get committed — they're the site's content. */
-export const MANIFEST_DIR =
-  process.env.MANIFEST_DIR || path.resolve(process.cwd(), '../../content/assets')
+export const MANIFEST_DIR = process.env.MANIFEST_DIR || path.join(REPO_ROOT, 'content/assets')
 
 export const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN || null
 

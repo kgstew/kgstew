@@ -5,8 +5,10 @@ small JSON manifest the site reads at build time.
 
 ## The rules this enforces
 
-1. **Originals never enter the repo and are never uploaded.** They live outside
-   the project so they can be re-derived at any size or format later, for free.
+1. **Originals are never committed and never uploaded.** They sit in `originals/`
+   for convenience but are gitignored, so derivatives can be regenerated at any
+   size or format later without the repo carrying gigabytes. Their `captions.yaml`
+   sidecars *are* tracked.
 2. **All metadata is stripped, and that is verified.** Every derivative is probed
    after encoding and the run fails if any EXIF, XMP, or IPTC survived. This is
    not decorative: five of the first six test photos carried a GPS IFD pointing at
@@ -33,14 +35,18 @@ echo 'BLOB_READ_WRITE_TOKEN=vercel_blob_rw_...' > .env.local
 ## Layout
 
 ```
-~/kgstew-assets/originals/          # ASSETS_ROOT — outside the repo
+originals/                          # ASSETS_ROOT — gitignored except captions
+  README.md                         # tracked
   fable-bound/
-    captions.yaml                   # you edit this
-    IMG_6613.HEIC
-    IMG_5349.MP4
+    captions.yaml                   # tracked — you edit this
+    IMG_6613.HEIC                   # ignored
+    IMG_5349.MP4                    # ignored
   butterflies/
     ...
 ```
+
+Paths resolve from the repo root regardless of where you run the tool from.
+Override with `ASSETS_ROOT` if you ever want originals elsewhere.
 
 ## Use
 

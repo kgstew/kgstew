@@ -1,0 +1,56 @@
+# Captions for this project.
+#
+# Keyed by original filename. Edit freely — ingest reads this file and never
+# overwrites what you have written. New originals get appended as empty stubs
+# the next time you run:  npm run ingest -- --project <slug> --init
+#
+#   alt      required for anything published. Describe what is in the frame.
+#   caption  optional. Shown under the image.
+#   credit   optional. Photographer, if it wasn't you.
+#   role     hero | process | detail
+#   order    optional integer. Lower sorts first.
+#   skip     true to keep an original out of the site entirely.
+
+assets:
+  DSC_7766.JPG:
+    alt: ""
+    caption: ""
+    credit: ""
+    role: detail
+    order: null
+    skip: false
+  IMG_3697.HEIC:
+    alt: ""
+    caption: ""
+    credit: ""
+    role: detail
+    order: null
+    skip: false
+  IMG_4327.HEIC:
+    alt: ""
+    caption: ""
+    credit: ""
+    role: detail
+    order: null
+    skip: false
+  IMG_5349.MP4:
+    alt: ""
+    caption: ""
+    credit: ""
+    role: detail
+    order: null
+    skip: false
+  IMG_6613.HEIC:
+    alt: ""
+    caption: ""
+    credit: ""
+    role: detail
+    order: null
+    skip: false
+  PXL_20240901_034626451.jpg:
+    alt: ""
+    caption: ""
+    credit: ""
+    role: detail
+    order: null
+    skip: false

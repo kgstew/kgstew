@@ -4,8 +4,16 @@
 /node_modules
 node_modules/
 
-# Asset originals never enter the repo — only derivatives and manifests do.
 /temp
+
+# Asset originals live here for convenience but are never committed or uploaded —
+# only their derivatives go to Blob. The captions sidecars ARE tracked: they are
+# hand-written content, they are tiny, and losing them means re-describing every
+# photo by hand.
+/originals/**
+!/originals/**/
+!/originals/**/captions.yaml
+!/originals/README.md
 
 # Dry-run manifests are scratch output for inspecting shape before an upload.
 content/assets/*.dry.json
@@ -52,3 +60,4 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+.env*.local
