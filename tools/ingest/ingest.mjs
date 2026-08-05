@@ -8,7 +8,7 @@ import { hashBytes, mapLimit, exists, bytes, log } from './lib/util.mjs'
 import { deriveImage } from './lib/image.mjs'
 import { readDecodable } from './lib/decode.mjs'
 import { deriveVideo } from './lib/video.mjs'
-import { uploadOnce } from './lib/blob.mjs'
+import { uploadOnce, assertToken } from './lib/blob.mjs'
 import { readSidecar, syncSidecar, missingAlt } from './lib/sidecar.mjs'
 import { readManifest, writeManifest, manifestPath } from './lib/manifest.mjs'
 
@@ -97,6 +97,7 @@ async function ingestProject(project) {
   let skipped = 0
   let totalBytes = 0
   let gpsStripped = 0
+  let failed = 0
 
   const publish = async (id, name, buf, ext, tag) => {
     const pathname = `assets/${project}/${id}/${tag}.${ext}`
@@ -153,6 +154,7 @@ async function ingestProject(project) {
           (transcoded ? ' (HEIC transcoded)' : '')
       )
     } catch (err) {
+      failed++
       log.err(`${name}: ${err.message}`)
     }
   })
@@ -192,15 +194,9 @@ async function ingestProject(project) {
           (d.needsStreamHost ? ' (full version needs a stream host)' : '')
       )
     } catch (err) {
+      failed++
       log.err(`${name}: ${err.message}`)
     }
-  })
-
-  // Dry runs still write a manifest, to a .dry.json sibling — the shape is worth
-  // inspecting before committing to an upload run.
-  const written = await writeManifest(project, assets, {
-    generatedAt: new Date().toISOString(),
-    dry: flags['dry-run'],
   })
 
   const entries = Object.values(assets)
@@ -211,9 +207,24 @@ async function ingestProject(project) {
   log.info(`  ${bytes(totalBytes)} of derivatives${flags['dry-run'] ? ' (dry run, nothing sent)' : ''}`)
   if (gpsStripped) log.info(`  ${gpsStripped} original(s) carried GPS — removed`)
   if (noAlt.length) log.warn(`${noAlt.length} asset(s) still need alt text in captions.yaml`)
+
+  // A partial run must never replace a good manifest with a worse one. If any
+  // asset failed, report and leave the existing file alone — a half-written
+  // manifest silently drops images from the site.
+  if (failed) {
+    log.err(`${failed} asset(s) failed — manifest left unchanged at ${manifestPath(project)}`)
+    return { project, count: entries.length, noAlt: noAlt.length, failed }
+  }
+
+  // Dry runs still write a manifest, to a .dry.json sibling — the shape is worth
+  // inspecting before committing to an upload run.
+  const written = await writeManifest(project, assets, {
+    generatedAt: new Date().toISOString(),
+    dry: flags['dry-run'],
+  })
   log.dim(`  manifest: ${written}`)
 
-  return { project, count: entries.length, noAlt: noAlt.length }
+  return { project, count: entries.length, noAlt: noAlt.length, failed: 0 }
 }
 
 function pickMeta(m) {
@@ -232,6 +243,9 @@ async function main() {
     process.exit(flags.help ? 0 : 1)
   }
 
+  // Fail on credentials before decoding a single file, not after.
+  if (!flags['dry-run'] && !flags.init) assertToken()
+
   const projects = flags.all ? await listProjects() : [flags.project]
   if (!projects.length) {
     log.err(`no projects under ${ASSETS_ROOT}`)
@@ -239,11 +253,14 @@ async function main() {
     process.exit(1)
   }
 
+  let failures = 0
   for (const p of projects) {
     log.info(`\n${p}`)
-    await ingestProject(p)
+    const res = await ingestProject(p)
+    failures += res?.failed ?? 0
   }
   log.info('')
+  if (failures) process.exit(1)
 }
 
 main().catch((err) => {

@@ -6,7 +6,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "ingest": "node --env-file-if-exists=.env.local ingest.mjs"
+    "ingest": "node --env-file-if-exists=../../.env.local --env-file-if-exists=.env.local ingest.mjs"
   },
   "type": "module",
   "dependencies": {

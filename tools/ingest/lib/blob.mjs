@@ -13,18 +13,32 @@ const CONTENT_TYPE = {
  * re-running ingest is a no-op for anything already published. That makes the
  * whole pipeline safe to run repeatedly while a project is being curated.
  */
+/**
+ * Checked once before any work starts. A credential problem should stop the run
+ * outright, not surface as a per-file error after every original has been
+ * decoded — and certainly not after a partial manifest has been written.
+ */
+export function assertToken() {
+  if (!BLOB_TOKEN) {
+    throw new Error(
+      'BLOB_READ_WRITE_TOKEN is not set.\n\n' +
+        '  Vercel dashboard → Storage → your blob store → copy BLOB_READ_WRITE_TOKEN\n' +
+        '  (it starts with vercel_blob_rw_ — VERCEL_OIDC_TOKEN is a different thing\n' +
+        '   and will not work here).\n\n' +
+        '  Put it in either .env.local at the repo root or tools/ingest/.env.local.'
+    )
+  }
+  if (!BLOB_TOKEN.startsWith('vercel_blob_rw_')) {
+    throw new Error(
+      `BLOB_READ_WRITE_TOKEN does not look like a Blob token (got "${BLOB_TOKEN.slice(0, 12)}…").\n` +
+        '  Expected a value starting with vercel_blob_rw_.'
+    )
+  }
+}
+
 export async function uploadOnce(pathname, buf, { dryRun = false, force = false } = {}) {
   // Report dry runs as "would upload" so the summary counts stay meaningful.
   if (dryRun) return { url: `dry-run://${pathname}`, skipped: false, bytes: buf.length }
-
-  if (!BLOB_TOKEN) {
-    throw new Error(
-      'BLOB_READ_WRITE_TOKEN is not set.\n' +
-        '  1. Create a Blob store: https://vercel.com/dashboard/stores\n' +
-        '  2. Copy its read/write token\n' +
-        '  3. export BLOB_READ_WRITE_TOKEN=... (or add it to tools/ingest/.env.local)'
-    )
-  }
 
   if (!force) {
     try {
