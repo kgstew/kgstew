@@ -2,6 +2,10 @@
 
 # dependencies
 /node_modules
+node_modules/
+
+# Asset originals never enter the repo — only derivatives and manifests do.
+/temp
 /.pnp
 .pnp.js
 /.yarn/*
