@@ -12,11 +12,32 @@ export function sidecarPath(projectDir) {
   return path.join(projectDir, 'captions.yaml')
 }
 
+/**
+ * Strict on purpose. An unreadable sidecar used to come back as `{}`, which
+ * syncSidecar then treated as "no captions yet" and helpfully overwrote with
+ * fresh stubs — destroying hand-written alt text with no warning. A file that
+ * exists but cannot be understood is an error, never an empty result.
+ */
 export async function readSidecar(projectDir) {
   const p = sidecarPath(projectDir)
   if (!(await exists(p))) return {}
-  const parsed = YAML.parse(await fs.readFile(p, 'utf8'))
-  return parsed?.assets ?? {}
+
+  const raw = await fs.readFile(p, 'utf8')
+  let parsed
+  try {
+    parsed = YAML.parse(raw)
+  } catch (err) {
+    throw new Error(`${p} is not valid YAML — fix or delete it before ingesting.\n  ${err.message}`)
+  }
+
+  if (parsed == null) return {} // genuinely empty file
+  if (typeof parsed !== 'object' || !('assets' in parsed)) {
+    throw new Error(
+      `${p} has no top-level "assets:" key.\n` +
+        '  Refusing to continue: regenerating it would discard existing captions.'
+    )
+  }
+  return parsed.assets ?? {}
 }
 
 const TEMPLATE_HEADER = `# Captions for this project.

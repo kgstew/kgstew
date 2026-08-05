@@ -1,0 +1,354 @@
+{
+  "project": "fable-bound",
+  "generatedAt": "2026-08-05T21:50:56.097Z",
+  "count": 6,
+  "assets": {
+    "0602fd4168": {
+      "id": "0602fd4168",
+      "project": "fable-bound",
+      "source": "IMG_5349.MP4",
+      "type": "video",
+      "duration": 2.1,
+      "needsStreamHost": false,
+      "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0602fd4168/loop.mp4",
+      "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0602fd4168/poster.jpg",
+      "alt": "",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": null
+    },
+    "2dadd5c8bc": {
+      "id": "2dadd5c8bc",
+      "project": "fable-bound",
+      "source": "IMG_3697.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2021-03-30T15:52:28",
+      "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoUAA8APt1cp0yopSOiMAgBEBuJZwAASqbQG68y3PPvjOQA/rnhLEdGEki4isqgIDorQf7r/YIQZs8HTEB7a9ZAAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/2dadd5c8bc/1600.jpg"
+          }
+        ]
+      },
+      "alt": "",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": null
+    },
+    "5cf3161e04": {
+      "id": "5cf3161e04",
+      "project": "fable-bound",
+      "source": "IMG_4327.HEIC",
+      "type": "image",
+      "width": 1857,
+      "height": 2221,
+      "aspect": 0.8361,
+      "capturedAt": "2024-07-08T17:27:05",
+      "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBQCdASoUABgAPt1ur1GopqQiqAgBEBuJZAC7AEsj9MtOvsT/Rt5GTVaqHu0ANCaAAP7uoKQKzoMK9uXzcVPEcPVe/nzWoURqLVUA4+7nKdCUI+v0H+hgU+TkszpBNS9d/iKLvrsO5ZiRRwAoUxiAAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1200.avif"
+          },
+          {
+            "w": 1857,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1857.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1200.webp"
+          },
+          {
+            "w": 1857,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1857.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5cf3161e04/1600.jpg"
+          }
+        ]
+      },
+      "alt": "",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": null
+    },
+    "0c3c7548b3": {
+      "id": "0c3c7548b3",
+      "project": "fable-bound",
+      "source": "DSC_7766.JPG",
+      "type": "image",
+      "width": 6000,
+      "height": 4000,
+      "aspect": 1.5,
+      "capturedAt": "2024-08-26T20:27:23",
+      "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoUAA0APt1gp00opaOiMAgBEBuJYwCdACKZLYx0MzsvOAD1p3qFrDreLrDz1y6FKyUsfoo8pPnGuZEAAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/0c3c7548b3/1600.jpg"
+          }
+        ]
+      },
+      "alt": "",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": null
+    },
+    "b17b97dc8e": {
+      "id": "b17b97dc8e",
+      "project": "fable-bound",
+      "source": "PXL_20240901_034626451.jpg",
+      "type": "image",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "capturedAt": "2024-08-31T20:46:26",
+      "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoUAA8APt1cp0yopSOiMAgBEBuJQAALfK9KI52wQWAA/tq+T17/5BlwU92F4Ya2SWt39axfEPX7UTX8ro1h6mDvZU/gAA==",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/b17b97dc8e/1600.jpg"
+          }
+        ]
+      },
+      "alt": "",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": null
+    },
+    "9b2adc23fa": {
+      "id": "9b2adc23fa",
+      "project": "fable-bound",
+      "source": "IMG_6613.HEIC",
+      "type": "image",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "capturedAt": "2025-06-06T17:17:08",
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoUAA8APt1ep00opSOiMAgBEBuJZgCdH8ADApetTY8MqQAA/qadadpoWuZEvFFiIY16stlTqOksFtC2i8QFUXviv8nBEu/AvpkSX4a9IOGnpVqAAAA=",
+      "variants": {
+        "avif": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/400.avif"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/800.avif"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/1200.avif"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/2000.avif"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/2400.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/400.webp"
+          },
+          {
+            "w": 800,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/800.webp"
+          },
+          {
+            "w": 1200,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/1200.webp"
+          },
+          {
+            "w": 2000,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/2000.webp"
+          },
+          {
+            "w": 2400,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/2400.webp"
+          }
+        ],
+        "jpeg": [
+          {
+            "w": 1600,
+            "url": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/9b2adc23fa/1600.jpg"
+          }
+        ]
+      },
+      "alt": "",
+      "caption": "",
+      "credit": "",
+      "role": "detail",
+      "order": null
+    }
+  }
+}
