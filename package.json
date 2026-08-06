@@ -12,7 +12,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "node --test",
+    "check:leaks": "node scripts/check-leaks.mjs",
+    "prepare": "git config core.hooksPath .husky"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",

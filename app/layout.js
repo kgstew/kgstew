@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './globals.css'
 
 export const metadata = {
@@ -15,12 +16,12 @@ export default function RootLayout({ children }) {
       <body className="bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
         <div className="mx-auto max-w-3xl px-6 py-12">
           <header className="mb-16 flex items-baseline justify-between gap-6">
-            <a href="/" className="font-semibold tracking-tight">
+            <Link href="/" className="font-semibold tracking-tight">
               Kyle Stewart
-            </a>
+            </Link>
             <nav className="flex gap-5 text-sm text-neutral-600 dark:text-neutral-400">
-              <a href="/work">Work</a>
-              <a href="/writing">Writing</a>
+              <Link href="/work">Work</Link>
+              <Link href="/writing">Writing</Link>
             </nav>
           </header>
           <main>{children}</main>

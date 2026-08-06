@@ -66,3 +66,8 @@ yarn-error.log*
 # Contentlayer
 .contentlayer
 .env*.local
+
+# Real redaction terms — the denylist the leak scan checks published content
+# against. Gitignored because it necessarily contains the strings we're
+# protecting. redactions.example.json shows the shape.
+content/private/redactions.json

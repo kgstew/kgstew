@@ -1,4 +1,4 @@
-import { assets, assetSrc } from '@/lib/content'
+import { assets, assetSrc } from '@/lib/legacy-content'
 
 export const metadata = { title: 'Work' }
 

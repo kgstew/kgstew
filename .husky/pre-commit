@@ -1,4 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx --no-install lint-staged
+# For a public repo the moment that matters is the push, not the deploy — a
+# build failure catches a leak after the content is already on GitHub.
+npm run --silent check:leaks
