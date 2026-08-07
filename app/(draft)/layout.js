@@ -1,6 +1,6 @@
 import Altitude from '@/components/Altitude'
 
-export const viewport = { colorScheme: 'light', themeColor: '#f1f3f2' }
+export const viewport = { colorScheme: 'light', themeColor: '#f2efe5' }
 
 export default function DraftLayout({ children }) {
   return <Altitude name="draft">{children}</Altitude>
