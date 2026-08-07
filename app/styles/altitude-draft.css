@@ -24,3 +24,23 @@
  * If a lighter grey is genuinely wanted for a non-essential dimension-line
  * stroke, that is a separate token, not this one.
  */
+
+/* Real title blocks are set in a single-width technical face, so the mono does
+   the headings here rather than adding a fourth family for one page type. */
+@layer components {
+  [data-altitude='draft'] :is(h1, h2, h3) {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  [data-altitude='draft'] h1 {
+    font-size: 1.5rem;
+  }
+  [data-altitude='draft'] dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+  }
+}

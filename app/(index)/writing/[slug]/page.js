@@ -21,7 +21,7 @@ export default async function Post({ params }) {
   if (!post) notFound()
 
   return (
-    <article>
+    <article data-surface="reading" className="max-w-[65ch]">
       <header className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight text-balance">{post.title}</h1>
         <p className="mt-3 text-sm text-dim">

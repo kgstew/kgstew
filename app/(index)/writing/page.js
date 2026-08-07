@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { allPosts } from '@/lib/content'
 
 export const metadata = { title: 'Writing' }
@@ -11,7 +12,7 @@ export default function Writing() {
       <ul className="mt-8 divide-y divide-hairline">
         {posts.map((p) => (
           <li key={p.slug} className="py-5">
-            <a href={`/writing/${p.slug}`} className="group block">
+            <Link href={`/writing/${p.slug}`} className="group block">
               <div className="flex items-baseline justify-between gap-4">
                 <span className="font-medium group-hover:underline">{p.title}</span>
                 <time className="shrink-0 text-sm tabular-nums text-dim">
@@ -21,7 +22,7 @@ export default function Writing() {
               {p.summary ? (
                 <p className="mt-1 text-sm text-soft">{p.summary}</p>
               ) : null}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

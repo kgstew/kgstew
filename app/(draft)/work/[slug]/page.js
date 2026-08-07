@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
@@ -86,9 +87,9 @@ export default async function Project({ params }) {
           <ul className="mt-3 space-y-1 text-sm">
             {posts.map((p) => (
               <li key={p.slug}>
-                <a href={`/writing/${p.slug}`} className="hover:underline">
+                <Link href={`/writing/${p.slug}`} className="hover:underline">
                   {p.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
