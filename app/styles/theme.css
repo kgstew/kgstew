@@ -8,23 +8,25 @@
  * `--color-dark-bg`, because the second name becomes a lie at two of the three
  * altitudes.
  *
- * Defaults here are Signal's, so anything rendered outside an altitude wrapper
- * degrades to the identity rather than to `unset`.
+ * There is one ground across the whole site. The altitudes are distinguished by
+ * type and structure, not by inverting value — flipping between a black page
+ * and a white one every time you follow a link is jarring, and the work in 005
+ * showed the treatments carry their identity in the typography anyway.
  */
 @theme {
-  --color-ground: #0e0f11;
-  --color-surface: #181b1f;
-  --color-ink: #edeae3;
-  --color-soft: #c6c4be;
-  --color-dim: #8f9195;
-  --color-hairline: #292d32;
-  --color-rule: #3a4046;
+  --color-ground: #f8f5ee;
+  --color-surface: #fffdf8;
+  --color-ink: #1a1815;
+  --color-soft: #4f4a42;
+  --color-dim: #6b655b;
+  --color-hairline: #e4dfd3;
+  --color-rule: #cdc7b9;
 
   /* `accent` is the sampled photographic colour, for fills and rules at ≥3:1.
      `accent-ink` is its companion, guaranteed ≥4.5:1 for text. Keeping both
      defined for every project means component code never has to branch. */
   --color-accent: #d93b2b;
-  --color-accent-ink: #e2513f;
+  --color-accent-ink: #ca3526;
 
   --font-display: var(--font-jost);
   --font-text: var(--font-newsreader);
@@ -60,7 +62,7 @@
 
 :root {
   --draft-grid: 34px;
-  --color-grid: #e3e7e5;
+  --color-grid: #e6e1d5;
   --sig-stroke-primary: 3.4;
   --sig-stroke-secondary: 2.2;
 }

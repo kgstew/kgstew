@@ -1,12 +1,9 @@
-/* Shop Drawing — project pages. Committed light, on drafting paper. */
+/* Shop Drawing — project pages, on a slightly deeper paper stock. */
 [data-altitude='draft'] {
-  --color-ground: #f1f3f2;
-  --color-surface: #ffffff;
-  --color-ink: #191c1a;
-  --color-soft: #3e4442;
-  --color-dim: #69706e; /* 4.55:1 — see note below */
-  --color-hairline: #c9cfcd;
-  --color-rule: #b4bbb9;
+  /* A shade deeper than the site ground — paper stock, not a different scheme.
+     Close enough that moving here from the catalog reads as turning a page. */
+  --color-ground: #f2efe5;
+  --color-surface: #fffdf8;
   --color-cyano: #1f4e79;
 
   background-image:
@@ -16,11 +13,27 @@
 }
 
 /*
- * On --color-dim: the design pitch specified #8B9290 for annotations, which is
- * 2.85:1 on this ground and fails even the 3:1 graphics threshold — and it was
- * proposed for 10px mono at 0.18em tracking, the worst case for legibility.
- * The first correction, #6E7573, still only reached 4.23:1. This clears 4.5:1.
- *
- * If a lighter grey is genuinely wanted for a non-essential dimension-line
- * stroke, that is a separate token, not this one.
+ * Neutrals are warm-biased to sit on the cream rather than reading as an
+ * unconsidered mid-grey. Every value was measured against BOTH this paper and
+ * the lighter site ground, since the same tokens serve both.
  */
+
+/* Real title blocks are set in a single-width technical face, so the mono does
+   the headings here rather than adding a fourth family for one page type. */
+@layer components {
+  [data-altitude='draft'] :is(h1, h2, h3) {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  [data-altitude='draft'] h1 {
+    font-size: 1.5rem;
+  }
+  [data-altitude='draft'] dt {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+  }
+}

@@ -9,12 +9,12 @@
  * audited, rather than in the render tree.
  *
  * Each accent was sampled from the project's own photography; the -ink variant
- * is a darkened cut measured to clear 4.5:1 on both light grounds. Four of the
+ * is a darkened cut measured to clear 4.5:1 on both the site ground and the deeper drawing paper. Four of the
  * six needed no adjustment.
  */
 [data-project='fable-bound'] {
   --color-accent: #1e7fa6; /* the painted waves */
-  --color-accent-ink: #1c779c;
+  --color-accent-ink: #1a759a;
 }
 [data-project='ephemerisle'] {
   --color-accent: #2a6e6b; /* delta water */
@@ -30,10 +30,10 @@
 [data-project='denhac'],
 [data-project='colorado-maker-directory'] {
   --color-accent: #c08a2c; /* brass and oak */
-  --color-accent-ink: #906721;
+  --color-accent-ink: #8a631f;
 }
 [data-project='wmd'],
 [data-project='zenput'] {
   --color-accent: #d93b2b;
-  --color-accent-ink: #cc3728;
+  --color-accent-ink: #ca3526;
 }

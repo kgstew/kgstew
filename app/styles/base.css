@@ -1,4 +1,13 @@
 @layer base {
+  /* A wrapper cannot colour the overscroll gutter. One ground, so one rule —
+     except the drawing surface, which is a shade deeper. */
+  html {
+    background-color: #f8f5ee;
+  }
+  html:has([data-altitude='draft']) {
+    background-color: #f2efe5;
+  }
+
   *,
   *::before,
   *::after {

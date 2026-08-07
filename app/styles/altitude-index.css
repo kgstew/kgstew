@@ -1,12 +1,23 @@
-/* Index — the work catalog. Committed light. */
+/* Index — the work catalog. */
 [data-altitude='index'] {
-  --color-ground: #fcfcfa;
-  --color-surface: #fcfcfa;
-  --color-ink: #121211;
-  --color-soft: #55534d;
-  --color-dim: #6f6d64; /* 5.05:1 — the pitch's #86847C was 3.65 and this is content, not chrome */
-  --color-hairline: #e2e1da;
-  --color-rule: #cfcec6;
-  --color-accent: #121211;
-  --color-accent-ink: #121211;
+  /* Inherits the site ground. Index is the catalog: serif titles, mono columns,
+     a colour spine — structure rather than a different surface. */
+  --color-accent: #1a1815;
+  --color-accent-ink: #1a1815;
+}
+
+/* Index is a catalog: the serif does the titles, and the optical-size axis
+   handles the jump from a 16px row to a 32px page heading. */
+@layer components {
+  [data-altitude='index'] :is(h1, h2, h3) {
+    font-family: var(--font-text);
+    font-weight: 500;
+    letter-spacing: -0.012em;
+  }
+  /* Reading surface: a measure, and prose rhythm rather than list rhythm. */
+  [data-altitude='index'][data-surface='reading'] p,
+  [data-altitude='index'] [data-surface='reading'] p {
+    max-width: 65ch;
+    line-height: 1.7;
+  }
 }
