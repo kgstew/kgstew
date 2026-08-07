@@ -57,16 +57,18 @@ export default async function Project({ params }) {
           <Loop key={a.id} asset={a} className="mt-8" />
         ))}
 
-        <MDXRemote
-          source={project.body}
-          components={mdxComponents}
-          options={{
-            mdxOptions: {
-              remarkPlugins: [remarkGfm],
-              rehypePlugins: [rehypeSlug, rehypeSections],
-            },
-          }}
-        />
+        <div className="project-body">
+          <MDXRemote
+            source={project.body}
+            components={mdxComponents}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [rehypeSlug, rehypeSections],
+              },
+            }}
+          />
+        </div>
 
         {project.outcome ? (
           <section className="sec">

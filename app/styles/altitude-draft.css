@@ -74,3 +74,42 @@
     }
   }
 }
+
+/**
+ * Nine of ten projects have no photography and several are written as plain
+ * paragraphs with no headings, so the body cannot rely on sections for any of
+ * its typography. Everything below gives an unsectioned body the same measure,
+ * leading and opening gap that `.sec` gives a sectioned one.
+ *
+ * Layered and altitude-scoped like the section rules above, so the two paths
+ * cannot end up fighting on specificity.
+ */
+@layer components {
+  /* Projects with a hero image got this opening gap for free from the image's
+     own margin, which hid the fact that a project without one had its first
+     paragraph butting against the last field, reading as that field's value. */
+  [data-altitude='draft'] .project-body {
+    margin-top: calc(var(--spacing-grid) * 2);
+  }
+  [data-altitude='draft'] .project-body > :first-child {
+    margin-top: 0;
+  }
+
+  /* Sections narrow their own column, so a project opening with a heading was
+     already measured; one written as plain paragraphs ran the full 960 and set
+     lines of about 110 characters. Listed by element rather than `:not(.sec)` so
+     figures and galleries, which carry their own width via the span utilities,
+     keep it. */
+  [data-altitude='draft'] .project-body > :is(p, ul, ol, blockquote, h3) {
+    max-width: var(--measure);
+  }
+
+  /* Matches `.sec > :not(h2) + :not(h2)`. Without it consecutive paragraphs in
+     an unsectioned body run together with no gap at all.
+     Sections are excluded on both sides: they set their own, larger opening gap,
+     and this selector has equal specificity but comes later, so including them
+     silently collapsed the space between sections to a paragraph's. */
+  [data-altitude='draft'] .project-body > :not(.sec) + :not(.sec) {
+    margin-top: 1rem;
+  }
+}
