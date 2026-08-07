@@ -15,7 +15,7 @@ export default function Gallery({ assetKey, role = 'detail', columns = 2, classN
 
   return (
     <div
-      className={`grid grid-cols-1 gap-6 ${cols} ${span === 'full' ? 'span-full' : span === 'text' ? '' : 'span-wide'} ${className}`}
+      className={`grid grid-cols-1 gap-6 ${cols} ${span === 'full' ? 'span-full' : span === 'text' ? 'span-text' : 'span-wide'} ${className}`}
     >
       {items.map((a) =>
         a.type === 'video' ? <Loop key={a.id} asset={a} span="text" /> : <Frame key={a.id} asset={a} span="text" />

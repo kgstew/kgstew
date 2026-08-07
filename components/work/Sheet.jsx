@@ -37,7 +37,7 @@ export default function Sheet({ project, hero }) {
         ))}
       </dl>
 
-      {hero ? <Frame asset={hero} priority span="text" className="mt-12" /> : null}
+      {hero ? <Frame asset={hero} priority className="mt-12" /> : null}
     </>
   )
 }

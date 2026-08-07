@@ -43,10 +43,29 @@
     color: var(--color-ground);
   }
 
+  /*
+   * One heading face, sentence case, everywhere.
+   *
+   * Each altitude had grown its own heading treatment — Jost on Signal,
+   * Newsreader on Index, uppercase mono on Shop Drawing — which read as three
+   * different sites. Jost wins because it is the one that already looked right
+   * set normally, on the homepage.
+   *
+   * Uppercase is now reserved for *labels*: margin labels, field labels, spec
+   * groups. Anything that names a thing is sentence case; anything that
+   * classifies a thing is uppercase mono. See `.legend`.
+   */
   h1,
   h2,
   h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-transform: none;
     text-wrap: balance;
+  }
+  h1 {
+    line-height: 1.06;
   }
   p {
     text-wrap: pretty;
@@ -116,13 +135,40 @@
       minmax(0, calc((var(--wide) - var(--measure)) / 2)) [wide-end]
       minmax(0, 1fr) [full-end];
   }
+  /*
+   * The default is `wide`. The masthead, the catalog rows and the images all
+   * want that width, and having prose set the page's column meant everything
+   * else was the exception — including the site's own name, which ended up
+   * narrower than the pictures beneath it.
+   *
+   * Prose narrows deliberately instead, either with `span-text` or by sitting
+   * inside a section that has its own measure column.
+   */
   .flow > * {
-    grid-column: text;
-  }
-  .flow > .span-wide {
     grid-column: wide;
   }
+  /* Both a track assignment and a width cap. As a direct grid child the
+     grid-column does the work; nested inside a wrapper the max-width does,
+     because a child combinator cannot reach a grandchild and wrapping elements
+     in sections is normal. */
+  .span-text {
+    grid-column: text;
+    max-width: var(--measure);
+  }
+  .span-wide {
+    grid-column: wide;
+    max-width: var(--wide);
+  }
   .flow > .span-full {
+    grid-column: full;
+  }
+
+  /* A reading surface inverts it back: continuous prose is the default there,
+     and media is what opts out. */
+  .flow[data-surface='reading'] > * {
+    grid-column: text;
+  }
+  .flow[data-surface='reading'] > .span-full {
     grid-column: full;
   }
 }

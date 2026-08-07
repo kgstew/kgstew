@@ -72,17 +72,18 @@
   --page-gutter: clamp(20px, 5vw, 40px);
   --measure: 520px;
 
-  /* Three distinct widths. `wide` used to be computed as all the leftover space,
-     which made it identical to `full` — so a 520px text column jumped straight
-     to 1072px with nothing between, and a hero read as belonging to another
-     document. 780 is a 1.5× step: emphatic without leaving the page. */
-  --wide: 780px;
+  /* `wide` is the page default: masthead, hero, field run, catalog rows. 960
+     against a 520 measure is a 1.85× step — it uses the container instead of
+     leaving 292px of accidental margin, without returning to the 2.06× that
+     made the hero read as belonging to a different document. `full` stays for a
+     deliberate bleed. */
+  --wide: 960px;
 
-  /* The label gutter for margin-set section names. 148 + 24 + 520 = 692, which
-     sits inside `wide` with slack, so the prose column stays put whether or not
-     a section has a label. */
-  --label: 148px;
-  --label-gap: 24px;
+  /* The label gutter grows with `wide` so the prose column stays roughly
+     centred beneath a wider hero rather than hugging the left edge:
+     224 + 32 + 520 = 776 inside 960. */
+  --label: 224px;
+  --label-gap: 32px;
 
   /* Dot pitch. 24px sits between the Moleskine 5mm ledger and the original
      34px spec — close enough to read as notebook paper, open enough not to

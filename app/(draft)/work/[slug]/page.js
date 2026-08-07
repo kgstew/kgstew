@@ -48,10 +48,9 @@ export default async function Project({ params }) {
 
   return (
     <article data-project={project.slug} className="flow">
-      {/* Everything sits in one `wide` column. Sections carry their own label
-          gutter, so the prose is indented from the same left edge the sheet and
-          the images share — the page reads down one axis. */}
-      <div className="span-wide">
+      {/* `wide` is the page default now, so nothing here opts in. Sections carry
+          their own label gutter and narrow the prose themselves. */}
+      <div>
         <Sheet project={project} hero={hero} />
 
         {heroLoops.map((a) => (

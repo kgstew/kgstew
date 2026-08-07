@@ -11,15 +11,6 @@
 /* Real title blocks are set in a single-width technical face, so the mono does
    the headings here rather than adding a fourth family for one page type. */
 @layer components {
-  [data-altitude='draft'] :is(h1, h2, h3) {
-    font-family: var(--font-mono);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-  [data-altitude='draft'] h1 {
-    font-size: 1.5rem;
-  }
   /* Scoped to the header's field list. It used to hit every dt on the page,
      which turned the parts-list row names into shouty uppercase mono. */
   [data-altitude='draft'] dl.field-list dt {

@@ -3,7 +3,8 @@ import { srcSet } from '@/lib/content'
 /** Which grid track this occupies: the prose column, the wider track, or the
  *  full page. Defaults to `wide` — a figure sitting at prose measure wastes the
  *  room the breakout grid exists to provide. */
-const spanClass = (span) => (span === 'text' ? '' : span === 'full' ? 'span-full' : 'span-wide')
+const spanClass = (span) =>
+  span === 'full' ? 'span-full' : span === 'text' ? 'span-text' : 'span-wide'
 
 
 /**
@@ -33,7 +34,7 @@ export default function Frame({
     (span === 'full'
       ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
       : span === 'wide'
-        ? '(min-width: 1152px) 780px, calc(100vw - 5rem)'
+        ? '(min-width: 1152px) 960px, calc(100vw - 5rem)'
         : '(min-width: 1152px) 520px, calc(100vw - 5rem)')
   if (!asset || asset.type !== 'image') return null
 
