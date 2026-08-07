@@ -1,13 +1,38 @@
 ---
 title: The Seventh Gate
-card: Lighting systems for Darrel Ansted's piece.
-summary: Lighting design and control for another artist's large-scale installation.
+card: A twenty-foot stupa you can climb, and six gates that notice you walking through them.
+summary: >
+  Lighting design and control for Darrel Ansted's Sapta Dvāra — 2,500 addressable LEDs across a
+  climbable stupa and six motion-sensing gates.
 context: art
 disciplines: [show-control, embedded]
-role: Lighting systems design
-started: '2026-01'
+role: Lighting systems design — control, wiring harness, power distribution
+started: '2023-01'
 ended: ongoing
-disclosure: embargoed
+disclosure: open
+destination: Black Rock City
+collaborators:
+  - { name: Darrel Ansted, credit: Artist }
+outcome: >
+  Shown at Burning Man in 2023 and returning this year.
 accent: harbour
 weight: 15
 ---
+
+Sapta Dvāra is Darrel Ansted's piece. I designed the lighting.
+
+The centrepiece is a twenty-foot stupa you can climb, ringed by arches of LED light. Around it stand
+six wishbone gates that sense participants approaching and answer them. Darrel describes it as
+"the mythic act of walking through light to awaken inner truth" — a corridor that is quiet presence
+by day and radiant colour by night.
+
+Underneath that: 2,500 LEDs on eight channels of 12V WS2815, driven by Chromatic through an
+Advantech controller and a wiring harness and power distribution system we designed and built. The
+six gates run separately on Quinn DigiNext2 controllers, each with a proximity sensor that trips a
+flash-bulb effect as someone passes.
+
+This was the first power distribution system I had designed myself, which meant working out the
+runs, where power needed injecting along them, and how injection actually behaves across a long
+LED installation. It was also my first time with Chromatic, and the interesting thing about it is
+how much control it hands back to whoever is running the show — you are not obliged to pre-program
+every pattern in code before the piece exists.

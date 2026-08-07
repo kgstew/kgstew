@@ -1,13 +1,34 @@
 ---
 title: Star Trace
-card: Lighting and control systems for David Griggs's installation.
-summary: Lighting and control systems work on another artist's installation.
+card: Seventy-four lights on a lobby ceiling in Hong Kong, all listening to one touchscreen.
+summary: >
+  Lighting control firmware, networking and a touchscreen operator interface for David Griggs's
+  ceiling installation.
 context: art
-disciplines: [show-control, embedded]
-role: Lighting and control systems
+disciplines: [show-control, embedded, software]
+role: Lighting control firmware, networking, and operator interface
 started: '2025-06'
 ended: ongoing
-disclosure: embargoed
+disclosure: open
+destination: Hong Kong
+collaborators:
+  - { name: David Griggs, credit: Artist }
 accent: delta
-weight: 35
+weight: 25
 ---
+
+Seventy-four lights across the ceiling of a lobby in Hong Kong, for David Griggs.
+
+I wrote the lighting control firmware that runs on the ESP32 in each fixture. The LEDs are driven
+from mains rather than a low-voltage supply, so the firmware switches them through a triac — which
+makes the timing considerably less forgiving than the DC systems I usually work on. On top of that
+sits the settings layer and the Wi-Fi networking that makes seventy-four independent fixtures
+behave like one instrument.
+
+The operator never touches any of that. There is a control box built on a Raspberry Pi with a custom
+touchscreen interface, and whoever is running the space uses it to adjust and save global settings
+patterns. Saving pushes the new pattern out over Wi-Fi to every fixture on the ceiling.
+
+It is installed and running. I am still working through some technical glitches with David and with
+the property management company, which is the ordinary condition of a permanent installation
+somebody has to live with rather than a stage it will eventually leave.

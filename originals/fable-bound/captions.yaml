@@ -12,7 +12,6 @@
 #   skip     true to keep an original out of the site entirely.
 
 assets:
-  # CHECK: a DSLR frame, so possibly not yours
   DSC_7766.JPG:
     alt: The ship seen at distance across the open playa in daylight, dwarfed by the desert, with the Man and the mountains behind it
     caption: For scale. Twenty feet of ship, and still a speck.
@@ -34,10 +33,9 @@ assets:
     role: process
     order: 10
     skip: false
-  # CHECK: mica? a diffuser sample? I could not tell what this is
   IMG_3247.HEIC:
-    alt: A hand holding a translucent panel up against a deep blue sky, sunlight blazing through the material
-    caption: ''
+    alt: A hand holding a translucent sunstone up against a deep blue sky, sunlight blazing through the crystal
+    caption: 'A sunstone. Viking navigators are said to have used them to find the sun through cloud and cross open ocean.'
     credit: ''
     role: process
     order: 11
@@ -86,12 +84,13 @@ assets:
     skip: false
   # CHECK: 32s — needs a stream host or a chosen 6s excerpt
   IMG_4900.MOV:
-    alt: The ship in motion
-    caption: ''
+    alt: A forklift lowering a section of the ship's hull into place on the open playa
+    caption: 'Setting the hull, Black Rock City.'
     credit: ''
-    role: detail
+    role: process
     order: 40
     skip: false
+    clipStart: 4
   # CHECK: worth naming the crew here, with their permission
   IMG_4978.HEIC:
     alt: Sixteen crew members in matching black hoodies posed in front of the ship on the open playa under heavy grey cloud
@@ -123,12 +122,13 @@ assets:
     skip: false
   # CHECK: 39s — needs a stream host or a chosen 6s excerpt
   IMG_5020.MOV:
-    alt: The ship in motion
+    alt: The lit ship at night with people aboard, a burst of flame above the deck
     caption: ''
     credit: ''
-    role: detail
+    role: hero
     order: 41
     skip: false
+    clipStart: 18
   IMG_5349.HEIC:
     alt: The ship lit at dusk outside an event centre, shields glowing cyan and the wave skirts washed blue, people standing on deck
     caption: October 2024. First outing after the playa, at a decompression event.
