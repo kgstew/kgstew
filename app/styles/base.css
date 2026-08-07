@@ -1,11 +1,11 @@
 @layer base {
   /* A wrapper cannot colour the overscroll gutter. One ground, so one rule —
      except the drawing surface, which is a shade deeper. */
+  /* One ground everywhere. The grid is on every page now, so an altitude no
+     longer needs a second background tint to feel distinct — the difference
+     lives in the typography. */
   html {
-    background-color: #f8f5ee;
-  }
-  html:has([data-altitude='draft']) {
-    background-color: #f2efe5;
+    background-color: var(--color-ground);
   }
 
   *,
@@ -95,5 +95,34 @@
     background-image: none !important;
     background-color: #fff !important;
     color: #000 !important;
+  }
+}
+
+/*
+ * The breakout grid.
+ *
+ * Children sit in the centre `text` track by default. Media opts into `wide` or
+ * `full` with a class. This is what lets prose stay at a readable measure while
+ * a photograph uses the room the page actually has — the previous single 720px
+ * column made six of the pipeline's eight renditions unreachable.
+ */
+@layer components {
+  .flow {
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(0, 1fr)
+      [wide-start] minmax(0, calc((var(--page-max) - var(--page-gutter) * 2 - var(--measure)) / 2))
+      [text-start] min(var(--measure), 100%) [text-end]
+      minmax(0, calc((var(--page-max) - var(--page-gutter) * 2 - var(--measure)) / 2)) [wide-end]
+      minmax(0, 1fr) [full-end];
+  }
+  .flow > * {
+    grid-column: text;
+  }
+  .flow > .span-wide {
+    grid-column: wide;
+  }
+  .flow > .span-full {
+    grid-column: full;
   }
 }

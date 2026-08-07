@@ -11,7 +11,7 @@ export default function Work() {
   const projects = allProjects()
 
   return (
-    <div>
+    <div className="flow">
       <h1 className="text-3xl font-bold tracking-tight">Work</h1>
       <ul className="mt-8 divide-y divide-hairline">
         {projects.map((p) => (

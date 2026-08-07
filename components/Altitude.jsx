@@ -10,9 +10,20 @@ import Masthead from './Masthead'
  */
 export default function Altitude({ name, surface, children }) {
   return (
-    <div data-altitude={name} data-surface={surface} className="min-h-dvh bg-ground text-ink">
-      <div className="mx-auto max-w-3xl px-6 py-12">
-        <Masthead />
+    <div
+      data-altitude={name}
+      data-surface={surface}
+      className="min-h-dvh bg-ground text-ink"
+      style={{
+        backgroundImage:
+          'radial-gradient(circle at 1px 1px, var(--color-grid) 1.35px, transparent 0)',
+        backgroundSize: 'var(--dot-pitch) var(--dot-pitch)',
+      }}
+    >
+      <div className="mx-auto w-full max-w-(--page-max) px-(--page-gutter) py-12">
+        <div className="flow">
+          <Masthead />
+        </div>
         <main>{children}</main>
         <footer className="mt-24 border-t border-hairline pt-6 text-sm text-dim">
           <a href="https://github.com/kgstew" className="hover:text-ink">

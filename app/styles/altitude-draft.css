@@ -1,22 +1,12 @@
-/* Shop Drawing — project pages, on a slightly deeper paper stock. */
+/* Shop Drawing — project pages. */
 [data-altitude='draft'] {
-  /* A shade deeper than the site ground — paper stock, not a different scheme.
-     Close enough that moving here from the catalog reads as turning a page. */
-  --color-ground: #f2efe5;
-  --color-surface: #fffdf8;
+  /* Shares the site ground and the site grid. What makes this Shop Drawing is
+     the uppercase mono headings, the field labels and the parts list — it does
+     not need a surface of its own, and a second tint behind a photograph was
+     one signal too many. */
   --color-cyano: #1f4e79;
-
-  background-image:
-    linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
-  background-size: var(--draft-grid) var(--draft-grid);
 }
 
-/*
- * Neutrals are warm-biased to sit on the cream rather than reading as an
- * unconsidered mid-grey. Every value was measured against BOTH this paper and
- * the lighter site ground, since the same tokens serve both.
- */
 
 /* Real title blocks are set in a single-width technical face, so the mono does
    the headings here rather than adding a fourth family for one page type. */
