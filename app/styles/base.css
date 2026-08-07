@@ -111,9 +111,9 @@
     display: grid;
     grid-template-columns:
       [full-start] minmax(0, 1fr)
-      [wide-start] minmax(0, calc((var(--page-max) - var(--page-gutter) * 2 - var(--measure)) / 2))
+      [wide-start] minmax(0, calc((var(--wide) - var(--measure)) / 2))
       [text-start] min(var(--measure), 100%) [text-end]
-      minmax(0, calc((var(--page-max) - var(--page-gutter) * 2 - var(--measure)) / 2)) [wide-end]
+      minmax(0, calc((var(--wide) - var(--measure)) / 2)) [wide-end]
       minmax(0, 1fr) [full-end];
   }
   .flow > * {

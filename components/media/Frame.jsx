@@ -33,8 +33,8 @@ export default function Frame({
     (span === 'full'
       ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
       : span === 'wide'
-        ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
-        : '(min-width: 1152px) 660px, calc(100vw - 5rem)')
+        ? '(min-width: 1152px) 780px, calc(100vw - 5rem)'
+        : '(min-width: 1152px) 520px, calc(100vw - 5rem)')
   if (!asset || asset.type !== 'image') return null
 
   const jpeg = asset.variants?.jpeg?.at(-1)?.url
