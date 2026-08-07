@@ -40,6 +40,8 @@ export default function Loop({ asset, className = '', caption = true }) {
     if (!el || !motionOk) return
     const io = new IntersectionObserver(
       ([entry]) => {
+        // Only ever latches on. Once mounted the element stays mounted, so
+        // scrolling away pauses rather than tearing down and re-downloading.
         if (entry.isIntersecting) setReached(true)
         const v = videoRef.current
         if (!v) return
@@ -52,6 +54,21 @@ export default function Loop({ asset, className = '', caption = true }) {
     io.observe(el)
     return () => io.disconnect()
   }, [motionOk])
+
+  /**
+   * Start playback when the element mounts.
+   *
+   * The observer callback that sets `reached` runs one render BEFORE the video
+   * exists, so `videoRef.current` is still null at that point and the play()
+   * call inside it is skipped. The element then stays intersecting, so no
+   * second callback ever arrives — which left the video sitting on its poster
+   * frame, indistinguishable from a still image. The `autoPlay` attribute
+   * covers the same case declaratively; this makes it deterministic.
+   */
+  useEffect(() => {
+    if (!motionOk || !reached) return
+    videoRef.current?.play().catch(() => {})
+  }, [motionOk, reached])
 
   if (!asset || asset.type !== 'video') return null
 
@@ -68,6 +85,7 @@ export default function Loop({ asset, className = '', caption = true }) {
           poster={asset.poster}
           width={asset.width}
           height={asset.height}
+          autoPlay
           muted
           loop
           playsInline
