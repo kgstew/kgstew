@@ -2,13 +2,13 @@
 title: Fable Bound
 card: A twenty-foot hull that pitched on pneumatics, sequenced by MIDI from a live Ableton set.
 summary: >
-  An animatronic viking longship for Burning Man 2024. Rowing the oars drove a pneumatic system
-  that pitched the hull; lighting and sound were sequenced against the same timeline.
+  An animatronic viking longship for Burning Man 2024. Sequencing from a MIDI soundtrack drove a pneumatic system
+  that pitched the hull and controlled the lighting.
 context: art
 disciplines: [fabrication, embedded, show-control, organizing]
-role: Lead artist — concept, control systems, and crew
+role: Lead artist — design, fabrication, control systems, fundraising, and crew
 started: '2023-11'
-ended: '2024-10'
+ended: '2025-01'
 disclosure: open
 destination: Black Rock City
 collaborators:
@@ -34,16 +34,17 @@ fields:
 specs:
   - group: Movement
     rows:
-      - ['Shop air jacks, ganged', '4 × 3,500 lb']
-      - ['Vertical travel at the bow', '14 in']
-      - ['Solenoid valves, relay-driven', '12 V']
-      - ['Theoretical lift, never tested', '14,000 lb']
+      - ['Air jacks', '4 × 3,500 lb']
+      - ['Vertical travel', '14 in']
+      - ['12 Solenoid valves, relay-driven', '12 V']
+      - ['Max Load', '14,000 lb']
   - group: Control
     rows:
       - ['Control host', 'Mac mini']
-      - ['Sequencing application', 'Node']
+      - ['Sequencing application', 'Typescript Node']
       - ['Trigger source', 'MIDI / Ableton']
       - ['Relay channels — fill, exhaust, ballast', '3']
+      - ['Lighting Control', 'Pixel Blaze']
 accent: harbour
 assets: fable-bound
 weight: 10
