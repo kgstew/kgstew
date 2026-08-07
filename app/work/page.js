@@ -1,43 +1,37 @@
-import { assets, assetSrc } from '@/lib/legacy-content'
+import Link from 'next/link'
+import { allProjects, disciplineLabel } from '@/lib/content'
 
 export const metadata = { title: 'Work' }
 
 /**
- * Placeholder index. The curated project model — disclosure fields, accent
- * colour, per-project pages — lands with the design work. For now this proves
- * the asset manifest renders end to end.
+ * Plain listing. The Index altitude — catalog table, colour spine, filtering —
+ * arrives with the design tickets; this only proves the model renders.
  */
 export default function Work() {
-  const heroes = assets('fable-bound').filter((a) => a.type === 'image' && a.role === 'hero')
+  const projects = allProjects()
 
   return (
     <div>
       <h1 className="text-3xl font-bold tracking-tight">Work</h1>
-      <section className="mt-10">
-        <h2 className="font-medium">Fable Bound</h2>
-        <p className="mt-1 max-w-prose text-neutral-600 dark:text-neutral-400">
-          A viking ship that rocked when you rowed it. Most of the crew who built it had never
-          welded.
-        </p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          {heroes.map((a) => (
-            <figure key={a.id}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={assetSrc(a, 800)}
-                alt={a.alt}
-                width={a.width}
-                height={a.height}
-                loading="lazy"
-                className="w-full rounded-sm bg-neutral-100 dark:bg-neutral-900"
-              />
-              {a.caption ? (
-                <figcaption className="mt-2 text-sm text-neutral-500">{a.caption}</figcaption>
-              ) : null}
-            </figure>
-          ))}
-        </div>
-      </section>
+      <ul className="mt-8 divide-y divide-hairline">
+        {projects.map((p) => (
+          <li key={p.slug} className="py-5">
+            <Link href={`/work/${p.slug}`} className="group block">
+              <div className="flex items-baseline justify-between gap-4">
+                <span className="font-medium group-hover:underline">{p.title}</span>
+                <span className="shrink-0 text-sm tabular-nums text-dim">
+                  {p.started.slice(0, 4)}
+                  {p.ended === 'ongoing' ? '–' : p.ended.slice(0, 4) !== p.started.slice(0, 4) ? `–${p.ended.slice(0, 4)}` : ''}
+                </span>
+              </div>
+              <p className="mt-1 text-sm text-soft">{p.card}</p>
+              <p className="mt-2 text-xs tracking-wide text-dim uppercase">
+                {p.disciplines.map(disciplineLabel).join(' · ')}
+              </p>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

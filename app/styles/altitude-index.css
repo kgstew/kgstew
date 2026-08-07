@@ -1,0 +1,12 @@
+/* Index — the work catalog. Committed light. */
+[data-altitude='index'] {
+  --color-ground: #fcfcfa;
+  --color-surface: #fcfcfa;
+  --color-ink: #121211;
+  --color-soft: #55534d;
+  --color-dim: #6f6d64; /* 5.05:1 — the pitch's #86847C was 3.65 and this is content, not chrome */
+  --color-hairline: #e2e1da;
+  --color-rule: #cfcec6;
+  --color-accent: #121211;
+  --color-accent-ink: #121211;
+}

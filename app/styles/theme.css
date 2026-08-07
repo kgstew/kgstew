@@ -1,0 +1,99 @@
+/*
+ * Semantic tokens, declared once. Altitudes rebind these — see
+ * altitude-*.css — rather than writing competing declarations, which is why
+ * there is never a specificity fight: Tailwind emits one `.text-ink` rule whose
+ * var() resolves differently depending on scope.
+ *
+ * Names describe role, never appearance. `--color-ground`, not
+ * `--color-dark-bg`, because the second name becomes a lie at two of the three
+ * altitudes.
+ *
+ * Defaults here are Signal's, so anything rendered outside an altitude wrapper
+ * degrades to the identity rather than to `unset`.
+ */
+@theme {
+  --color-ground: #0e0f11;
+  --color-surface: #181b1f;
+  --color-ink: #edeae3;
+  --color-soft: #c6c4be;
+  --color-dim: #8f9195;
+  --color-hairline: #292d32;
+  --color-rule: #3a4046;
+
+  /* `accent` is the sampled photographic colour, for fills and rules at ≥3:1.
+     `accent-ink` is its companion, guaranteed ≥4.5:1 for text. Keeping both
+     defined for every project means component code never has to branch. */
+  --color-accent: #d93b2b;
+  --color-accent-ink: #e2513f;
+
+  --font-display: var(--font-jost);
+  --font-text: var(--font-newsreader);
+  --font-mono: var(--font-martian);
+
+  --tracking-signal: -0.025em;
+  --tracking-legend: 0.18em;
+
+  /* Shop Drawing's grid pitch. Exposed as spacing so gutters and section rhythm
+     can snap to it — otherwise the grid reads as wallpaper, not structure. */
+  --spacing-grid: 34px;
+
+  --text-display: 4.5rem;
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.03em;
+}
+
+/*
+ * `inline` resolves the value into the utility at build time. That is correct
+ * for fonts, because the next/font variables arrive via a className on <html>
+ * and would not be in scope at :root — and it is WRONG for colour, because
+ * baking the value in leaves the altitudes nothing to rebind. This asymmetry is
+ * deliberate; don't "fix" it.
+ */
+@theme inline {
+  --font-sans: var(--font-display);
+  --font-serif: var(--font-text);
+}
+
+@custom-variant signal (&:where([data-altitude='signal'] *));
+@custom-variant index (&:where([data-altitude='index'] *));
+@custom-variant draft (&:where([data-altitude='draft'] *));
+
+:root {
+  --draft-grid: 34px;
+  --color-grid: #e3e7e5;
+  --sig-stroke-primary: 3.4;
+  --sig-stroke-secondary: 2.2;
+}
+
+/* Mono, uppercase, tracked. Repeated everywhere; @utility (unlike a bare class)
+   composes with variants, so `md:legend` works. */
+@utility legend {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: var(--tracking-legend);
+  text-transform: uppercase;
+  color: var(--color-dim);
+}
+
+/* A drafting dimension line: 1px rule with tick ends. */
+@utility dimension-line {
+  position: relative;
+  height: 1px;
+  background: var(--color-dim);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 1px;
+    height: 7px;
+    background: var(--color-dim);
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}

@@ -2,11 +2,12 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
-import { allPosts, postBySlug } from '@/lib/legacy-content'
+import { postSlugs, postBySlug } from '@/lib/content'
 
 export function generateStaticParams() {
-  return allPosts().map((p) => ({ slug: p.slug }))
+  return postSlugs().map((slug) => ({ slug }))
 }
+export const dynamicParams = false
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
@@ -23,8 +24,8 @@ export default async function Post({ params }) {
     <article>
       <header className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight text-balance">{post.title}</h1>
-        <p className="mt-3 text-sm text-neutral-500">
-          <time>{post.date?.slice(0, 10)}</time>
+        <p className="mt-3 text-sm text-dim">
+          <time>{post.day ?? post.date}</time>
           <span className="px-2">·</span>
           {post.readingTime} min read
         </p>
