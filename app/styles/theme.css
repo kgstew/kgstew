@@ -39,7 +39,10 @@
      can snap to it — otherwise the grid reads as wallpaper, not structure. */
   --spacing-grid: 24px;
 
-  --text-display: 4.5rem;
+  /* Fluid. A fixed 4.5rem is right at 1152 and absurd on a phone — it set the
+     homepage headline five lines deep at 500px. The floor keeps it emphatic at
+     the smallest width, the ceiling is the desktop size it was designed at. */
+  --text-display: clamp(2.25rem, 6.5vw, 4.5rem);
   --text-display--line-height: 0.95;
   --text-display--letter-spacing: -0.03em;
 }

@@ -13,3 +13,129 @@
 
 /* An altitude is a type system as much as a palette. Signal leads with the
    geometric display face at tight tracking. */
+
+/*
+ * The signal-path diagram.
+ *
+ * Colour comes from custom properties rather than `stroke=` attributes so the
+ * diagram is not the one thing on the page that ignores a retheme.
+ *
+ * The secondary strokes use color-mix rather than stroke-opacity or a group
+ * opacity. Opacity compounds where two translucent paths overlap, so the
+ * crossings — the exact thing this diagram is about — would render as dark knots.
+ * A pre-mixed opaque colour cannot compound.
+ */
+@layer components {
+  .sig-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+    color: var(--color-dim);
+    white-space: nowrap;
+  }
+
+  /* People read at full strength; the tools are deliberately quieter. */
+  .sig-label[data-kind='primary'] {
+    color: var(--color-accent-ink);
+  }
+
+  .sig-line {
+    fill: none;
+    stroke-linecap: round;
+    /* Keeps weights true under preserveAspectRatio="none". */
+    vector-effect: non-scaling-stroke;
+  }
+  .sig-line[data-kind='primary'] {
+    stroke: var(--color-accent);
+    stroke-width: var(--sig-stroke-primary);
+  }
+  .sig-line[data-kind='secondary'] {
+    stroke: color-mix(in oklab, var(--color-ink) 55%, transparent);
+    stroke-width: var(--sig-stroke-secondary);
+  }
+
+  .sig-wide,
+  .sig-narrow {
+    display: none;
+  }
+
+  .sig-node {
+    fill: var(--color-accent);
+    /* r is in user units and x is scaled ~3.7x by preserveAspectRatio="none",
+       so a circle would render as a wide ellipse. Counter-scale on the x axis
+       about the node's own centre. */
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scaleX(0.27);
+  }
+
+  .sig-output {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
+
+  /*
+   * Breakpoint-exclusive rules in both directions. An earlier version set the
+   * narrow variant's `display: grid` after the min-width block, so at equal
+   * specificity it won and both drawings rendered at once.
+   */
+  @media (min-width: 640px) {
+    .sig-wide {
+      display: grid;
+      grid-template-columns: auto minmax(120px, 1fr) auto;
+      align-items: center;
+      column-gap: 20px;
+    }
+    .sig-inputs {
+      display: grid;
+      row-gap: 22px;
+      justify-items: end;
+      text-align: right;
+    }
+    .sig-svg {
+      /* Height tracks the label stack: three rows plus two gaps. */
+      height: calc(3 * 1lh + 44px);
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .sig-narrow {
+      display: grid;
+      row-gap: 10px;
+      justify-items: start;
+    }
+    .sig-narrow .sig-label {
+      padding-left: 12px;
+      border-left: 2px solid color-mix(in oklab, var(--color-ink) 55%, transparent);
+    }
+    .sig-narrow .sig-label[data-kind='primary'] {
+      border-left-width: 4px;
+      border-left-color: var(--color-accent);
+    }
+    .sig-narrow-join {
+      width: 4px;
+      height: 20px;
+      background: var(--color-accent);
+    }
+    .sig-narrow .sig-output {
+      padding-left: 12px;
+    }
+  }
+
+  /* Under forced colours the mixed stroke resolves to a system colour and the
+     accent distinction is gone, so lean on weight, which survives. */
+  @media (forced-colors: active) {
+    .sig-line {
+      stroke: CanvasText;
+    }
+    .sig-line[data-kind='primary'] {
+      stroke-width: 4;
+    }
+  }
+}

@@ -12,7 +12,7 @@ export default function Work() {
 
   return (
     <div className="flow">
-      <h1 className="text-3xl font-bold tracking-tight">Work</h1>
+      <h1 className="text-3xl">Work</h1>
       <ul className="mt-8 divide-y divide-hairline">
         {projects.map((p) => (
           <li key={p.slug} className="py-5">
