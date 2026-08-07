@@ -38,19 +38,19 @@ export default async function Project({ params }) {
 
   const posts = postsForProject(slug)
   const hero = heroAsset(project.assets)
-  // A hero-role video would otherwise render nowhere: heroAsset() only returns
-  // images, and the galleries below only cover process and detail.
-  const heroLoops = assetsByRole(project.assets, 'hero').filter((a) => a.type === 'video')
+  // Hero-role videos are placed deliberately in the body — a loop of the thing
+  // moving belongs next to the prose about how it moves, not stacked under the
+  // hero photograph where it reads as a second, unrelated banner.
+  const bodyRefsLoop = /<Figure[^>]+\.(MOV|MP4|mp4|mov)"/.test(project.body)
+  const heroLoops = bodyRefsLoop
+    ? []
+    : assetsByRole(project.assets, 'hero').filter((a) => a.type === 'video')
 
   return (
     <article data-project={project.slug} className="flow">
       <h1 className="text-3xl font-bold tracking-tight text-balance">{project.title}</h1>
       <p className="mt-3 text-lg text-soft">{project.card}</p>
 
-      {hero && <Frame asset={hero} priority className="mt-8" />}
-      {heroLoops.map((a) => (
-        <Loop key={a.id} asset={a} className="mt-6" />
-      ))}
 
       <dl className="field-list mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
         {project.role && (
@@ -80,6 +80,11 @@ export default async function Project({ params }) {
       </dl>
 
       {project.outcome && <p className="mt-8 text-soft">{project.outcome}</p>}
+
+      {hero && <Frame asset={hero} priority className="mt-10" />}
+      {heroLoops.map((a) => (
+        <Loop key={a.id} asset={a} className="mt-6" />
+      ))}
 
       <div className="mt-8 space-y-4 leading-relaxed">
         <MDXRemote
