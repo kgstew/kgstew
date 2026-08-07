@@ -1,6 +1,6 @@
 {
   "project": "fable-bound",
-  "generatedAt": "2026-08-05T22:36:17.802Z",
+  "generatedAt": "2026-08-06T00:07:49.233Z",
   "count": 24,
   "assets": {
     "ef98d42090": {
@@ -1490,6 +1490,9 @@
       "type": "video",
       "duration": 32.203333,
       "needsStreamHost": true,
+      "width": 1280,
+      "height": 720,
+      "aspect": 1.7778,
       "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5286eba791/loop.mp4",
       "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/5286eba791/poster.jpg",
       "alt": "The ship in motion",
@@ -1505,6 +1508,9 @@
       "type": "video",
       "duration": 39.536667,
       "needsStreamHost": true,
+      "width": 1280,
+      "height": 720,
+      "aspect": 1.7778,
       "loop": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8ab3abec63/loop.mp4",
       "poster": "https://alq6rtfb0wp4doyn.public.blob.vercel-storage.com/assets/fable-bound/8ab3abec63/poster.jpg",
       "alt": "The ship in motion",

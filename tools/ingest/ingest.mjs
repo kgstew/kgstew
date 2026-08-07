@@ -87,13 +87,23 @@ async function ingestProject(project) {
   const previous = await readManifest(project)
   const assets = {}
 
-  const queue = originals.filter((name) => {
-    if (sidecar[name]?.skip) return false
+  // Everything the project should contain, regardless of --only.
+  const kept = originals.filter((name) => !sidecar[name]?.skip)
+
+  const matchesOnly = (name) => {
+    if (!flags.only) return true
     const ext = path.extname(name).toLowerCase()
-    if (flags.only === 'images') return IMAGE_EXT.has(ext)
-    if (flags.only === 'video') return VIDEO_EXT.has(ext)
-    return true
-  })
+    return flags.only === 'images' ? IMAGE_EXT.has(ext) : VIDEO_EXT.has(ext)
+  }
+  const queue = kept.filter(matchesOnly)
+
+  // --only narrows what gets *processed*, never what the manifest contains.
+  // Without this, `--only video` writes a manifest holding only videos, marks
+  // every image as an orphan, and a subsequent --prune deletes them.
+  for (const name of kept.filter((n) => !matchesOnly(n))) {
+    const prior = Object.values(previous.assets ?? {}).find((a) => a.source === name)
+    if (prior) assets[prior.id] = prior
+  }
 
   const images = queue.filter((n) => IMAGE_EXT.has(path.extname(n).toLowerCase()))
   const videos = queue.filter((n) => VIDEO_EXT.has(path.extname(n).toLowerCase()))
@@ -190,6 +200,9 @@ async function ingestProject(project) {
         type: 'video',
         duration: d.duration,
         needsStreamHost: d.needsStreamHost,
+        width: d.width ?? null,
+        height: d.height ?? null,
+        aspect: d.aspect ?? null,
         loop: await publish(id, name, d.loop.buf, d.loop.ext, 'loop'),
         poster: await publish(id, name, d.poster.buf, d.poster.ext, 'poster'),
         ...pickMeta(meta),

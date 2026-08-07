@@ -1,4 +1,4 @@
-import { allPosts } from '@/lib/content'
+import { allPosts } from '@/lib/legacy-content'
 
 export default function Home() {
   const recent = allPosts().slice(0, 5)

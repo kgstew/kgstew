@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { MANIFEST_DIR } from './config.mjs'
 import { exists } from './util.mjs'
+import { sortAssets } from '../../../lib/asset-order.js'
 
 /**
  * One manifest per project. Small, committed, and the only thing the site reads —
@@ -24,14 +25,8 @@ export async function writeManifest(
 ) {
   await fs.mkdir(MANIFEST_DIR, { recursive: true })
 
-  const roleWeight = { hero: 0, process: 1, detail: 2 }
-  const sorted = Object.values(assets).sort((a, b) => {
-    const r = (roleWeight[a.role] ?? 3) - (roleWeight[b.role] ?? 3)
-    if (r) return r
-    const o = (a.order ?? 1e9) - (b.order ?? 1e9)
-    if (o) return o
-    return (a.capturedAt ?? '').localeCompare(b.capturedAt ?? '') || a.source.localeCompare(b.source)
-  })
+  // Shared with the site's reader so the two can never disagree.
+  const sorted = sortAssets(assets)
 
   const doc = {
     project,

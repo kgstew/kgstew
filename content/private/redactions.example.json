@@ -1,0 +1,10 @@
+{
+  "_comment": [
+    "Strings that must never appear in published output. Copy to redactions.json",
+    "and fill in the real values — that file is gitignored, this one is not.",
+    "Scanned against project prose, metadata, collaborator credits, and every",
+    "alt/caption/credit in the referenced asset manifest.",
+    "Matching is case-insensitive substring."
+  ],
+  "terms": ["Example Client Ltd", "Some Venue Name"]
+}

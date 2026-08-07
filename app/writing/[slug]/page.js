@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
-import { allPosts, postBySlug } from '@/lib/content'
+import { allPosts, postBySlug } from '@/lib/legacy-content'
 
 export function generateStaticParams() {
   return allPosts().map((p) => ({ slug: p.slug }))

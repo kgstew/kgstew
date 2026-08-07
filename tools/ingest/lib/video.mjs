@@ -18,6 +18,26 @@ export async function ffprobeDuration(file) {
 }
 
 /**
+ * Dimensions of the encoded loop, probed from the output rather than computed
+ * from the source. The scale filter rounds height to an even number, so
+ * deriving it arithmetically is off by one often enough to matter — and being
+ * off by one is exactly what causes the layout shift these fields exist to
+ * prevent.
+ */
+export async function ffprobeDimensions(file) {
+  const { stdout } = await run('ffprobe', [
+    '-v', 'error',
+    '-select_streams', 'v:0',
+    '-show_entries', 'stream=width,height',
+    '-of', 'csv=s=x:p=0',
+    file,
+  ])
+  const [w, h] = stdout.trim().split('x').map(Number)
+  if (!w || !h) return null
+  return { width: w, height: h, aspect: +(w / h).toFixed(4) }
+}
+
+/**
  * Kyle builds things that move, so a still is the least interesting version of
  * the work. Every video becomes a short silent loop for the top of a project
  * page, plus a poster frame. Anything longer than the loop window keeps its
@@ -57,9 +77,15 @@ export async function deriveVideo(file) {
       posterPath,
     ])
 
+    const dims = await ffprobeDimensions(loopPath)
+
     return {
       duration,
       needsStreamHost: duration != null && duration > LOOP_MAX_SECONDS,
+      // width/height/aspect let the player reserve space before the poster
+      // loads. Without them a loop shifts layout — the one thing the image
+      // path is careful to avoid.
+      ...(dims ?? {}),
       loop: { ext: 'mp4', buf: await fs.readFile(loopPath) },
       poster: { ext: 'jpg', buf: await fs.readFile(posterPath) },
     }
