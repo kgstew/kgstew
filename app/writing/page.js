@@ -1,4 +1,4 @@
-import { allPosts } from '@/lib/legacy-content'
+import { allPosts } from '@/lib/content'
 
 export const metadata = { title: 'Writing' }
 

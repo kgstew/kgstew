@@ -1,0 +1,33 @@
+---
+title: WMD
+card: The factory and the books had never spoken to each other.
+summary: >
+  Embedded firmware for Eurorack synthesizer modules, and the systems work that connects a small
+  hardware manufacturer's production floor to its accounting.
+context: professional
+disciplines: [embedded, operations]
+role: Systems and firmware; business operations
+started: '2023-01'
+ended: ongoing
+disclosure: open
+outcome: >
+  Three systems that had never talked to each other — storefront, manufacturing, accounting — now
+  run through one integration layer and a custom operations dashboard. Build orders are being
+  placed on its recommendations.
+accent: signal
+weight: 20
+---
+
+WMD manufactures modular synthesizers and guitar pedals. I work on both halves of the company: the
+firmware inside the products, and the systems that let a small hardware business see what it is
+actually doing.
+
+On the systems side, three tools ran the company and none of them shared anything. I built the
+integration layer between them and an operations dashboard on top, which is where lead times,
+build planning and true assembly costs became visible for the first time.
+
+On the firmware side, the Metron sequencer is a legacy codebase that was never version controlled —
+seven simultaneous state machines across several ten-thousand-line files. I refactored it into
+something modular, cleared three hundred compiler warnings, built a real release process with CI,
+and spent months tracking down SD card bugs that were losing customers' work. It is now becoming
+the hub of a CAN bus ecosystem for other modules.
