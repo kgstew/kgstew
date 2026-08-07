@@ -17,6 +17,11 @@ import SignalPath from '@/components/signal/SignalPath'
  * too — true, and too granular for a front door. Evidence at that resolution
  * belongs on the project pages, which is where the links go.
  *
+ * No origin story here. It was placed below the work on the reasoning that it
+ * would read as explanation rather than as opening sentiment; Kyle cut it as
+ * "completely out of place" on a page whose job is stating capability. The text
+ * is kept in kgstew-notes/positioning.md if it finds a home later.
+ *
  * American English throughout the site, per Kyle.
  */
 
@@ -95,21 +100,6 @@ export default function Home() {
         <Link href="/work" className="mt-5 inline-block text-sm text-dim hover:text-ink">
           All work →
         </Link>
-      </section>
-
-      {/* Below the evidence, so it explains the work rather than introducing it. */}
-      <section className="span-text">
-        <h2 className="legend">Why the work looks like this</h2>
-        <p className="mt-5">
-          In 2013 a friend offered me a job as a junior software engineer. I had never written a line
-          of code. He figured I&rsquo;d work it out. Ten years later I was managing engineering
-          teams.
-        </p>
-        <p className="mt-4">
-          That is most of what I believe about people, and it is why I hand hard problems to whoever
-          is willing to take them. The teams on these projects are full of people doing something for
-          the first time.
-        </p>
       </section>
 
       {posts.length > 0 && (
