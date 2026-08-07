@@ -78,6 +78,12 @@
      document. 780 is a 1.5× step: emphatic without leaving the page. */
   --wide: 780px;
 
+  /* The label gutter for margin-set section names. 148 + 24 + 520 = 692, which
+     sits inside `wide` with slack, so the prose column stays put whether or not
+     a section has a label. */
+  --label: 148px;
+  --label-gap: 24px;
+
   /* Dot pitch. 24px sits between the Moleskine 5mm ledger and the original
      34px spec — close enough to read as notebook paper, open enough not to
      shimmer behind photographs. */
