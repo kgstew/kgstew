@@ -20,7 +20,9 @@
   [data-altitude='draft'] h1 {
     font-size: 1.5rem;
   }
-  [data-altitude='draft'] dt {
+  /* Scoped to the header's field list. It used to hit every dt on the page,
+     which turned the parts-list row names into shouty uppercase mono. */
+  [data-altitude='draft'] dl.field-list dt {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     letter-spacing: var(--tracking-legend);

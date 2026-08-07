@@ -61,4 +61,10 @@ function A({ href = '', children, ...rest }) {
   )
 }
 
+/**
+ * Note on props: next-mdx-remote v6 strips JSX *expression* attributes as part of
+ * its fix for evaluating untrusted MDX. Only string props survive here, so
+ * `<Gallery columns={3} />` in MDX silently falls back to the default. Anything
+ * structured belongs in frontmatter, rendered by the page.
+ */
 export const mdxComponents = { Figure, Loop, Gallery, Aside, img: Img, a: A }

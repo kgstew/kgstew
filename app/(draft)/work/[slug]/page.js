@@ -15,6 +15,7 @@ import {
 import Frame from '@/components/media/Frame'
 import Loop from '@/components/media/Loop'
 import Gallery from '@/components/media/Gallery'
+import Specs from '@/components/work/Specs'
 
 // Derived from the same filtered list as allProjects(), so an embargoed
 // project can never have a route emitted for it. dynamicParams closes the
@@ -51,7 +52,7 @@ export default async function Project({ params }) {
         <Loop key={a.id} asset={a} className="mt-6" />
       ))}
 
-      <dl className="mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
+      <dl className="field-list mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
         {project.role && (
           <>
             <dt className="text-dim">Role</dt>
@@ -87,6 +88,8 @@ export default async function Project({ params }) {
           options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
         />
       </div>
+
+      <Specs specs={project.specs} className="mt-10" />
 
       <Gallery assetKey={project.assets} role="process" className="mt-10" />
       <Gallery assetKey={project.assets} role="detail" columns={3} className="mt-6" />
