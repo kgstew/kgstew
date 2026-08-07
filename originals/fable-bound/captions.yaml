@@ -76,8 +76,8 @@ assets:
     order: 15
     skip: false
   IMG_4785.HEIC:
-    alt: The control electronics laid out on a bench — a green custom circuit board marked FABLE BOUND carrying four ESP32 modules and relay boards, wired to 12-volt supplies through a labelled harness reading PS RAIL, SB UP, SB AFT and SB FORE
-    caption: The board that ran the ship. Labelled harness, because you cannot debug a pneumatic system in the dark at 2am otherwise.
+    alt: The control electronics laid out on a bench — a green custom circuit board marked FABLE BOUND carrying four ESP32 modules and relay boards, wired to 12-volt supplies through a labeled harness reading PS RAIL, SB UP, SB AFT and SB FORE
+    caption: The board that ran the ship. Labeled harness, because you cannot debug a pneumatic system in the dark at 2am otherwise.
     credit: 'Nathan Koral'
     role: process
     order: 16
@@ -93,7 +93,7 @@ assets:
     clipStart: 4
   # CHECK: worth naming the crew here, with their permission
   IMG_4978.HEIC:
-    alt: Sixteen crew members in matching black hoodies posed in front of the ship on the open playa under heavy grey cloud
+    alt: Sixteen crew members in matching black hoodies posed in front of the ship on the open playa under heavy gray cloud
     caption: The crew, on playa. Most of them had never built anything like this before they showed up.
     credit: ''
     role: hero
@@ -130,15 +130,15 @@ assets:
     skip: false
     clipStart: 18
   IMG_5349.HEIC:
-    alt: The ship lit at dusk outside an event centre, shields glowing cyan and the wave skirts washed blue, people standing on deck
+    alt: The ship lit at dusk outside an event center, shields glowing cyan and the wave skirts washed blue, people standing on deck
     caption: October 2024. First outing after the playa, at a decompression event.
     credit: ''
     role: detail
     order: 35
     skip: false
   IMG_5565.HEIC:
-    alt: The complete ship parked on a path in a Denver park in spring, painted blue wave skirts spread around its base and wooden steps at the centre
-    caption: April 2025, set up in Denver. It travelled after the burn.
+    alt: The complete ship parked on a path in a Denver park in spring, painted blue wave skirts spread around its base and wooden steps at the center
+    caption: April 2025, set up in Denver. It traveled after the burn.
     credit: ''
     role: process
     order: 17

@@ -59,7 +59,7 @@ export async function deriveVideo(file, { start = 0 } = {}) {
     await run('ffmpeg', [
       '-y', '-loglevel', 'error',
       // -ss before -i seeks by keyframe, which is fast and accurate enough for
-      // a six-second excerpt. The default of 0 keeps the old behaviour.
+      // a six-second excerpt. The default of 0 keeps the old behavior.
       ...(start ? ['-ss', String(start)] : []),
       '-i', file,
       '-t', String(LOOP_MAX_SECONDS),

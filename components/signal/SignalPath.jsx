@@ -1,37 +1,36 @@
 /**
- * Three inputs converging into one system.
+ * People, software and hardware converging into one system.
  *
- * People are first and carry the accent at the heaviest weight, per Kyle's
- * correction: "people are what's important, they're the ones that enable the
- * possibilities; my ability to coordinate them and the tools are always
- * secondary to the people we're supporting." The accent path runs unbroken from
- * PEOPLE through to the output — the other two merge into it rather than the
- * three averaging into something new.
+ * Follows the original design pitch: each input has its own color, each path
+ * begins at a filled node, and the terminus is an open square rather than a dot.
+ * The first implementation flattened all of that to one monochrome pair of
+ * weights, which is what made it read as decoration.
  *
- * The labels are HTML, not SVG `<text>`. A 960-unit viewBox scaled into a 360px
- * phone is 0.375×, which turns a 13px label into 5px — the acceptance criterion
- * for this diagram is that it reads at 360px, and scaled text cannot. So the SVG
- * holds only the connective geometry and stretches to whatever width its grid
- * cell gets, with `preserveAspectRatio="none"` and `non-scaling-stroke` keeping
- * the line weights honest while the curves distort.
+ * People are first and heaviest, per Kyle's correction: "people are what's
+ * important, they're the ones that enable the possibilities; my ability to
+ * coordinate them and the tools are always secondary to the people we're
+ * supporting."
  *
- * Below `sm` the SVG is dropped entirely rather than shrunk. Three stacked rules
- * of descending weight feeding one output says the same thing in the space
- * available, and needs no second drawing to maintain.
+ * Only the curves live in the SVG. The labels are HTML because a 560-unit
+ * viewBox scaled into a 360px phone turns a 9px label into 6px, and the diagram
+ * has to read at 360px. The nodes and the terminal square are HTML too: the
+ * curves need `preserveAspectRatio="none"` to stretch, which would squash a
+ * circle into an ellipse and a square into a rectangle. Keeping the shapes in
+ * CSS avoids counter-scaling four of them against a width nobody knows ahead of
+ * time.
  */
 
 const INPUTS = [
-  { label: 'People', kind: 'primary' },
-  { label: 'Software', kind: 'secondary' },
-  { label: 'Hardware', kind: 'secondary' },
+  { label: 'People', kind: 'people' },
+  { label: 'Software', kind: 'software' },
+  { label: 'Hardware', kind: 'hardware' },
 ]
 
 export default function SignalPath() {
   return (
     <figure className="sig" aria-labelledby="sig-caption">
-      {/* The wide arrangement: labels, connector, output. */}
       <div className="sig-wide">
-        <div className="sig-inputs">
+        <div className="sig-col sig-labels">
           {INPUTS.map(({ label, kind }) => (
             <span key={label} className="sig-label" data-kind={kind}>
               {label}
@@ -39,28 +38,38 @@ export default function SignalPath() {
           ))}
         </div>
 
+        <div className="sig-col sig-nodes" aria-hidden="true">
+          {INPUTS.map(({ kind }) => (
+            <span key={kind} className="sig-node" data-kind={kind} />
+          ))}
+        </div>
+
+        {/* Curve control points carried over from the original: a long flat run
+            before a late bend, so the convergence reads as deliberate rather
+            than as three diagonals meeting. */}
         <svg
           className="sig-svg"
-          viewBox="0 0 200 120"
+          viewBox="0 0 200 100"
           preserveAspectRatio="none"
           aria-hidden="true"
           focusable="false"
         >
-          {/* Secondary paths first so the accent sits on top where they meet. */}
-          <path className="sig-line" data-kind="secondary" d="M0 60 H70 C112 60 112 60 150 60" />
-          <path className="sig-line" data-kind="secondary" d="M0 100 H70 C112 100 112 60 150 60" />
-          <path className="sig-line" data-kind="primary" d="M0 20 H70 C112 20 112 60 150 60" />
-          <path className="sig-line" data-kind="primary" d="M150 60 H200" />
-          {/* A node at the junction. Without it the middle input is collinear
-              with the output and reads as the trunk that people branch off,
-              which is backwards — people are the through-line here. */}
-          <circle className="sig-node" cx="150" cy="60" r="4" />
+          <path className="sig-line" data-kind="software" d="M0 50 H200" />
+          <path className="sig-line" data-kind="hardware" d="M0 90 C79 90, 109 50, 200 50" />
+          <path className="sig-line" data-kind="people" d="M0 10 C79 10, 109 50, 200 50" />
         </svg>
 
-        <span className="sig-output">One system</span>
+        <span className="sig-terminal" aria-hidden="true" />
+
+        <span className="sig-output">
+          One
+          <br />
+          system
+        </span>
       </div>
 
-      {/* Under sm: descending rules into one output. No second drawing. */}
+      {/* Under sm the drawing is dropped rather than shrunk. Three rules of
+          descending weight feeding one terminus says the same thing. */}
       <div className="sig-narrow">
         {INPUTS.map(({ label, kind }) => (
           <span key={label} className="sig-label" data-kind={kind}>
@@ -68,11 +77,12 @@ export default function SignalPath() {
           </span>
         ))}
         <span className="sig-narrow-join" aria-hidden="true" />
-        <span className="sig-output">One system</span>
+        <span className="sig-output-inline">One system</span>
       </div>
 
       <figcaption id="sig-caption" className="sr-only">
-        People, software and hardware converging into one system.
+        People, software and hardware converging into one working system, with people drawn as the
+        primary input.
       </figcaption>
     </figure>
   )

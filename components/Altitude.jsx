@@ -3,9 +3,9 @@ import Masthead from './Masthead'
 /**
  * The only component that knows altitude names exist.
  *
- * Sets `data-altitude`, which rebinds the semantic colour tokens for everything
+ * Sets `data-altitude`, which rebinds the semantic color tokens for everything
  * inside it — see app/styles/altitude-*.css. Nothing else in the tree needs to
- * branch on altitude for colour; `text-ink` and `border-hairline` resolve
+ * branch on altitude for color; `text-ink` and `border-hairline` resolve
  * differently by scope on their own.
  */
 export default function Altitude({ name, surface, children }) {

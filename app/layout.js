@@ -11,7 +11,7 @@ export const metadata = {
 }
 
 /**
- * Deliberately carries no colour. Each route group wraps its children in an
+ * Deliberately carries no color. Each route group wraps its children in an
  * Altitude, which is what binds the ground and ink — putting them here would
  * mean one of the three altitudes always painted underneath the others.
  */

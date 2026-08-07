@@ -4,7 +4,7 @@ import { allProjects, disciplineLabel } from '@/lib/content'
 export const metadata = { title: 'Work' }
 
 /**
- * Plain listing. The Index altitude — catalog table, colour spine, filtering —
+ * Plain listing. The Index altitude — catalog table, color spine, filtering —
  * arrives with the design tickets; this only proves the model renders.
  */
 export default function Work() {

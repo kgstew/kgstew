@@ -18,7 +18,7 @@ const spanClass = (span) =>
  *
  * Deliberately not `next/image`. The manifest already holds five AVIF widths on
  * Blob, generated during ingest; routing them through the Vercel optimizer would
- * re-encode already-optimised bytes, bill per transformation, and discard the
+ * re-encode already-optimized bytes, bill per transformation, and discard the
  * LQIP we generated at the same time.
  *
  * The placeholder goes on the <img> itself as a background rather than in a

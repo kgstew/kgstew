@@ -1,5 +1,5 @@
 @layer base {
-  /* A wrapper cannot colour the overscroll gutter. One ground, so one rule —
+  /* A wrapper cannot color the overscroll gutter. One ground, so one rule —
      except the drawing surface, which is a shade deeper. */
   /* One ground everywhere. The grid is on every page now, so an altitude no
      longer needs a second background tint to feel distinct — the difference
@@ -120,7 +120,7 @@
 /*
  * The breakout grid.
  *
- * Children sit in the centre `text` track by default. Media opts into `wide` or
+ * Children sit in the center `text` track by default. Media opts into `wide` or
  * `full` with a class. This is what lets prose stay at a readable measure while
  * a photograph uses the room the page actually has — the previous single 720px
  * column made six of the pipeline's eight renditions unreachable.

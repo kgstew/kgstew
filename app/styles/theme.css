@@ -22,7 +22,7 @@
   --color-hairline: #e4dfd3;
   --color-rule: #cdc7b9;
 
-  /* `accent` is the sampled photographic colour, for fills and rules at ≥3:1.
+  /* `accent` is the sampled photographic color, for fills and rules at ≥3:1.
      `accent-ink` is its companion, guaranteed ≥4.5:1 for text. Keeping both
      defined for every project means component code never has to branch. */
   --color-accent: #d93b2b;
@@ -50,7 +50,7 @@
 /*
  * `inline` resolves the value into the utility at build time. That is correct
  * for fonts, because the next/font variables arrive via a className on <html>
- * and would not be in scope at :root — and it is WRONG for colour, because
+ * and would not be in scope at :root — and it is WRONG for color, because
  * baking the value in leaves the altitudes nothing to rebind. This asymmetry is
  * deliberate; don't "fix" it.
  */
@@ -83,7 +83,7 @@
   --wide: 960px;
 
   /* The label gutter grows with `wide` so the prose column stays roughly
-     centred beneath a wider hero rather than hugging the left edge:
+     centered beneath a wider hero rather than hugging the left edge:
      224 + 32 + 520 = 776 inside 960. */
   --label: 224px;
   --label-gap: 32px;
