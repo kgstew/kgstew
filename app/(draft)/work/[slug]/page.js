@@ -78,7 +78,7 @@ export default async function Project({ params }) {
         <Specs specs={project.specs} className="mt-16" />
 
         <Gallery assetKey={project.assets} role="process" className="mt-16" />
-        <Gallery assetKey={project.assets} role="detail" columns={3} className="mt-6" />
+        <Gallery assetKey={project.assets} role="detail" className="mt-6" />
 
         {project.collaborators.length > 0 && (
           <section className="sec">

@@ -3,8 +3,14 @@ import { srcSet } from '@/lib/content'
 /** Which grid track this occupies: the prose column, the wider track, or the
  *  full page. Defaults to `wide` — a figure sitting at prose measure wastes the
  *  room the breakout grid exists to provide. */
+/**
+ * `none` for items inside a nested layout — a gallery, a column. The span
+ * utilities set a max-width as well as a grid column, so applying one to a
+ * child of another grid caps it at the wrong width and claims a track that does
+ * not exist there. That is what collapsed the galleries.
+ */
 const spanClass = (span) =>
-  span === 'full' ? 'span-full' : span === 'text' ? 'span-text' : 'span-wide'
+  span === 'none' ? '' : span === 'full' ? 'span-full' : span === 'text' ? 'span-text' : 'span-wide'
 
 
 /**
