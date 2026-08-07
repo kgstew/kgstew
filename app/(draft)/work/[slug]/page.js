@@ -3,7 +3,10 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
-import { projectSlugs, projectBySlug, postsForProject, disciplineLabel } from '@/lib/content'
+import { mdxComponents } from '@/lib/mdx-components'
+import { projectSlugs, projectBySlug, postsForProject, disciplineLabel, heroAsset } from '@/lib/content'
+import Frame from '@/components/media/Frame'
+import Gallery from '@/components/media/Gallery'
 
 // Derived from the same filtered list as allProjects(), so an embargoed
 // project can never have a route emitted for it. dynamicParams closes the
@@ -25,11 +28,14 @@ export default async function Project({ params }) {
   if (!project) notFound()
 
   const posts = postsForProject(slug)
+  const hero = heroAsset(project.assets)
 
   return (
     <article data-project={project.slug}>
       <h1 className="text-3xl font-bold tracking-tight text-balance">{project.title}</h1>
       <p className="mt-3 max-w-prose text-lg text-soft">{project.card}</p>
+
+      {hero && <Frame asset={hero} priority className="mt-8" />}
 
       <dl className="mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
         {project.role && (
@@ -63,9 +69,13 @@ export default async function Project({ params }) {
       <div className="mt-8 max-w-prose space-y-4 leading-relaxed">
         <MDXRemote
           source={project.body}
+          components={mdxComponents}
           options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
         />
       </div>
+
+      <Gallery assetKey={project.assets} role="process" className="mt-10" />
+      <Gallery assetKey={project.assets} role="detail" columns={3} className="mt-6" />
 
       {project.collaborators.length > 0 && (
         <section className="mt-10 border-t border-hairline pt-6">

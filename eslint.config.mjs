@@ -47,11 +47,25 @@ const contentBoundary = {
   },
 }
 
+/**
+ * The media components render <img> and <picture> directly, on purpose. The
+ * asset manifest already holds five AVIF widths on Blob generated during
+ * ingest; next/image would re-encode already-optimised bytes, bill per
+ * transformation, and discard the LQIP produced at the same time. This is an
+ * architectural decision, so it is exempted once here rather than disabled at
+ * six call sites.
+ */
+const mediaComponents = {
+  files: ['components/media/**/*.jsx', 'lib/mdx-components.jsx'],
+  rules: { '@next/next/no-img-element': 'off' },
+}
+
 const config = [
   { ignores: ['.next/**', 'node_modules/**', 'tools/**', 'originals/**'] },
   js.configs.recommended,
   ...next,
   contentBoundary,
+  mediaComponents,
   {
     rules: {
       // `const { client, ...rest } = obj` is the clearest way to express
