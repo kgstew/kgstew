@@ -15,7 +15,8 @@
     "format": "prettier --write .",
     "test": "node --test",
     "check:leaks": "node scripts/check-leaks.mjs",
-    "prepare": "git config core.hooksPath .husky"
+    "prepare": "git config core.hooksPath .husky",
+    "check:assets": "node tools/check-orphan-assets.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
