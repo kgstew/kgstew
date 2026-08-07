@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
+import { mdxComponents } from '@/lib/mdx-components'
 import { postSlugs, postBySlug } from '@/lib/content'
 
 export function generateStaticParams() {
@@ -33,6 +34,7 @@ export default async function Post({ params }) {
       <div className="prose-neutral max-w-none space-y-4 leading-relaxed">
         <MDXRemote
           source={post.body}
+          components={mdxComponents}
           options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
         />
       </div>
