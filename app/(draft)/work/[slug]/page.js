@@ -8,14 +8,13 @@ import {
   projectSlugs,
   projectBySlug,
   postsForProject,
-  disciplineLabel,
   heroAsset,
   assetsByRole,
 } from '@/lib/content'
-import Frame from '@/components/media/Frame'
 import Loop from '@/components/media/Loop'
 import Gallery from '@/components/media/Gallery'
 import Specs from '@/components/work/Specs'
+import Plate from '@/components/work/Plate'
 
 // Derived from the same filtered list as allProjects(), so an embargoed
 // project can never have a route emitted for it. dynamicParams closes the
@@ -48,45 +47,15 @@ export default async function Project({ params }) {
 
   return (
     <article data-project={project.slug} className="flow">
-      <h1 className="text-3xl font-bold tracking-tight text-balance">{project.title}</h1>
-      <p className="mt-3 text-lg text-soft">{project.card}</p>
+      <Plate project={project} hero={hero} />
 
-
-      <dl className="field-list mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
-        {project.role && (
-          <>
-            <dt className="text-dim">Role</dt>
-            <dd>{project.role}</dd>
-          </>
-        )}
-        <dt className="text-dim">Years</dt>
-        <dd className="tabular-nums">
-          {project.started} — {project.ended}
-        </dd>
-        <dt className="text-dim">Disciplines</dt>
-        <dd>{project.disciplines.map(disciplineLabel).join(' · ')}</dd>
-        {project.destination && (
-          <>
-            <dt className="text-dim">Where</dt>
-            <dd>{project.destination}</dd>
-          </>
-        )}
-        {project.disclosure === 'work-only' && (
-          <>
-            <dt className="text-dim">Client</dt>
-            <dd className="text-dim">Not named.</dd>
-          </>
-        )}
-      </dl>
-
-      {project.outcome && <p className="mt-8 text-soft">{project.outcome}</p>}
-
-      {hero && <Frame asset={hero} priority className="mt-10" />}
       {heroLoops.map((a) => (
         <Loop key={a.id} asset={a} className="mt-6" />
       ))}
 
-      <div className="mt-8 space-y-4 leading-relaxed">
+      {project.outcome && <p className="mt-10 text-soft">{project.outcome}</p>}
+
+      <div className="mt-10 space-y-4 leading-relaxed">
         <MDXRemote
           source={project.body}
           components={mdxComponents}
