@@ -24,7 +24,7 @@ export default function Work() {
                   {p.ended === 'ongoing' ? '–' : p.ended.slice(0, 4) !== p.started.slice(0, 4) ? `–${p.ended.slice(0, 4)}` : ''}
                 </span>
               </div>
-              <p className="mt-1 text-sm text-soft">{p.card}</p>
+              <p className="mt-1 text-sm text-soft">{p.summary}</p>
               <p className="mt-2 text-xs tracking-wide text-dim uppercase">
                 {p.disciplines.map(disciplineLabel).join(' · ')}
               </p>

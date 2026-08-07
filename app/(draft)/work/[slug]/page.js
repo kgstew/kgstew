@@ -28,7 +28,7 @@ export const dynamicParams = false
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const p = projectBySlug(slug)
-  return p ? { title: p.title, description: p.summary || p.card } : {}
+  return p ? { title: p.title, description: p.summary } : {}
 }
 
 export default async function Project({ params }) {

@@ -29,7 +29,7 @@ export default function Home() {
             <li key={p.slug} className="py-4">
               <Link href={`/work/${p.slug}`} className="group block">
                 <span className="font-medium group-hover:underline">{p.title}</span>
-                <span className="mt-1 block text-sm text-soft">{p.card}</span>
+                <span className="mt-1 block text-sm text-soft">{p.summary}</span>
               </Link>
             </li>
           ))}

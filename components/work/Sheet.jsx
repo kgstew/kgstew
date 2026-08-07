@@ -26,7 +26,7 @@ export default function Sheet({ project, hero }) {
   return (
     <>
       <h1 className="text-[29px] leading-tight">{project.title}</h1>
-      <p className="mt-3 max-w-[42ch] text-[20px] leading-snug text-soft">{project.card}</p>
+      <p className="mt-3 max-w-[42ch] text-[20px] leading-snug text-soft">{project.summary}</p>
 
       <dl className="mt-11 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
         {rows.map(([label, value]) => (
