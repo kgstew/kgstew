@@ -4,8 +4,16 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import { mdxComponents } from '@/lib/mdx-components'
-import { projectSlugs, projectBySlug, postsForProject, disciplineLabel, heroAsset } from '@/lib/content'
+import {
+  projectSlugs,
+  projectBySlug,
+  postsForProject,
+  disciplineLabel,
+  heroAsset,
+  assetsByRole,
+} from '@/lib/content'
 import Frame from '@/components/media/Frame'
+import Loop from '@/components/media/Loop'
 import Gallery from '@/components/media/Gallery'
 
 // Derived from the same filtered list as allProjects(), so an embargoed
@@ -29,6 +37,9 @@ export default async function Project({ params }) {
 
   const posts = postsForProject(slug)
   const hero = heroAsset(project.assets)
+  // A hero-role video would otherwise render nowhere: heroAsset() only returns
+  // images, and the galleries below only cover process and detail.
+  const heroLoops = assetsByRole(project.assets, 'hero').filter((a) => a.type === 'video')
 
   return (
     <article data-project={project.slug} className="flow">
@@ -36,6 +47,9 @@ export default async function Project({ params }) {
       <p className="mt-3 text-lg text-soft">{project.card}</p>
 
       {hero && <Frame asset={hero} priority className="mt-8" />}
+      {heroLoops.map((a) => (
+        <Loop key={a.id} asset={a} className="mt-6" />
+      ))}
 
       <dl className="mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
         {project.role && (
