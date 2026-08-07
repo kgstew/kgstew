@@ -40,10 +40,13 @@ export async function ffprobeDimensions(file) {
 /**
  * Kyle builds things that move, so a still is the least interesting version of
  * the work. Every video becomes a short silent loop for the top of a project
- * page, plus a poster frame. Anything longer than the loop window keeps its
- * duration recorded so we know it needs a streaming host rather than the repo.
+ * page, plus a poster frame.
+ *
+ * `clipStart` in captions.yaml picks which six seconds. Defaulting to the first
+ * six is almost always wrong — the interesting moment is rarely at the head of
+ * the file, and for one of these it was a flame effect twenty seconds in.
  */
-export async function deriveVideo(file) {
+export async function deriveVideo(file, { start = 0 } = {}) {
   const duration = await ffprobeDuration(file)
   const tmp = await fs.mkdtemp(path.join(os.tmpdir(), 'kgs-vid-'))
   const loopPath = path.join(tmp, 'loop.mp4')
@@ -55,6 +58,9 @@ export async function deriveVideo(file) {
   try {
     await run('ffmpeg', [
       '-y', '-loglevel', 'error',
+      // -ss before -i seeks by keyframe, which is fast and accurate enough for
+      // a six-second excerpt. The default of 0 keeps the old behaviour.
+      ...(start ? ['-ss', String(start)] : []),
       '-i', file,
       '-t', String(LOOP_MAX_SECONDS),
       '-an',                          // silent — these autoplay
@@ -69,7 +75,7 @@ export async function deriveVideo(file) {
     await run('ffmpeg', [
       '-y', '-loglevel', 'error',
       '-i', file,
-      '-ss', String(Math.min(1, (duration || 2) / 3)),
+      '-ss', String(start ? start + 1 : Math.min(1, (duration || 2) / 3)),
       '-frames:v', '1',
       '-vf', scale,
       '-q:v', '4',

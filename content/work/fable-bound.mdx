@@ -1,30 +1,119 @@
 ---
 title: Fable Bound
-card: A viking ship that rocked when you rowed it. Most of the crew who built it had never welded.
-summary: >
-  A twenty-foot animatronic longship for Burning Man 2024. Rowing the oars drove a pneumatic
-  system that pitched the hull, and the light and sound followed the motion.
+summary: A twenty-foot hull that pitched on pneumatics, sequenced by MIDI from a live Ableton set.
 context: art
 disciplines: [fabrication, embedded, show-control, organizing]
-role: Lead artist — concept, control systems, and crew
+role: Lead artist — design, fabrication, control systems, fundraising, and crew
 started: '2023-11'
-ended: '2024-10'
+ended: '2025-01'
 disclosure: open
 destination: Black Rock City
 collaborators:
-  - { name: Leanne Lopez, credit: Co-lead — concept, narrative, shields }
-  - { name: Nathan Koral, credit: Control PCB }
-  - { name: Martin Stenflo, credit: Shields }
-  - { name: Bravo, credit: Photography }
-outcome: >
-  Awarded a Burning Man Honoraria grant covering 40% of the budget. Built over eleven months by a
-  volunteer crew, half of whom found the project through the artist posting rather than knowing
-  anyone on it. Shown again at two decompression events and a Colorado regional.
+  - name: Leanne Lopez
+    credit: Co-lead, concept, narrative, shields
+  - name: Nathan Koral
+    credit: Electronics
+  - name: Dan Mountain
+    credit: Fabrication, woodworking
+  - name: Alex Maki
+    credit: Control software, Lighting
+  - name: William Mathewson
+    credit: Electronics, fabrication
+  - name: Dan Blackmon
+    credit: Snake sculpture, fabrication
+  - name: Norma Perea
+    credit: Textiles, decoration
+  - name: Vesper Holly
+    credit: decoration
+  - name: Martin Stenflo
+    credit: Shields, fabrication
+  - name: Sheena McNeal
+    credit: decoration
+  - name: Corrine Trujillo
+    credit: Murals
+  - name: Charlie Gleeson
+    credit: Soundscapes
+  - name: Rinth
+    credit: Fabrication
+  - name: Rose
+    credit: Vultures
+  - name: Bravo
+    credit: Welding, photography
+fields:
+  - ['Grant', 'Burning Man Honoraria']
+  - ['Crew', 'Core of 16. ~60 volunteers over 11 months']
+  - ['Shown', 'Burning Man 2024, Denver decompressions, Apogaea, Rumpus in the Park']
+specs:
+  - group: Movement
+    rows:
+      - ['Air jacks', '4 × 3,500 lb']
+      - ['Vertical travel', '14 in']
+      - ['12 Solenoid valves, relay-driven', '12 V']
+      - ['Max Load', '14,000 lb']
+  - group: Control
+    rows:
+      - ['Control host', 'Mac mini']
+      - ['Sequencing application', 'Typescript Node']
+      - ['Trigger source', 'MIDI / Ableton']
+      - ['Relay channels — fill, exhaust, ballast', '3']
+      - ['Lighting Control', 'Pixel Blaze']
 accent: harbour
 assets: fable-bound
 weight: 10
 ---
 
-Between November 2023 and October 2024 I led a team of volunteers to build the largest and most
-complex piece of art I have finished. The engineering write-up is still being drafted; the story of
-how it got funded is in the writing section.
+## Requirement
+
+The ship had to move on demand, in time with music, with people standing on it, for a week in the
+desert. That set most of the architecture. The movement needed enough force to lift a loaded hull,
+a slow enough travel to be safe with people aboard, and control that could be handed to whoever was
+running the music rather than to an operator with a switch.
+
+## Movement
+
+Four shop air jacks are ganged under the hull, the type used for lifting trucks. Each is rated at
+3,500 lb, giving roughly fourteen inches of vertical travel at the bow. Air is valved by twelve-volt
+solenoids driven through relays on a board Nathan Koral built for the project.
+
+<Figure project="fable-bound" src="IMG_5020.MOV" />
+
+## Control
+
+Firmware on the board handles three relay functions and holds the safety interlocks. Fill and
+exhaust do what they say. The third drives a secondary ballast reserve, which keeps air available
+between cycles so a movement never has to wait on the compressor catching up.
+
+Above that, a Mac mini runs a Node application that receives MIDI. Each note maps to a movement
+program. Sequencing the ship from the same Ableton session that played the music meant the person
+running sound was also running the ship, and neither side needed to understand the other.
+
+I designed the system and did not write most of that application. I refactored it afterwards to make
+it maintainable.
+
+## Safety
+
+The piece was built for Burning Man, where the standard is lower than it would be for a permanent
+public installation. Pinch points were made physically unreachable rather than signposted, and the
+stairs and deck were built so that climbing aboard felt adventurous without offering anyone a way to
+get it wrong. It has not been installed in a non-Burning Man public context, which would need
+constant on-site oversight.
+
+## Field failure
+
+The compressor charging the pneumatic system failed on the third day and could not be replaced on
+playa. Lighting and sound ran for the full week; the movement did not. The system itself was sound —
+the failure was in the supply feeding it. It was a straightforward repair once we were home, and the
+ship has run at two decompression events since.
+
+## Crew
+
+Eleven months of build days, and about half the crew found the project through the Burning Man
+artist posting rather than through anyone on it. Martin Stenflo and Leanne Lopez made the shields,
+each one different.
+
+Matt arrived at a build day knowing nobody. He had worked on other people's art and never made his
+own. He learned to solder, learned to weld, and became the person I handed the hard problems to. He
+is moving into fabrication as a career now, and building installations in Denver with other people
+from this crew.
+
+<Figure project="fable-bound" src="IMG_4978.HEIC" span="none" />

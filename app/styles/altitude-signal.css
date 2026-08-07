@@ -10,26 +10,6 @@
   --color-accent-ink: #ca3526;
 }
 
-@layer components {
-  [data-altitude='signal'] :is(h1, h2, h3) {
-    font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: var(--tracking-signal);
-  }
-  [data-altitude='signal'] h1 {
-    line-height: 1.04;
-  }
-}
 
 /* An altitude is a type system as much as a palette. Signal leads with the
    geometric display face at tight tracking. */
-@layer components {
-  [data-altitude='signal'] :is(h1, h2, h3) {
-    font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: var(--tracking-signal);
-  }
-  [data-altitude='signal'] h1 {
-    line-height: 1.04;
-  }
-}

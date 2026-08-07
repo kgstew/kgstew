@@ -181,8 +181,12 @@ async function ingestProject(project) {
       const stat = await fs.stat(file)
       // Hash the path + size + mtime rather than the bytes: these are large and
       // reading a 90 MB file just to name it is wasteful.
-      const id = hashBytes(Buffer.from(`${name}:${stat.size}:${stat.mtimeMs}`))
       const meta = sidecar[name] ?? {}
+      // clipStart participates in the id so changing which six seconds you want
+      // invalidates the old upload without needing --force.
+      const id = hashBytes(
+        Buffer.from(`${name}:${stat.size}:${stat.mtimeMs}:${meta.clipStart ?? 0}`)
+      )
 
       const prior = previous.assets?.[id]
       if (prior && !flags.force) {
@@ -192,7 +196,7 @@ async function ingestProject(project) {
         return
       }
 
-      const d = await deriveVideo(file)
+      const d = await deriveVideo(file, { start: Number(meta.clipStart) || 0 })
       assets[id] = {
         id,
         project,
@@ -200,6 +204,7 @@ async function ingestProject(project) {
         type: 'video',
         duration: d.duration,
         needsStreamHost: d.needsStreamHost,
+        clipStart: Number(meta.clipStart) || 0,
         width: d.width ?? null,
         height: d.height ?? null,
         aspect: d.aspect ?? null,

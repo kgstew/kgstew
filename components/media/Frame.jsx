@@ -3,7 +3,14 @@ import { srcSet } from '@/lib/content'
 /** Which grid track this occupies: the prose column, the wider track, or the
  *  full page. Defaults to `wide` — a figure sitting at prose measure wastes the
  *  room the breakout grid exists to provide. */
-const spanClass = (span) => (span === 'text' ? '' : span === 'full' ? 'span-full' : 'span-wide')
+/**
+ * `none` for items inside a nested layout — a gallery, a column. The span
+ * utilities set a max-width as well as a grid column, so applying one to a
+ * child of another grid caps it at the wrong width and claims a track that does
+ * not exist there. That is what collapsed the galleries.
+ */
+const spanClass = (span) =>
+  span === 'none' ? '' : span === 'full' ? 'span-full' : span === 'text' ? 'span-text' : 'span-wide'
 
 
 /**
@@ -33,8 +40,8 @@ export default function Frame({
     (span === 'full'
       ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
       : span === 'wide'
-        ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
-        : '(min-width: 1152px) 660px, calc(100vw - 5rem)')
+        ? '(min-width: 1152px) 960px, calc(100vw - 5rem)'
+        : '(min-width: 1152px) 520px, calc(100vw - 5rem)')
   if (!asset || asset.type !== 'image') return null
 
   const jpeg = asset.variants?.jpeg?.at(-1)?.url

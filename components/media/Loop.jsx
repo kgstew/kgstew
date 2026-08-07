@@ -77,7 +77,7 @@ export default function Loop({ asset, className = '', caption = true, span = 'wi
   const showVideo = motionOk && reached
 
   return (
-    <figure ref={ref} className={`${span === 'full' ? 'span-full' : span === 'text' ? '' : 'span-wide'} ${className}`}>
+    <figure ref={ref} className={`${span === 'none' ? '' : span === 'full' ? 'span-full' : span === 'text' ? 'span-text' : 'span-wide'} ${className}`}>
       {showVideo ? (
         <video
           ref={videoRef}

@@ -11,19 +11,105 @@
 /* Real title blocks are set in a single-width technical face, so the mono does
    the headings here rather than adding a fourth family for one page type. */
 @layer components {
-  [data-altitude='draft'] :is(h1, h2, h3) {
-    font-family: var(--font-mono);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-  [data-altitude='draft'] h1 {
-    font-size: 1.5rem;
-  }
-  [data-altitude='draft'] dt {
+  /* Scoped to the header's field list. It used to hit every dt on the page,
+     which turned the parts-list row names into shouty uppercase mono. */
+  [data-altitude='draft'] dl.field-list dt {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     letter-spacing: var(--tracking-legend);
     text-transform: uppercase;
+  }
+}
+
+/*
+ * Margin labels.
+ *
+ * Section names hang in a gutter to the left of the prose, right-aligned against
+ * it — segmentation by position rather than by rule. That is what replaced the
+ * bordered plate: on a dotted ground a box is redundant, and the reader can
+ * still see the whole structure of the page by scanning down the left edge.
+ *
+ * Sections come from lib/rehype-sections.js, which groups each h2 with the
+ * blocks that follow it. Without that grouping this layout is not expressible —
+ * a flat grid puts the next heading beside the previous paragraph.
+ */
+@layer components {
+  [data-altitude='draft'] .sec {
+    display: grid;
+    grid-template-columns: var(--label) minmax(0, var(--measure));
+    column-gap: var(--label-gap);
+    margin-top: calc(var(--spacing-grid) * 2);
+  }
+  [data-altitude='draft'] .sec > h2 {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 0.35rem;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+    color: var(--color-accent-ink);
+  }
+  [data-altitude='draft'] .sec > :not(h2) {
+    grid-column: 2;
+  }
+  [data-altitude='draft'] .sec > :not(h2) + :not(h2) {
+    margin-top: 1rem;
+  }
+
+  /* Below the label gutter's width, labels stack above their section. */
+  @media (max-width: 900px) {
+    [data-altitude='draft'] .sec {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    [data-altitude='draft'] .sec > h2 {
+      grid-column: 1;
+      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+    [data-altitude='draft'] .sec > :not(h2) {
+      grid-column: 1;
+    }
+  }
+}
+
+/**
+ * Nine of ten projects have no photography and several are written as plain
+ * paragraphs with no headings, so the body cannot rely on sections for any of
+ * its typography. Everything below gives an unsectioned body the same measure,
+ * leading and opening gap that `.sec` gives a sectioned one.
+ *
+ * Layered and altitude-scoped like the section rules above, so the two paths
+ * cannot end up fighting on specificity.
+ */
+@layer components {
+  /* Projects with a hero image got this opening gap for free from the image's
+     own margin, which hid the fact that a project without one had its first
+     paragraph butting against the last field, reading as that field's value. */
+  [data-altitude='draft'] .project-body {
+    margin-top: calc(var(--spacing-grid) * 2);
+  }
+  [data-altitude='draft'] .project-body > :first-child {
+    margin-top: 0;
+  }
+
+  /* Sections narrow their own column, so a project opening with a heading was
+     already measured; one written as plain paragraphs ran the full 960 and set
+     lines of about 110 characters. Listed by element rather than `:not(.sec)` so
+     figures and galleries, which carry their own width via the span utilities,
+     keep it. */
+  [data-altitude='draft'] .project-body > :is(p, ul, ol, blockquote, h3) {
+    max-width: var(--measure);
+  }
+
+  /* Matches `.sec > :not(h2) + :not(h2)`. Without it consecutive paragraphs in
+     an unsectioned body run together with no gap at all.
+     Sections are excluded on both sides: they set their own, larger opening gap,
+     and this selector has equal specificity but comes later, so including them
+     silently collapsed the space between sections to a paragraph's. */
+  [data-altitude='draft'] .project-body > :not(.sec) + :not(.sec) {
+    margin-top: 1rem;
   }
 }

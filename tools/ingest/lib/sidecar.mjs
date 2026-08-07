@@ -52,6 +52,7 @@ const TEMPLATE_HEADER = `# Captions for this project.
 #   role     ${ROLES.join(' | ')}
 #   order    optional integer. Lower sorts first.
 #   skip     true to keep an original out of the site entirely.
+#   clipStart video only. Seconds into the source where the 6s loop begins.
 
 assets:
 `

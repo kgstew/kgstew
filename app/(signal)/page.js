@@ -11,12 +11,12 @@ export default function Home() {
         <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl">
           I design systems and assemble the people who build them.
         </h1>
-        <p className="mt-6 text-lg text-soft">
+        <p className="span-text mt-6 text-lg text-soft">
           The parts are usually people first — and then whatever software and hardware those people
           need. The job is the same: build the thing in the middle that makes them work as one
           system.
         </p>
-        <p className="mt-4 text-soft">
+        <p className="span-text mt-4 text-soft">
           It looks scattered. It&rsquo;s the qualification — you can only integrate systems you can
           speak the language of.
         </p>
@@ -29,7 +29,7 @@ export default function Home() {
             <li key={p.slug} className="py-4">
               <Link href={`/work/${p.slug}`} className="group block">
                 <span className="font-medium group-hover:underline">{p.title}</span>
-                <span className="mt-1 block text-sm text-soft">{p.card}</span>
+                <span className="mt-1 block text-sm text-soft">{p.summary}</span>
               </Link>
             </li>
           ))}

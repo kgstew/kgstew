@@ -9,11 +9,6 @@
 /* Index is a catalog: the serif does the titles, and the optical-size axis
    handles the jump from a 16px row to a 32px page heading. */
 @layer components {
-  [data-altitude='index'] :is(h1, h2, h3) {
-    font-family: var(--font-text);
-    font-weight: 500;
-    letter-spacing: -0.012em;
-  }
   /* Reading surface: a measure, and prose rhythm rather than list rhythm. */
   [data-altitude='index'][data-surface='reading'] p,
   [data-altitude='index'] [data-surface='reading'] p {

@@ -61,24 +61,36 @@
 @custom-variant draft (&:where([data-altitude='draft'] *));
 
 :root {
+  /*
+   * Layout constants live here rather than in @theme. Tailwind tree-shakes theme
+   * variables that no utility consumes, and `--wide` was silently dropped —
+   * which made grid-template-columns invalid and collapsed every track into one,
+   * so prose and images all rendered full width. @theme is for values that
+   * should generate utilities; these are not that.
+   */
+  --page-max: 1152px;
+  --page-gutter: clamp(20px, 5vw, 40px);
+  --measure: 520px;
+
+  /* `wide` is the page default: masthead, hero, field run, catalog rows. 960
+     against a 520 measure is a 1.85× step — it uses the container instead of
+     leaving 292px of accidental margin, without returning to the 2.06× that
+     made the hero read as belonging to a different document. `full` stays for a
+     deliberate bleed. */
+  --wide: 960px;
+
+  /* The label gutter grows with `wide` so the prose column stays roughly
+     centred beneath a wider hero rather than hugging the left edge:
+     224 + 32 + 520 = 776 inside 960. */
+  --label: 224px;
+  --label-gap: 32px;
+
   /* Dot pitch. 24px sits between the Moleskine 5mm ledger and the original
      34px spec — close enough to read as notebook paper, open enough not to
      shimmer behind photographs. */
   --dot-pitch: 24px;
   --color-grid: #ddd6c6;
 
-  /* Breakout grid. Prose is capped at a comfortable measure; media opts into
-     the wider tracks either side. One definition, so no component carries its
-     own max-width and nothing needs a wrapper div at the call site. */
-  --page-max: 1152px;
-  /* 40px is a fifth of a phone screen. Scale it down rather than letting the
-     content column get squeezed on small viewports. */
-  --page-gutter: clamp(20px, 5vw, 40px);
-  /* 520px ≈ 68 characters in Newsreader at 16px. Deliberately not expressed in
-     `ch`: that unit is the width of the zero glyph, which in this face is 9.06px
-     against a 7.65px average character — so Tailwind's `max-w-prose` (65ch)
-     actually renders 77 characters per line. Measured, not assumed. */
-  --measure: 520px;
   --sig-stroke-primary: 3.4;
   --sig-stroke-secondary: 2.2;
 }
