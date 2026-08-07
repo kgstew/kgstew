@@ -28,36 +28,36 @@ export default async function Project({ params }) {
   return (
     <article data-project={project.slug}>
       <h1 className="text-3xl font-bold tracking-tight text-balance">{project.title}</h1>
-      <p className="mt-3 max-w-prose text-lg text-neutral-700">{project.card}</p>
+      <p className="mt-3 max-w-prose text-lg text-soft">{project.card}</p>
 
       <dl className="mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
         {project.role && (
           <>
-            <dt className="text-neutral-500">Role</dt>
+            <dt className="text-dim">Role</dt>
             <dd>{project.role}</dd>
           </>
         )}
-        <dt className="text-neutral-500">Years</dt>
+        <dt className="text-dim">Years</dt>
         <dd className="tabular-nums">
           {project.started} — {project.ended}
         </dd>
-        <dt className="text-neutral-500">Disciplines</dt>
+        <dt className="text-dim">Disciplines</dt>
         <dd>{project.disciplines.map(disciplineLabel).join(' · ')}</dd>
         {project.destination && (
           <>
-            <dt className="text-neutral-500">Where</dt>
+            <dt className="text-dim">Where</dt>
             <dd>{project.destination}</dd>
           </>
         )}
         {project.disclosure === 'work-only' && (
           <>
-            <dt className="text-neutral-500">Client</dt>
-            <dd className="text-neutral-500">Not named.</dd>
+            <dt className="text-dim">Client</dt>
+            <dd className="text-dim">Not named.</dd>
           </>
         )}
       </dl>
 
-      {project.outcome && <p className="mt-8 max-w-prose text-neutral-700">{project.outcome}</p>}
+      {project.outcome && <p className="mt-8 max-w-prose text-soft">{project.outcome}</p>}
 
       <div className="mt-8 max-w-prose space-y-4 leading-relaxed">
         <MDXRemote
@@ -67,13 +67,13 @@ export default async function Project({ params }) {
       </div>
 
       {project.collaborators.length > 0 && (
-        <section className="mt-10 border-t border-neutral-200 pt-6">
-          <h2 className="text-sm tracking-widest text-neutral-500 uppercase">Built with</h2>
+        <section className="mt-10 border-t border-hairline pt-6">
+          <h2 className="text-sm tracking-widest text-dim uppercase">Built with</h2>
           <ul className="mt-3 space-y-1 text-sm">
             {project.collaborators.map((c) => (
               <li key={c.name}>
                 <span className="font-medium">{c.name}</span>
-                {c.credit && <span className="text-neutral-600"> — {c.credit}</span>}
+                {c.credit && <span className="text-soft"> — {c.credit}</span>}
               </li>
             ))}
           </ul>
@@ -81,8 +81,8 @@ export default async function Project({ params }) {
       )}
 
       {posts.length > 0 && (
-        <section className="mt-10 border-t border-neutral-200 pt-6">
-          <h2 className="text-sm tracking-widest text-neutral-500 uppercase">Writing</h2>
+        <section className="mt-10 border-t border-hairline pt-6">
+          <h2 className="text-sm tracking-widest text-dim uppercase">Writing</h2>
           <ul className="mt-3 space-y-1 text-sm">
             {posts.map((p) => (
               <li key={p.slug}>

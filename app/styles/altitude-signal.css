@@ -1,0 +1,25 @@
+/* Signal — the identity. Committed dark; the theme defaults already are Signal,
+   so this only needs to assert the ground for the page canvas. */
+[data-altitude='signal'] {
+  --color-ground: #0e0f11;
+  --color-surface: #181b1f;
+  --color-ink: #edeae3;
+  --color-soft: #c6c4be;
+  --color-dim: #8f9195;
+  --color-hairline: #292d32;
+  --color-rule: #3a4046;
+  --color-accent: #d93b2b;
+  --color-accent-ink: #e2513f; /* #D93B2B as text is 4.21:1 and fails AA */
+}
+
+/* A wrapper cannot colour the overscroll gutter or the scrollbar. :has() is
+   baseline since Firefox 121; the older failure mode is a white gutter. */
+html:has([data-altitude='signal']) {
+  background-color: #0e0f11;
+}
+html:has([data-altitude='index']) {
+  background-color: #fcfcfa;
+}
+html:has([data-altitude='draft']) {
+  background-color: #f1f3f2;
+}

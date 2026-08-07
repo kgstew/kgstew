@@ -1,0 +1,90 @@
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--color-ground);
+    color: var(--color-ink);
+    font-family: var(--font-text);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Digits that sit in columns must align. Newsreader defaults to a figure
+     style that does not. */
+  table,
+  time,
+  .tabular {
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-ink);
+    outline-offset: 2px;
+    /* A halo so the ring stays visible against both accent-adjacent and
+       hairline-adjacent backgrounds. */
+    box-shadow: 0 0 0 4px var(--color-ground);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ground);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/*
+ * The budget that would otherwise go on a dark variant of two committed-light
+ * altitudes goes here instead. These serve people the dark-mode argument
+ * usually skips over.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-hairline: var(--color-rule);
+    --color-dim: var(--color-soft);
+  }
+  [data-altitude] {
+    /* The drafting grid is decoration and it competes with content at higher
+       contrast. */
+    background-image: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  [data-altitude] {
+    background-image: none !important;
+  }
+  :focus-visible {
+    outline: 2px solid CanvasText;
+  }
+}
+
+@media print {
+  [data-altitude] {
+    background-image: none !important;
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+}

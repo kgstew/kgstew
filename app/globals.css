@@ -1,13 +1,8 @@
+/* A manifest, deliberately. Rules live in the files below. */
 @import 'tailwindcss';
-
-/* Placeholder tokens. The real system — Signal / Index / Shop Drawing — lands
-   with the design work; this is only enough to keep the foundation legible. */
-@theme {
-  --color-ground: #0e0f11;
-  --color-screen: #edeae3;
-  --color-signal: #d93b2b;
-}
-
-html {
-  color-scheme: light dark;
-}
+@import './styles/theme.css';
+@import './styles/base.css';
+@import './styles/accents.css';
+@import './styles/altitude-signal.css';
+@import './styles/altitude-index.css';
+@import './styles/altitude-draft.css';

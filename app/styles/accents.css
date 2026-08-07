@@ -1,0 +1,39 @@
+/*
+ * Per-project accents, bound by a `data-project` attribute rather than an
+ * inline style.
+ *
+ * Under a strict CSP a nonce applies to <style> *elements* but not to style
+ * *attributes*, so `style={{'--color-accent': hex}}` would require
+ * `style-src-attr 'unsafe-inline'` — precisely what a strict policy exists to
+ * prevent. It also keeps design values in a stylesheet where they can be
+ * audited, rather than in the render tree.
+ *
+ * Each accent was sampled from the project's own photography; the -ink variant
+ * is a darkened cut measured to clear 4.5:1 on both light grounds. Four of the
+ * six needed no adjustment.
+ */
+[data-project='fable-bound'] {
+  --color-accent: #1e7fa6; /* the painted waves */
+  --color-accent-ink: #1c779c;
+}
+[data-project='ephemerisle'] {
+  --color-accent: #2a6e6b; /* delta water */
+  --color-accent-ink: #2a6e6b;
+}
+[data-project='freespace'],
+[data-project='red-victorian'],
+[data-project='technical-artists'] {
+  --color-accent: #8a3fa8; /* the murals */
+  --color-accent-ink: #8a3fa8;
+}
+[data-project='hobby-crafts'],
+[data-project='denhac'],
+[data-project='colorado-maker-directory'] {
+  --color-accent: #c08a2c; /* brass and oak */
+  --color-accent-ink: #906721;
+}
+[data-project='wmd'],
+[data-project='zenput'] {
+  --color-accent: #d93b2b;
+  --color-accent-ink: #cc3728;
+}

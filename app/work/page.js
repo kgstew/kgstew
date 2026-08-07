@@ -13,19 +13,19 @@ export default function Work() {
   return (
     <div>
       <h1 className="text-3xl font-bold tracking-tight">Work</h1>
-      <ul className="mt-8 divide-y divide-neutral-200">
+      <ul className="mt-8 divide-y divide-hairline">
         {projects.map((p) => (
           <li key={p.slug} className="py-5">
             <Link href={`/work/${p.slug}`} className="group block">
               <div className="flex items-baseline justify-between gap-4">
                 <span className="font-medium group-hover:underline">{p.title}</span>
-                <span className="shrink-0 text-sm tabular-nums text-neutral-500">
+                <span className="shrink-0 text-sm tabular-nums text-dim">
                   {p.started.slice(0, 4)}
                   {p.ended === 'ongoing' ? '–' : p.ended.slice(0, 4) !== p.started.slice(0, 4) ? `–${p.ended.slice(0, 4)}` : ''}
                 </span>
               </div>
-              <p className="mt-1 text-sm text-neutral-600">{p.card}</p>
-              <p className="mt-2 text-xs tracking-wide text-neutral-500 uppercase">
+              <p className="mt-1 text-sm text-soft">{p.card}</p>
+              <p className="mt-2 text-xs tracking-wide text-dim uppercase">
                 {p.disciplines.map(disciplineLabel).join(' · ')}
               </p>
             </Link>
