@@ -1,5 +1,11 @@
 import { srcSet } from '@/lib/content'
 
+/** Which grid track this occupies: the prose column, the wider track, or the
+ *  full page. Defaults to `wide` — a figure sitting at prose measure wastes the
+ *  room the breakout grid exists to provide. */
+const spanClass = (span) => (span === 'text' ? '' : span === 'full' ? 'span-full' : 'span-wide')
+
+
 /**
  * An image from the asset manifest.
  *
@@ -14,11 +20,21 @@ import { srcSet } from '@/lib/content'
  */
 export default function Frame({
   asset,
-  sizes = '(min-width: 768px) 42rem, 100vw',
+  span = 'wide',
+  sizes,
   priority = false,
   caption = true,
   className = '',
 }) {
+  // sizes must track the grid or the browser keeps picking the wrong rendition —
+  // this is exactly what made six of eight widths unreachable at 720px.
+  const resolvedSizes =
+    sizes ??
+    (span === 'full'
+      ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
+      : span === 'wide'
+        ? '(min-width: 1152px) 1072px, calc(100vw - 5rem)'
+        : '(min-width: 1152px) 660px, calc(100vw - 5rem)')
   if (!asset || asset.type !== 'image') return null
 
   const jpeg = asset.variants?.jpeg?.at(-1)?.url
@@ -27,10 +43,10 @@ export default function Frame({
   const hasCaption = caption && (asset.caption || asset.credit)
 
   return (
-    <figure className={className}>
+    <figure className={`${spanClass(span)} ${className}`}>
       <picture>
-        <source type="image/avif" srcSet={srcSet(asset, 'avif')} sizes={sizes} />
-        <source type="image/webp" srcSet={srcSet(asset, 'webp')} sizes={sizes} />
+        <source type="image/avif" srcSet={srcSet(asset, 'avif')} sizes={resolvedSizes} />
+        <source type="image/webp" srcSet={srcSet(asset, 'webp')} sizes={resolvedSizes} />
         <img
           src={jpeg}
           alt={asset.alt || ''}

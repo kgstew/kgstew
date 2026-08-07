@@ -7,7 +7,7 @@ export default function Writing() {
   const posts = allPosts()
 
   return (
-    <div>
+    <div className="flow">
       <h1 className="text-3xl font-bold tracking-tight">Writing</h1>
       <ul className="mt-8 divide-y divide-hairline">
         {posts.map((p) => (

@@ -21,7 +21,7 @@ import { useEffect, useRef, useState } from 'react'
  * Kyle builds things that move, so a still is the least interesting version of
  * the work — this is the default treatment for a kinetic project.
  */
-export default function Loop({ asset, className = '', caption = true }) {
+export default function Loop({ asset, className = '', caption = true, span = 'wide' }) {
   const ref = useRef(null)
   const videoRef = useRef(null)
   const [motionOk, setMotionOk] = useState(false)
@@ -77,7 +77,7 @@ export default function Loop({ asset, className = '', caption = true }) {
   const showVideo = motionOk && reached
 
   return (
-    <figure ref={ref} className={className}>
+    <figure ref={ref} className={`${span === 'full' ? 'span-full' : span === 'text' ? '' : 'span-wide'} ${className}`}>
       {showVideo ? (
         <video
           ref={videoRef}

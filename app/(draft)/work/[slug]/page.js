@@ -31,9 +31,9 @@ export default async function Project({ params }) {
   const hero = heroAsset(project.assets)
 
   return (
-    <article data-project={project.slug}>
+    <article data-project={project.slug} className="flow">
       <h1 className="text-3xl font-bold tracking-tight text-balance">{project.title}</h1>
-      <p className="mt-3 max-w-prose text-lg text-soft">{project.card}</p>
+      <p className="mt-3 text-lg text-soft">{project.card}</p>
 
       {hero && <Frame asset={hero} priority className="mt-8" />}
 
@@ -64,9 +64,9 @@ export default async function Project({ params }) {
         )}
       </dl>
 
-      {project.outcome && <p className="mt-8 max-w-prose text-soft">{project.outcome}</p>}
+      {project.outcome && <p className="mt-8 text-soft">{project.outcome}</p>}
 
-      <div className="mt-8 max-w-prose space-y-4 leading-relaxed">
+      <div className="mt-8 space-y-4 leading-relaxed">
         <MDXRemote
           source={project.body}
           components={mdxComponents}

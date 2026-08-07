@@ -22,7 +22,7 @@ export default async function Post({ params }) {
   if (!post) notFound()
 
   return (
-    <article data-surface="reading" className="max-w-[65ch]">
+    <article data-surface="reading" className="flow">
       <header className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight text-balance">{post.title}</h1>
         <p className="mt-3 text-sm text-dim">
@@ -31,7 +31,7 @@ export default async function Post({ params }) {
           {post.readingTime} min read
         </p>
       </header>
-      <div className="prose-neutral max-w-none space-y-4 leading-relaxed">
+      <div className="prose-neutral space-y-4 leading-relaxed">
         <MDXRemote
           source={post.body}
           components={mdxComponents}

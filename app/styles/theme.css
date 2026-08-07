@@ -37,7 +37,7 @@
 
   /* Shop Drawing's grid pitch. Exposed as spacing so gutters and section rhythm
      can snap to it — otherwise the grid reads as wallpaper, not structure. */
-  --spacing-grid: 34px;
+  --spacing-grid: 24px;
 
   --text-display: 4.5rem;
   --text-display--line-height: 0.95;
@@ -61,8 +61,24 @@
 @custom-variant draft (&:where([data-altitude='draft'] *));
 
 :root {
-  --draft-grid: 34px;
-  --color-grid: #e6e1d5;
+  /* Dot pitch. 24px sits between the Moleskine 5mm ledger and the original
+     34px spec — close enough to read as notebook paper, open enough not to
+     shimmer behind photographs. */
+  --dot-pitch: 24px;
+  --color-grid: #ddd6c6;
+
+  /* Breakout grid. Prose is capped at a comfortable measure; media opts into
+     the wider tracks either side. One definition, so no component carries its
+     own max-width and nothing needs a wrapper div at the call site. */
+  --page-max: 1152px;
+  /* 40px is a fifth of a phone screen. Scale it down rather than letting the
+     content column get squeezed on small viewports. */
+  --page-gutter: clamp(20px, 5vw, 40px);
+  /* 520px ≈ 68 characters in Newsreader at 16px. Deliberately not expressed in
+     `ch`: that unit is the width of the zero glyph, which in this face is 9.06px
+     against a 7.65px average character — so Tailwind's `max-w-prose` (65ch)
+     actually renders 77 characters per line. Measured, not assumed. */
+  --measure: 520px;
   --sig-stroke-primary: 3.4;
   --sig-stroke-secondary: 2.2;
 }
