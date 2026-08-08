@@ -4,7 +4,7 @@ import { allProjects, disciplineLabel } from '@/lib/content'
 export const metadata = { title: 'Work' }
 
 /**
- * Plain listing. The Index altitude — catalog table, colour spine, filtering —
+ * Plain listing. The Index altitude — catalog table, color spine, filtering —
  * arrives with the design tickets; this only proves the model renders.
  */
 export default function Work() {
@@ -12,7 +12,7 @@ export default function Work() {
 
   return (
     <div className="flow">
-      <h1 className="text-3xl font-bold tracking-tight">Work</h1>
+      <h1 className="text-3xl">Work</h1>
       <ul className="mt-8 divide-y divide-hairline">
         {projects.map((p) => (
           <li key={p.slug} className="py-5">

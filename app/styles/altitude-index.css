@@ -1,7 +1,7 @@
 /* Index — the work catalog. */
 [data-altitude='index'] {
   /* Inherits the site ground. Index is the catalog: serif titles, mono columns,
-     a colour spine — structure rather than a different surface. */
+     a color spine — structure rather than a different surface. */
   --color-accent: #1a1815;
   --color-accent-ink: #1a1815;
 }

@@ -3,7 +3,7 @@
  *
  * Shares the site ground. What makes it Signal is the display face, the tight
  * tracking, and the signal-path diagram; it does not need to invert the page to
- * be recognisable, and inverting made every link between sections jarring.
+ * be recognizable, and inverting made every link between sections jarring.
  */
 [data-altitude='signal'] {
   --color-accent: #d93b2b;
@@ -13,3 +13,183 @@
 
 /* An altitude is a type system as much as a palette. Signal leads with the
    geometric display face at tight tracking. */
+
+/*
+ * The signal-path diagram.
+ *
+ * Three colors, sampled in the original design pitch: people red, software the
+ * same harbor blue used as Fable Bound's accent, hardware a delta green. All
+ * three clear 3:1 on cream, which is the bar for graphics — 4.18, 4.16 and 4.78.
+ *
+ * The original used `opacity: 0.85` on the two secondary strokes. Not carried
+ * over: opacity compounds where translucent paths overlap, so the convergence —
+ * the one thing the diagram is about — would darken into a knot. These colors
+ * are opaque and already distinct by hue and weight.
+ *
+ * Color comes from custom properties rather than `stroke=` attributes so the
+ * diagram is not the one element on the page that ignores a retheme.
+ */
+@layer components {
+  [data-altitude='signal'] {
+    --sig-people: var(--color-accent);
+    --sig-software: #1e7fa6;
+    --sig-hardware: #2f7a55;
+  }
+
+  .sig-wide,
+  .sig-narrow {
+    display: none;
+  }
+
+  .sig-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+    color: var(--color-dim);
+    white-space: nowrap;
+  }
+  /* Only people gets colored type. The other two are named in the same neutral
+     as every other label on the site, because coloring all three would make the
+     hue carry no emphasis at all. Their color lives in the stroke and the node. */
+  .sig-label[data-kind='people'] {
+    color: var(--color-accent-ink);
+  }
+
+  .sig-line {
+    fill: none;
+    stroke-linecap: round;
+    /* Keeps weights true under preserveAspectRatio="none". */
+    vector-effect: non-scaling-stroke;
+  }
+  .sig-line[data-kind='people'] {
+    stroke: var(--sig-people);
+    stroke-width: var(--sig-stroke-primary);
+  }
+  .sig-line[data-kind='software'] {
+    stroke: var(--sig-software);
+    stroke-width: var(--sig-stroke-secondary);
+  }
+  .sig-line[data-kind='hardware'] {
+    stroke: var(--sig-hardware);
+    stroke-width: var(--sig-stroke-secondary);
+  }
+
+  .sig-node {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sig-software);
+  }
+  .sig-node[data-kind='people'] {
+    width: 11px;
+    height: 11px;
+    background: var(--sig-people);
+  }
+  .sig-node[data-kind='hardware'] {
+    background: var(--sig-hardware);
+  }
+
+  /* The terminus is an open square, not a filled dot: the inputs are sources,
+     the output is a container. */
+  .sig-terminal {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-ink);
+  }
+
+  .sig-output,
+  .sig-output-inline {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    line-height: 1.35;
+    letter-spacing: var(--tracking-legend);
+    text-transform: uppercase;
+    color: var(--color-ink);
+  }
+  .sig-output-inline {
+    white-space: nowrap;
+  }
+
+  /*
+   * Breakpoint-exclusive in both directions. An earlier version set the narrow
+   * variant's `display: grid` after the min-width block, so at equal specificity
+   * it won and both drawings rendered at once.
+   */
+  @media (min-width: 640px) {
+    .sig-wide {
+      display: grid;
+      grid-template-columns: auto auto minmax(90px, 1fr) auto auto;
+      align-items: center;
+      column-gap: 14px;
+    }
+    /*
+     * Explicit row height and gap, totalling 100px, so the SVG can use a
+     * viewBox 100 units tall and one unit equals one pixel vertically. Row
+     * centres then land on exactly 10, 50 and 90 in both the CSS grid and the
+     * path data.
+     *
+     * Intrinsic rows do not work here: a label row is one line-height and a node
+     * row is 8px, so the two columns drift apart by roughly a node's diameter and
+     * every path starts off its own label.
+     */
+    .sig-col {
+      display: grid;
+      grid-auto-rows: 20px;
+      row-gap: 20px;
+      align-items: center;
+    }
+    .sig-labels {
+      justify-items: end;
+      text-align: right;
+    }
+    .sig-nodes {
+      justify-items: center;
+    }
+    .sig-svg {
+      /* 3 rows of 20 plus 2 gaps of 20. Matches the viewBox exactly. */
+      height: 100px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .sig-narrow {
+      display: grid;
+      row-gap: 10px;
+      justify-items: start;
+    }
+    .sig-narrow .sig-label {
+      padding-left: 12px;
+      border-left: 2px solid var(--sig-software);
+    }
+    .sig-narrow .sig-label[data-kind='people'] {
+      border-left-width: 4px;
+      border-left-color: var(--sig-people);
+    }
+    .sig-narrow .sig-label[data-kind='hardware'] {
+      border-left-color: var(--sig-hardware);
+    }
+    .sig-narrow-join {
+      width: 4px;
+      height: 18px;
+      background: var(--sig-people);
+    }
+    .sig-output-inline {
+      padding-left: 12px;
+    }
+  }
+
+  /* Under forced colors every stroke resolves to the same system color, so the
+     hue distinction is gone and weight is all that survives. */
+  @media (forced-colors: active) {
+    .sig-line {
+      stroke: CanvasText;
+    }
+    .sig-line[data-kind='people'] {
+      stroke-width: 4;
+    }
+  }
+}
